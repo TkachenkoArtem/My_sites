@@ -1,0 +1,8 @@
+/**/node_modules
+/**/dist
+/**/bower_components
+/**/app/css/font-awesome.vendor.css
+/**/app/css/normalize.vendor.css
+/*/*.psd
+/*/*.png
+npm-debug.log
