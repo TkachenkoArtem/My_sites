@@ -139,6 +139,18 @@ a[href] {
 #back-to-top.show {
   opacity: 1; }
 
+.github {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  color: #278f7f; }
+  .github__link {
+    font: 0.813em "Lady Copra"; }
+
+.fa-github:before {
+  color: #278f7f; }
+
 .wrapper {
   width: 98%; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -843,7 +855,7 @@ main {
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     #footer {
       width: 100%;
-      padding: .500em;
+      padding: 0.500em;
       margin-bottom: 1.000em; } }
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     #footer {
@@ -853,7 +865,7 @@ main {
     vertical-align: top; }
     @media only screen and (min-width: 0px) and (max-width: 479px) {
       #footer > div > ul {
-        margin: .2em;
+        margin: 0.2em;
         padding: 0; } }
     #footer > div > ul > li {
       color: #99c9c2;
