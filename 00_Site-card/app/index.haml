@@ -1,0 +1,49 @@
+!!! 5
+%html{lang:"en"}
+
+  %head
+    %meta{charset:"UTF-8"}
+    %title Tkachenko's site
+    %link{rel:"shortcut icon", href:"img/favicon.ico", type:"image/x-icon"}
+    %link{rel:"stylesheet", href:"css/vendor.min.css"}
+    %link{rel:"stylesheet", href:"css/style.min.css"}
+
+  %body
+
+    .wrapper
+
+      .fa.fa-windows
+
+      %div.speaker
+
+      .display
+
+        .imgcontainer
+
+        %a#back-to-top.fa.fa-arrow-up{href:"#", title:"Back to top"}
+
+              -#  _____HEADER_____
+
+        %header#header
+          %ul.headernav
+            %li
+              %a.elegantshadow{href:"#", onclick:"loadHome()"} Home
+            %li
+              %a.elegantshadow{href:"#", onclick:"loadAboutme()"} About me
+            %li
+              %a.elegantshadow{href:"#"} Portfolio
+            %li
+              %a.elegantshadow{href:"#"} Contact
+
+              -#  _____MAIN_____
+
+        %main
+          -# %p From my work i useing:
+          -#   %img{src:"img\img11.png", alt="img11"}
+
+              -#  _____FOOTER_____
+
+        %footer#footer
+
+    %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+    %script{src:"scripts/script.min.js"}

@@ -1,0 +1,20 @@
+//main: style.scss
+
+.elegantshadow--main {
+  font-size: 22vh;
+  padding: 0;
+  padding-top: .300em;
+
+  @include respond-to(320) {
+        font-size: 8vh;
+    }
+    @include respond-to(480) {
+        font-size: 10vh;
+    }
+    @include respond-to(768) {
+        font-size: 13vh;
+    }
+    @include respond-to(992) {
+        font-size: 16vh;
+    }
+}

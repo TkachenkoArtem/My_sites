@@ -1,0 +1,22 @@
+{
+  "name": "SiteCard",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Tkachenko Artem"
+  ],
+  "license": "free",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "font-awesome": "fontawesome#^4.6.3",
+    "jquery": "^3.1.0"
+  }
+}
