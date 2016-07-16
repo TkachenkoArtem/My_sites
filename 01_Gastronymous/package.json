@@ -1,0 +1,21 @@
+{
+    "name": "Gastronymous",
+    "description": "",
+    "version": "0.0.2",
+    "author": "Tkachenko Artem",
+    "license": "free",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-base64-inline": "^1.0.3",
+        "gulp-clean-css": "^2.0.9",
+        "gulp-concat-css": "^2.3.0",
+        "gulp-htmlmin": "^2.0.0",
+        "gulp-livereload": "^3.8.1",
+        "gulp-pngmin": "^0.1.4",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^2.3.1",
+        "gulp-uglify": "^1.5.4",
+        "gulp-uncss": "^1.0.5"
+    }
+}

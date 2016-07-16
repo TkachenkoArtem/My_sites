@@ -1,0 +1,544 @@
+//main: style.scss
+
+main {
+    width: 97.25%;
+    padding: 2.000em 2.063em 0;
+    background-color: white;
+    @include respond(320, 768) {
+        width: 100%;
+        padding: 1.000em;
+    }
+    @include respond-to(768) {
+        width: 96.5%;
+    }
+}
+
+.slidercontainer {
+    &__circle {
+        width: 12em;
+        height: 12em;
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 900;
+        padding-top: 2.813em;
+        border-radius: 6em;
+        background-image: linear-gradient(to top, rgb(155, 220, 210) 0%, rgb(183, 232, 224) 100%);
+        text-align: center;
+        @include respond-to(1200) {
+            display: block;
+        }
+
+        &__header {
+            padding-bottom: 1.214em;
+            font: 700 0.875em/1.286em "Interstate";
+            letter-spacing: 0.057em;
+            text-transform: uppercase;
+            text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.5);
+            color: $darkGreen;
+
+            &--bottom {
+                letter-spacing: 0.182em;
+            }
+        }
+
+        &__line {
+            width: 150px;
+            margin-bottom: 0.625em;
+            border: 0;
+            border-bottom: 1px solid #99c9c2;
+        }
+
+        &__text {
+            @extend %Italic11Georgia;
+            color: #787878;
+        }
+    }
+
+}
+
+.moreBesideHead-up {
+    @extend %Italic11Georgia;
+    margin-left: 0.500em;
+    letter-spacing: 0;
+    text-transform: lowercase;
+    color: $darkGreen !important;
+}
+
+.fa-angle-left.fa-2x,
+.fa-angle-right.fa-2x {
+    font-size: 1.5em;
+}
+
+// #arrowLeft,
+// #arrowRight {
+//     width: 30px;
+//     height: 30px;
+//     position: absolute;
+//     padding: 1.5px 10px 0;
+//     top: 80px;
+//     border-radius: 15px;
+//     background-color: white;
+//     font-weight: 900;
+//     color: $darkGreen;
+//     cursor: pointer;
+//     @include respond(480, 992) {
+//         background-color: transparent;
+//     }
+//     @include respond-to(768) {
+//         top: 60px;
+//     }
+// // }
+//
+// #arrowLeft {
+//     left: -50px;
+//     text-align: left;
+// }
+//
+// #arrowRight {
+//     top: 89px;
+//     right: -50px;
+//     text-align: right;
+//     @include respond-to(768) {
+//         top: 69px;
+//     }
+// }
+//
+// #slider {
+//     float: left;
+//     overflow: auto;
+//     width: 934px;
+//     height: 230px;
+//     @include respond-to(320) {
+//         width: 230px;
+//         height: 130px;
+//     }
+//     @include respond-to(480) {
+//         width: 340px;
+//         height: 140px;
+//     }
+//     @include respond-to(768) {
+//         width: 588px;
+//         height: 145px;
+//     }
+//     @include respond-to(992) {
+//         width: 771px;
+//         height: 190px;
+//     }
+//
+//     ul {
+//         position: absolute;
+//         list-style: none;
+//         padding-left: 0;
+//     }
+//
+//     li {
+//         float: left;
+//     }
+// }
+
+.pagination {
+    list-style: none;
+}
+
+.post {
+    @extend %Georgia13;
+    letter-spacing: -0.038em;
+    text-align: justify;
+    color: $postAndInterrogation;
+    @include respond-to(480) {
+        font-size: 1.100em;
+    }
+}
+
+.oneWeekInPictures {
+    margin: 0.438em auto 2.688em 0.125em;
+    text-align: center;
+
+    img {
+        margin-top: 1.000em;
+        width: 12%;
+        @include respond-to(1200) {
+            width: 7%;
+        }
+    }
+
+    h3 {
+        text-align: left;
+    }
+}
+
+.oppositeAside {
+    width: 74%;
+    display: inline-block;
+    margin-top: 1.375em;
+    @include respond(320, 768) {
+        width: 100%;
+    }
+}
+
+.section {
+    article {
+        padding: 0.7em 0;
+
+        img {
+            width: 34%;
+            display: inline-block;
+            margin-right: 1em;
+            @include respond(320, 768) {
+                display: none;
+            }
+        }
+    }
+
+    .news {
+        width: 62%;
+        vertical-align: top;
+        display: inline-block;
+        @include respond(320, 768) {
+            width: 100%;
+        }
+
+        data {
+            &:after {
+                content: '•';
+                color: $darkGreen;
+            }
+        }
+
+        & > div.post,
+        & > p.post {
+            font-style: italic;
+            margin-bottom: 1.077em;
+        }
+
+        & > div > a,
+        & > p > a {
+            color: $darkGreen;
+        }
+
+        & > div.post {
+            padding-top: 0.15em;
+
+            & > span:nth-of-type(1) {
+                font-size: 0.9em;
+                margin: auto 1.3em auto 0.3em;
+                padding: 0.2em 0.9em 0.2em 0.45em;
+                background-color: #f0e3c8;
+                border-radius: 4px;
+
+                &:hover {
+                    color: rgb(240, 227, 200);
+                    background-color: rgb(162, 141, 98);
+
+                    &:before {
+                        border-bottom-color: rgb(162, 141, 98);
+                    }
+                }
+            }
+
+            & > span:nth-of-type(1):before {
+                @extend %contentAbsolute;
+                @include triangle(10px, #f0e3c8, up);
+                top: -3px;
+            }
+
+            & > a.fa-twitter-square {
+                margin: auto 0.85em auto 0.3em;
+            }
+
+            & > .fa-lg {
+                font-size: 1.4em;
+            }
+        }
+    }
+}
+
+.latestVideo {
+    width: 64%;
+    display: inherit;
+    margin-bottom: 4.375em;
+    vertical-align: top;
+    @include respond(320, 768) {
+        width: 100%;
+        display: block;
+    }
+    @include respond-to(768) {
+        width: 134.5%;
+        margin-bottom: 2.000em;
+    }
+    @include respond-to(992) {
+        margin-top: auto;
+    }
+
+    .video-container {
+        margin: 2.188em auto auto 0.188em;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+
+        iframe {
+            position: absolute;
+            border-radius: 8px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.MoreVideos {
+    width: 34%;
+    display: inherit;
+    @include respond(320, 768) {
+        width: 100%;
+        display: block;
+    }
+    @include respond-to(768) {
+        width: 134.5%;
+        margin-bottom: 4.375em;
+    }
+    @include respond(1200, 4801) {
+        padding-left: 1.255em;
+    }
+
+    & > h3 {
+        margin-bottom: 2.125em;
+    }
+}
+
+.MoreVideosInside {
+    a:first-of-type {
+        img {
+            border-top-left-radius: 8px;
+        }
+    }
+
+    a:nth-of-type(4) {
+        img {
+            border-top-right-radius: 8px;
+        }
+    }
+
+    a:nth-of-type(17) {
+        img {
+            border-bottom-left-radius: 8px;
+        }
+    }
+
+    a:last-of-type {
+        img {
+            border-bottom-right-radius: 8px;
+        }
+    }
+
+    img {
+        &:hover {
+            outline: #3bc0ac solid 3px;
+        }
+    }
+}
+
+.aside {
+    width: 25%;
+    display: inline-block;
+    padding: 1.938em 0 0 1.625em;
+    vertical-align: top;
+    @include respond(320, 768) {
+        width: 100%;
+        padding: 0;
+    }
+    @include respond-to(768) {
+        margin-top: -.5em;
+    }
+
+    img {
+        width: 100%;
+        @include respond(320, 768) {
+            margin: auto auto auto 1em;
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    img:nth-of-type(1) {
+        margin: 0.938em auto 1.188em -0.125em;
+    }
+
+    h6:nth-of-type(1) {
+        margin-bottom: 0.9em;
+    }
+
+    img:nth-of-type(2) {
+        margin: 2.375em auto 1.250em -0.125em;
+    }
+
+    img:nth-of-type(1),
+    img:nth-of-type(2) {
+        @include respond(320, 768) {
+            margin: 1em 1em auto auto;
+        }
+    }
+
+    h6:nth-of-type(2) {
+        @extend h6: nth-of-type(1);
+    }
+
+    article {
+        @include respond(320, 768) {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 1.000em;
+            width: 70%;
+        }
+
+        h6 {
+            & > a {
+                @include respond(320, 992) {
+                    font-size: 1.250em;
+                }
+                @include respond-to(480) {
+                    font-size: 1.500em;
+                }
+            }
+        }
+    }
+
+    article:nth-of-type(2) {
+        @include respond-to(768) {
+            margin-bottom: 2.000em;
+        }
+    }
+
+    h3:nth-of-type(1) {
+        @include respond(320, 768) {
+            margin-top: 1.500em;
+        }
+    }
+
+    h3:nth-of-type(2) {
+        margin-top: 3.3em;
+        display: none;
+        @include respond(992, 4801) {
+            display: block;
+        }
+    }
+
+    h3:nth-of-type(3) {
+        @include respond(320, 768) {
+            margin-top: 1.000em;
+        }
+    }
+
+    .interrogation {
+        @extend %Italic11Georgia;
+        color: $postAndInterrogation;
+        width: 100%;
+        display: none;
+        @include respond(992, 4801) {
+            display: block;
+        }
+
+        p {
+            font: 1.17em/1.500em "Georgia";
+            margin: 1.900em auto 0.900em;
+        }
+
+        label {
+            font: italic 1.15em/2.083em "Georgia";
+            display: inline-block;
+            cursor: pointer;
+
+            input[type="radio"] {
+                cursor: pointer;
+            }
+
+            span {
+                margin-left: 1.400em;
+            }
+
+            &:not(:last-of-type):after {
+                content: '';
+                width: 167px;
+                display: block;
+                border: none;
+                border-bottom: 1px solid #e5ede7;
+                margin-top: 0.2em;
+            }
+        }
+
+        & > input[type="button"],
+        & > input[type="submit"] {
+            @extend %notBorderNotOutline;
+            width: 69px;
+            height: 33px;
+            font: 1.455em "Interstate";
+            margin: 2.25em 0.5em 3.150em 0.087em;
+            background-color: transparent;
+            color: $darkGreen;
+        }
+
+        & > input[type="button"]:hover,
+        & > input[type="submit"]:hover {
+            background-color: #f0e3c8;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            color: $postAndInterrogation;
+        }
+    }
+
+    .emailFolder {
+        width: 100%;
+        border-radius: 13px;
+        background-color: #f4ebd8;
+        padding-left: 0.688em;
+        margin: 1.500em auto 0.900em;
+        -webkit-box-shadow: inset 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+        box-shadow: inset 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+        @include respond(320, 768) {
+            width: 40%;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 1.500em;
+        }
+        padding-bottom: 2px;
+
+        input[type="email"] {
+            @extend %Italic11Georgia;
+            @extend %notBorderNotOutline;
+            width: 80%;
+            height: 17px;
+            cursor: text;
+            background-color: transparent;
+            @include placeholder-color($postAndInterrogation);
+        }
+
+        input[type="email"]:focus {
+            font-style: normal;
+        }
+
+        input[type="submit"] {
+            display: none;
+        }
+
+        .fa-envelope-o {
+            color: $postAndInterrogation;
+            cursor: pointer;
+        }
+    }
+
+    .asideBottomSocialIcon {
+        @include respond(320, 768) {
+            display: none;
+        }
+    }
+
+    .fa-2x {
+        font-size: 2.2em;
+        margin-right: 0.143em;
+    }
+}

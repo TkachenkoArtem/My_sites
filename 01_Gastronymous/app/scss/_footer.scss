@@ -1,0 +1,99 @@
+// main: style.scss
+
+#footer {
+    width: 97.25%;
+    padding: 2.938em 0 2.500em 3.375em;
+    margin-bottom: 3.750em;
+    background: url("../img/backgroundFooter.png") repeat;
+    text-align: center;
+    @include respond(320, 768) {
+        width: 100%;
+        padding: 0.500em;
+        margin-bottom: 1.000em;
+    }
+    @include respond-to(480) {
+        padding: 1.000em;
+    }
+
+    & > div {
+        display: inline-block;
+        vertical-align: top;
+
+        & > ul {
+            @include respond-to(320) {
+                margin: 0.2em;
+                padding: 0;
+            }
+
+            & > li {
+                @extend %Italic12Georgia;
+                color: $lightGreen;
+                display: inline-block;
+                width: 100%;
+                text-align: left;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        &:nth-of-type(1) {
+            width: 26%;
+            color: white;
+            @include respond-to(320) {
+                width: 37%;
+            }
+            @include respond-to(480) {
+                width: 35%;
+            }
+        }
+
+        &:nth-of-type(3) {
+            ul {
+                li:nth-last-of-type(-n+2) {
+                    display: none;
+                    @include respond(320, 768) {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(4) {
+            @include respond(320, 768) {
+                display: none;
+            }
+        }
+
+        &:not(:nth-of-type(1)) {
+            width: 19%;
+            @include respond(320, 768) {
+                width: 30%;
+            }
+        }
+
+        & > p {
+            @extend %Italic12Georgia;
+            color: inherit;
+            margin-top: 1.500em;
+            margin-left: -4.583em;
+            text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 1.417em;
+            @include respond(320, 768) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.footerLink {
+    margin: 1.375em auto auto 2.313em;
+
+    .fa-facebook-square,
+    .fa-twitter-square {
+        background-color: white;
+        border-radius: 4px;
+    }
+}
