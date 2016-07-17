@@ -83,7 +83,7 @@ ul {
     top: 2.400em;
     right: 8.500em;
     color: dimgray;
-    @include respond(320, 768) {
+    @include respond(100, 768) {
         display: none;
     }
 

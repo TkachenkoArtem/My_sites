@@ -83,7 +83,7 @@ ul {
   top: 2.400em;
   right: 8.500em;
   color: dimgray; }
-  @media only screen and (min-width: 320px) and (max-width: 767px) {
+  @media only screen and (min-width: 100px) and (max-width: 767px) {
     .rss {
       display: none; } }
   .rss .fa-2x {
@@ -139,6 +139,19 @@ ul {
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .nav {
       padding-right: 7.500em; } }
+  .nav .github {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 9999;
+    color: white; }
+    @media only screen and (min-width: 0px) and (max-width: 479px) {
+      .nav .github {
+        display: none; } }
+    .nav .github__link {
+      font: 0.813em "AmericanTypewriter"; }
+  .nav .fa-github:before {
+    color: white; }
 
 .mainmenu--nav {
   font: 1.000em "Glasgow-Medium";
