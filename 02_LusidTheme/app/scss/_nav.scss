@@ -1,0 +1,16 @@
+//main: style.scss
+
+.nav {
+    padding: 0.150em 0;
+    background-color: $brandedcolor;
+    text-align: right;
+    @include respond-to(1200) {
+        padding-right: 7.500em;
+    }
+}
+
+.mainmenu--nav {
+    font: 1.000em "Glasgow-Medium";
+    text-shadow: 0.5px 0.5px 0 lightgray;
+    color: white;
+}

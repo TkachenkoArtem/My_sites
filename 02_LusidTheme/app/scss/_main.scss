@@ -1,0 +1,316 @@
+//main: style.scss
+
+main {
+    @include respond-to(992) {
+        padding: 2.500em 5.000em;
+    }
+    @include respond-to(1200) {
+        padding: 2.300em 5.000em 4.000em;
+    }
+}
+
+.section {
+    display: inline-block;
+    width: 100%;
+    @include respond(992, 4801) {
+        width: 73%;
+    }
+}
+
+.articleleftpart {
+    width: 15%;
+    float: left;
+    padding-right: 0.500em;
+
+    .fa {
+        width: 100%;
+        padding-bottom: 0.300em;
+        text-transform: uppercase;
+        text-align: center;
+        color: dimgray;
+
+        &::after {
+            font: 0.750em Arial;
+            color: dimgray;
+        }
+
+        &:first-of-type::after {
+            content: " 12";
+        }
+
+        &:nth-of-type(2)::after {
+            content: " 31 people";
+        }
+
+        &:last-of-type::after {
+            content: " admin";
+        }
+
+        & > br {
+            @include respond(992, 4801) {
+                display: none;
+            }
+        }
+        @include respond(992, 4801) {
+            text-align: left;
+        }
+    }
+    @include respond(320, 768) {
+        display: none;
+    }
+    @include respond-to(992) {
+        width: 22%;
+        padding-left: 0.700em;
+    }
+    @include respond-to(1200) {
+        width: 22%;
+        padding-left: 1.600em;
+    }
+
+    &__soсial {
+        padding-bottom: 0.800em;
+        border-bottom: 2px groove lightgray;
+    }
+
+    &__category {
+        margin-top: 0.200em;
+    }
+
+    &__tags {
+        .articlelink__tag {
+            display: block;
+            padding-top: 0.400em;
+        }
+    }
+
+    &__category,
+    &__tags {
+        text-align: center;
+        @include respond(992, 4801) {
+            text-align: left;
+        }
+    }
+}
+
+.articlerightpart {
+    width: 100%;
+    padding: 0.200em;
+    float: right;
+    border: 10px solid rgba(0, 0, 0, 0.06);
+    background-color: #f2f2f2;
+    @include respond-to(768) {
+        width: 85%;
+    }
+    @include respond(992, 4801) {
+        width: 78%;
+    }
+
+    &--mb {
+        @include respond-to(1200) {
+            margin-bottom: 4.900em;
+        }
+    }
+
+    &__inside {
+        padding: 0 1.200em;
+        background-color: white;
+        border-radius: 4px;
+    }
+
+    &__post {
+        padding-bottom: 1.900em;
+        font: 400 0.800em/1.500em "Arial";
+    }
+
+    &__link {
+        padding: 0 0 0.800em 0.800em;
+        font: 0.800em "Arial";
+        text-transform: uppercase;
+        color: gray;
+
+        &--categoryandtags {
+            padding: 0;
+            font-size: 0.700em;
+        }
+    }
+
+    &__image {
+        display: inline-block;
+        margin: 0.800em 0.100em 0.200em 0.900em;
+        border: 3px solid $brandedcolor;
+    }
+}
+
+.articlelink__tag {
+    font: 0.750em Arial;
+    text-transform: uppercase;
+    color: dimgray;
+}
+
+.fa-commenting,
+.fa-heart,
+.fa-user-plus {
+    font-size: 1.000em;
+}
+
+.asideright {
+    display: inline-block;
+    padding: 0 1.400em;
+    width: 26%;
+    vertical-align: top;
+    @include respond(320, 992) {
+        display: none;
+    }
+
+    &__circle {
+        border-bottom: 2px groove lightgray;
+        text-align: center;
+
+        &__inside {
+            margin: 0 0.300em;
+            width: 6.500em;
+            height: 6.500em;
+            border: 10px solid white;
+            border-radius: 3.250em;
+            text-align: center;
+            vertical-align: middle;
+            background-color: $brandedcolor;
+        }
+
+        &__container {
+            display: inline-block;
+        }
+
+        &__followers {
+            display: block;
+            padding: 0.600em 2.000em;
+            width: 100%;
+            font-size: 0.800em;
+            color: dimgray;
+        }
+    }
+}
+
+.fa-tumblr,
+.fa-twitter {
+    padding-top: 0.300em;
+    font-size: 3.700em;
+    color: white;
+}
+
+.paginator {
+    margin-top: 3.000em;
+    @include respond(320, 768) {
+        margin-bottom: 1.000em;
+        text-align: center;
+    }
+    @include respond-to(768) {
+        top: -2.000em;
+        margin-left: 8.500em;
+    }
+    @include respond-to(992) {
+        margin-left: 7.000em;
+    }
+    @include respond-to(1200) {
+        margin-left: 10.700em;
+    }
+
+    &__menu {
+        padding: 0;
+
+        &__list {
+            display: inline-block;
+            margin-right: 0.600em;
+            padding-top: 0.3em;
+            width: 30px;
+            height: 30px;
+            border: 1px solid lightgray;
+            background-color: #f2f2f2;
+            text-align: center;
+
+            &:hover {
+                border: 1px solid dimgray;
+                background-color: lightgray;
+            }
+
+            a {
+                vertical-align: middle;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.search {
+    margin: 2.000em auto 2.700em;
+
+    &__button,
+    &__fild {
+        width: 96%;
+        font: 0.800em "Glasgow-Medium";
+        outline: none;
+        text-transform: uppercase;
+        vertical-align: middle;
+        letter-spacing: 0.083em;
+    }
+
+    &__fild {
+        margin-bottom: 0.500em;
+        padding: 0.300em;
+        color: lightgray;
+    }
+
+    &__button {
+        border: none;
+        text-align: center;
+        background-color: $brandedcolor;
+        border-radius: 4px;
+        color: white;
+
+        &:hover {
+            background-color: lightgray;
+            color: $brandedcolor;
+        }
+    }
+
+}
+
+.poster {
+    display: inline-block;
+    margin: 0.250em;
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border: 1px solid lightgray;
+
+    &__text {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 0.750em;
+        line-height: 110px;
+        vertical-align: middle;
+        color: lightgray;
+    }
+}
+
+.asidemenu {
+    margin-top: 2.000em;
+    text-transform: uppercase;
+
+    
+
+    &__list {
+        margin-top: 0.600em;
+        padding: .400em;
+        padding-left: .800em;
+        font-size: .800em;
+        background-color: white;
+        border-radius: 8px;
+        color: lightgray;
+
+        &:hover {
+          color: black;
+        }
+    }
+}
