@@ -22,3 +22,18 @@ if ($('#back-to-top').length) {
         }, 700);
     });
 }
+
+/*STICKYNAV*/
+
+window.onscroll = changePos;
+
+function changePos() {
+    var nav = document.getElementById('nav');
+    if (window.pageYOffset > 200) {
+        nav.style.position = 'absolute';
+        nav.style.top = pageYOffset + 'px';
+    } else {
+        nav.style.position = "";
+        nav.style.top = "";
+    }
+}
