@@ -1,20 +1,37 @@
 //main: style.scss
 
-.elegantshadow--main {
-  font-size: 22vh;
-  padding: 0;
-  padding-top: .300em;
 
-  @include respond-to(320) {
-        font-size: 8vh;
-    }
-    @include respond-to(480) {
-        font-size: 10vh;
-    }
-    @include respond-to(768) {
-        font-size: 13vh;
-    }
-    @include respond-to(992) {
-        font-size: 16vh;
-    }
+main {
+  padding-top: 5.500em;
+  padding-left: .500em;
+  padding-right: .500em;
+  padding-bottom: .500em;
+}
+
+.elegantshadow--main {
+  font-size: 8.000em;
+  padding: 0 0 .300em;
+}
+
+.aboutme {
+  width: 100%;
+  margin: 1.500em;
+  padding: 0;
+  font-size: 2.000em;
+  text-align: left;
+  &__container {
+    text-align: center;
+  }
+}
+
+.contacts__link {
+  color: navy;
+  font-size: 1.200em;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-shadow: none;
+}
+
+.elegantshadow--contacts{
+  display: block;
 }
