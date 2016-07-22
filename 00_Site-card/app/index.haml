@@ -10,40 +10,88 @@
 
   %body
 
-    .wrapper
+    .tablet
 
       .fa.fa-windows
 
       %div.speaker
 
-      .display
-
-        .imgcontainer
+    .wrapper
 
         %a#back-to-top.fa.fa-arrow-up{href:"#", title:"Back to top"}
 
               -#  _____HEADER_____
 
         %header#header
-          %ul.headernav
+
+          .header__avatar
+
+          %ul.header__nav
             %li
               %a.elegantshadow{href:"#", onclick:"loadHome()"} Home
             %li
               %a.elegantshadow{href:"#", onclick:"loadAboutme()"} About me
             %li
-              %a.elegantshadow{href:"#"} Portfolio
+              %a.elegantshadow{href:"#", onclick:"loadPortfolio()"} Portfolio
             %li
-              %a.elegantshadow{href:"#"} Contact
+              %a.elegantshadow{href:"#", onclick:"loadContact()"} Contact
 
               -#  _____MAIN_____
 
         %main
-          -# %p From my work i useing:
-          -#   %img{src:"img\img11.png", alt="img11"}
+          -# %p.elegantshadow.aboutme Have practical skills with:
+          -#     .aboutme__container
+          -#       	%a{href:"https://atom.io/", target:"_blank"} %img{src:"img/Atom-logo.png", alt="atom"}
+          -#       	%a{href:"http://gulpjs.com/", target:"_blank"} %img{src:"img/gulp-logo.png", alt="gulpjs"}
+          -#       	%a{href:"http://codepen.io/", target:"_blank"} %img{src:"img/codepen-logo.png", alt="codepen"}
+          -#       	%a{href:"https://git-scm.com/", target:"_blank"} %img{src:"img/git-logo.png", alt="git"}
+          -#       	%a{href:"https://www.npmjs.com/", target:"_blank"} %img{src:"img/npm-logo.png", alt="npm"}
+          -#       	%a{href:"http://sass-lang.com/", target:"_blank"} %img{src:"img/sass-logo.png", alt="sass"}
+          -#       	%a{href:"https://github.com/", target:"_blank"} %img{src:"img/githab-logo.png", alt="github"}
+          -#         %a{href:"http://www.w3schools.com/css/css3_intro.asp", target:"_blank"} %img{src:"img/css3-logo.png", alt="css3"}
+          -#         %a{href:"http://www.w3schools.com/html/default.asp", target:"_blank"} %img{src:"img/html5-logo.png", alt="html5"}
+          -#         %a{href:"http://www.w3schools.com/js/default.asp", target:"_blank"} %img{src:"img/javascript-logo.png", alt="JS"}
+          -#         %a{href:"http://getbootstrap.com/", target:"_blank"} %img{src:"img/bootstrap-logo.png", alt="bootstrap"}
+          -#         %a{href:"https://bower.io/", target:"_blank"} %img{src:"img/bower-logo.png", alt="bower"}
+          -#         %a{href:"http://fontawesome.io/", target:"_blank"} %img{src:"img/fontawesome.png", alt="fontawesome"}
+          -#         %a{href:"http://kenwheeler.github.io/slick/", target:"_blank"} %img{src:"img/slick-logo.png", alt="slick"}
+          -#         %a{href:"https://necolas.github.io/normalize.css/", target:"_blank"} %img{src:"img/normalizecss-logo.png", alt="normalize.css"}
+          -#         %a{href:"http://bourbon.io/docs/", target:"_blank"} %img{src:"img/bourbon-logo.png", alt="bourbon"}
+          -#         %a{href:"http://haml.info/", target:"_blank"} %img{src:"img/haml-logo.png", alt="haml"}
+          -#
+          -# %p.elegantshadow.aboutme Have theoretical skills with:
+          -#     .aboutme__container
+          -#         %a{href:"http://www.json.org/", target:"_blank"} %img{src:"img/JSON-logo.png", alt="json"}
+          -#         %a{href:"http://www.w3schools.com/ajax/", target:"_blank"} %img{src:"img/AJAX-logo.png", alt="ajax"}
+          -#         %a{href:"http://underscorejs.org/", target:"_blank"} %img{src:"img/underscore-logo.png", alt="underscore.js"}
+          -#         %a{href:"http://www.w3schools.com/xml/", target:"_blank"} %img{src:"img/XML-logo.png", alt="xml"}
+          -#         %a{href:"https://www.mongodb.com/", target:"_blank"} %img{src:"img/MongoDB-logo.png", alt="mongodb"}
+          -#         %a{href:"https://www.adobe.com/products/photoshop-lightroom.html?promoid=KLXLX", target:"_blank"} %img{src:"img/Lightroom-logo.png", alt="Lightroom"}
+          -#         %a{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank"} %img{src:"img/AdobePhotoshop-logo.png", alt="Photoshop"}
+          -#         %a{href:"http://jade-lang.com/", target:"_blank"} %img{src:"img/jade-logo.png", alt="jade"}
+          -#         %a{href:"https://wordpress.org/", target:"_blank"} %img{src:"img/wordpress-logo.png", alt="wordpress"}
+          -#         %a{href:"http://www.autodesk.ru/products/autocad/overview", target:"_blank"} %img{src:"img/autocad-logo.png", alt="autocad"}
+          -#         %a{href:"https://babeljs.io/", target:"_blank"} %img{src:"img/babel-logo.png", alt="babel.js"}
+          -#         %a{href:"https://jquery.com/", target:"_blank"} %img{src:"img/jquery-logo.png", alt="jquery"}
+          -#
+          -# %p.elegantshadow.aboutme Now I learn:
+          -#     .aboutme__container
+          -#         %a{href:"http://riotjs.com/", target:"_blank"} %img{src:"img/riot-logo.png", alt="riotjs"}
+          -#         %a{href:"http://coffeescript.org/", target:"_blank"} %img{src:"img/cs-logo.png", alt="coffescript"}
+          -#         %a{href:"https://nodejs.org/en/", target:"_blank"} %img{src:"img/nodejs-logo.png", alt="nodejs"}
+          -#         %a{href:"http://backbonejs.org/", target:"_blank"} %img{src:"img/BackboneJS_logo.png", alt="backbonejs"}
 
-              -#  _____FOOTER_____
-
-        %footer#footer
+          -# .contacts
+          -#     %p.elegantshadow E-mail:
+          -#         %span.contacts__link.elegantshadow igrfy87@gmail.com
+          -#     %p.elegantshadow Skype:
+          -#         %span.contacts__link.elegantshadow a.tkachenko177
+          -#     %p.elegantshadow Viber:
+          -#         %span.contacts__link.elegantshadow +380688891260
+          -#     %a.elegantshadow.elegantshadow--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank"} Codepen:
+          -#         %span.contacts__link.elegantshadow http://codepen.io/Tkachenko/
+          -#     %a.elegantshadow.elegantshadow--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank"} Github:
+          -#         %span.contacts__link.elegantshadow https://github.com/TkachenkoArtem/
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %script{src:"scripts/script.min.js"}

@@ -1,5 +1,32 @@
 //main: style.scss
 
-.headernav{
-  text-align: right;
+.header {
+  &__avatar {
+    width: 6.000em;
+    height: 6.000em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 3.000em;
+    background-image: url("../img/img01.png");
+    background-position: 50% 0;
+
+    &:after {
+      content:"Artem Tkachenko";
+      position: absolute;
+      top: 60%;
+      left: 100%;
+      font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+      text-align: left;
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      color: #131313;
+      letter-spacing: 0.15em;
+      text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474;
+    }
+  }
+
+  &__nav {
+    text-align: right;
+  }
 }
