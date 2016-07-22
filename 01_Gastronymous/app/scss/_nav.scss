@@ -1,162 +1,160 @@
 //main: style.scss
 
-.nav {
+#nav {
+  width: 100%;
+  height: 93.5px;
+  z-index: 999;
+  padding: 1.000em 2.000em 0;
+  border-bottom: 3.5px solid #7b4c24;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 4px 7px 0 #7b4c24;
+  background: url("../img/backgroundMenuNew.png") repeat-x;
+  @include respond(320, 768) {
+    display: none;
+  }
+  @include respond(768, 1200) {
+    height: 90px;
+    padding: 1.000em 0 0;
+  }
+
+  * {
+    display: inline-block;
+  }
+
+  &:after,
+  &:before {
+    @extend %contentAbsolute;
+    width: 3.5%;
+    height: 105%;
+    top: 0;
+    z-index: 700;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.6;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
+.rounding {
+  @extend %contentAbsolute;
+  width: 14px;
+  height: 8px;
+  top: 100%;
+  background-color: rgba(105, 53, 18, 0.60);
+
+  &--left {
+    left: 0;
+    border-bottom-left-radius: 12px 8px;
+  }
+
+  &--right {
+    right: 0;
+    border-bottom-right-radius: 12px 8px;
+  }
+}
+
+.navigation {
+  position: static;
+
+  &:after,
+  &:before {
+    @extend %contentAbsolute;
+    width: 97%;
+    height: 3px;
+    top: 8%;
+    left: 0;
+    margin-left: 1em;
+    background: url("../img/dashed.png") repeat-x;
+  }
+
+  &:after {
+    top: 90%;
+  }
+
+  &__link {
+    width: 6.000em;
+    margin-left: 11px;
+    margin-right: 11px;
+    padding-top: 0.563em;
+    color: #87391b;
+    cursor: pointer;
+    @include respond-to(768) {
+      width: 5.000em;
+    }
+
+    &--wide {
+      width: 11.000em;
+      @include respond-to(768) {
+        width: 9.000em;
+      }
+    }
+
+    &:hover {
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      box-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.17), inset 0 0.9px 0 rgba(0, 0, 1, 0.15);
+      background: rgba(138, 99, 53, 0.67) no-repeat;
+      text-shadow: 0.5px 0.9px 1px rgba(0, 0, 1, 0.31);
+      color: #f6f6f6;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      @extend %contentAbsolute;
+      height: 39px;
+      top: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+
+    &:hover:before {
+      left: -20px;
+      border-right: 10px solid rgba(138, 99, 53, 0.67);
+    }
+
+    &:hover:after {
+      right: -20px;
+      border-left: 10px solid rgba(138, 99, 53, 0.67);
+    }
+  }
+
+  &__text {
     width: 100%;
-    height: 93.5px;
-    z-index: 999;
-    padding: 1.000em 2.000em 0;
-    border-bottom: 3.5px solid #7b4c24;
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    box-shadow: 0 4px 7px 0 #7b4c24;
-    background: url("../img/backgroundMenuNew.png") repeat-x;
-    @include respond(320, 768) {
-        display: none;
-    }
-    @include respond(768, 1200) {
-        height: 90px;
-        padding: 1.000em 0 0;
+    text-align: center;
+    text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.5);
+    color: inherit;
+
+    &--top {
+      font: 600 1.188em/1.474em "Glasgow-Medium";
+      letter-spacing: 0.129em;
+      text-transform: uppercase;
     }
 
-    * {
-        display: inline-block;
+    &--bottom {
+      @extend %Italic11Georgia;
+      text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.24);
+      letter-spacing: 0.150em;
+      line-height: 2.000em;
+      text-transform: lowercase;
+      @include respond-to(992) {
+        line-height: 2.400em;
+      }
+      @include respond-to(768) {
+        line-height: 2.700em;
+      }
     }
-
-    &:after,
-    &:before {
-        @extend %contentAbsolute;
-        width: 3.5%;
-        height: 105%;
-        top: 0;
-        z-index: 700;
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
-        background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
-        background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
-        background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
-        opacity: 0.6;
-    }
-
-    &:before {
-        left: 0;
-    }
-
-    &:after {
-        right: 0;
-    }
-
-    &__radius {
-        @extend %contentAbsolute;
-        width: 14px;
-        height: 8px;
-        top: 100%;
-        background-color: rgba(105, 53, 18, 0.60);
-
-        &--left {
-            left: 0;
-            border-bottom-left-radius: 12px 8px;
-        }
-
-        &--right {
-            right: 0;
-            border-bottom-right-radius: 12px 8px;
-        }
-    }
-
-    &__ul {
-        position: static;
-
-        &:after,
-        &:before {
-            @extend %contentAbsolute;
-            width: 97%;
-            height: 3px;
-            top: 8%;
-            left: 0;
-            margin-left: 1em;
-            background: url("../img/dashed.png") repeat-x;
-        }
-
-        &:after {
-            top: 90%;
-        }
-
-        &__li {
-            width: 6.000em;
-            margin-left: 11px;
-            margin-right: 11px;
-            padding-top: 0.563em;
-            color: #87391b;
-            cursor: pointer;
-            @include respond-to(768) {
-                width: 5.000em;
-            }
-
-            &:nth-of-type(3),
-            &:nth-of-type(4) {
-                width: 11.000em;
-                @include respond-to(768) {
-                    width: 9.000em;
-                }
-            }
-
-            &:hover {
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                box-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.17), inset 0 0.9px 0 rgba(0, 0, 1, 0.15);
-                background: rgba(138, 99, 53, 0.67) no-repeat;
-                text-shadow: 0.5px 0.9px 1px rgba(0, 0, 1, 0.31);
-                color: #f6f6f6;
-                // transition: 0.5s all;
-            }
-
-            &:hover:after,
-            &:hover:before {
-                @extend %contentAbsolute;
-                height: 39px;
-                top: 0;
-                border-top: 10px solid transparent;
-                border-bottom: 10px solid transparent;
-            }
-
-            &:hover:before {
-                left: -20px;
-                border-right: 10px solid rgba(138, 99, 53, 0.67);
-            }
-
-            &:hover:after {
-                right: -20px;
-                border-left: 10px solid rgba(138, 99, 53, 0.67);
-            }
-
-            span {
-                width: 100%;
-                text-align: center;
-                text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.5);
-                color: inherit;
-            }
-
-            & > span:nth-of-type(1) {
-                font: 600 1.188em/1.474em "Glasgow-Medium";
-                letter-spacing: 0.129em;
-                text-transform: uppercase;
-            }
-
-            & > span:nth-of-type(2) {
-                @extend %Italic11Georgia;
-                text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.24);
-                letter-spacing: 0.150em;
-                line-height: 2.000em;
-                text-transform: lowercase;
-                @include respond-to(992) {
-                    line-height: 2.400em;
-                }
-                @include respond-to(768) {
-                    line-height: 2.700em;
-                }
-            }
-        }
-    }
+  }
 }

@@ -82,37 +82,34 @@
       </header>
 
       <!--NAV-->
-      <nav id="nav" class="nav">
-        <div class="nav__radius nav__radius--left"></div>
-        <div class="nav__radius nav__radius--right"></div>
-        <ul class="nav__ul">
-          <li onclick="location.href='#';" class="nav__ul__li"><span>Gastro</span><span>slot</span></li>
-          <li onclick="location.href='#';" class="nav__ul__li"><span>dinner</span><span>club</span></li>
-          <li onclick="location.href='#';" class="nav__ul__li"><span>food tracker</span><span>tracking</span></li>
-          <li onclick="location.href='#';" class="nav__ul__li"><span>restaurant</span><span>search</span></li>
-          <li onclick="location.href='#';" class="nav__ul__li"><span>menu</span><span>mix</span></li>
-          <li onclick="location.href='#';" class="nav__ul__li"><span>street</span><span>walker</span></li>
+      <nav id="nav">
+        <div class="rounding rounding--left"></div>
+        <div class="rounding rounding--right"></div>
+        <ul class="navigation">
+          <li onclick="location.href='#';" class="navigation__link"><span class="navigation__text navigation__text--top">Gastro</span><span class="navigation__text navigation__text--bottom">slot</span></li>
+          <li onclick="location.href='#';" class="navigation__link"><span class="navigation__text navigation__text--top">dinner</span><span class="navigation__text navigation__text--bottom">club</span></li>
+          <li onclick="location.href='#';" class="navigation__link navigation__link--wide"><span class="navigation__text navigation__text--top">food tracker</span><span class="navigation__text navigation__text--bottom">tracking</span></li>
+          <li onclick="location.href='#';" class="navigation__link navigation__link--wide"><span class="navigation__text navigation__text--top">restaurant</span><span class="navigation__text navigation__text--bottom">search</span></li>
+          <li onclick="location.href='#';" class="navigation__link"><span class="navigation__text navigation__text--top">menu</span><span class="navigation__text navigation__text--bottom">mix</span></li>
+          <li onclick="location.href='#';" class="navigation__link"><span class="navigation__text navigation__text--top">street</span><span class="navigation__text navigation__text--bottom">walker</span></li>
         </ul>
       </nav>
 
       <!--MAIN-->
       <main>
-        <div class="slidercontainer">
-
-          <div class="slidercontainer__circle">
-            <p class="slidercontainer__circle__header">garry parkers
-              <br><span class="slidercontainer__circle__header--bottom">restaurants</span></p>
-            <hr class="slidercontainer__circle__line">
-            <span class="slidercontainer__circle__text">The bloodied bodies lay <br> stuffed and tangled in the <br> back.</span>
+        <div>
+          <div class="circle">
+            <p class="circle__header">garry parkers
+              <br><span class="circle__header--bottom">restaurants</span></p>
+            <hr class="circle__line">
+            <span class="circle__text">The bloodied bodies lay <br> stuffed and tangled in the <br> back.</span>
           </div>
 
-          <div class="slidercontainer__slick">
-
-            <div class="slidercontainer__slide"><img src="img\slider1.png" alt="holl"></div>
-            <div class="slidercontainer__slide"><img src="img\slider2.png" alt="holl"></div>
-            <div class="slidercontainer__slide"><img src="img\slider3.png" alt="holl"></div>
-            <div class="slidercontainer__slide"><img src="img\slider4.png" alt="holl"></div>
-
+          <div class="slick">
+            <img src="img\slider1.png" alt="holl">
+            <img src="img\slider2.png" alt="holl">
+            <img src="img\slider3.png" alt="holl">
+            <img src="img\slider4.png" alt="holl">
           </div>
         </div>
 
@@ -311,7 +308,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script>
-      $('.slidercontainer__slick').slick({
+      $('.slick').slick({
         autoplay: true
       });
     </script>
