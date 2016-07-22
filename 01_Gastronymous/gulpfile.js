@@ -80,7 +80,7 @@ gulp.task('css', () => {
 
 /*операции с js*/
 gulp.task('compress', () => {
-    return gulp.src('app/scripts/*.js')
+    return gulp.src('app/scripts/script.js')
         .pipe(uglify())
         .pipe(rename('script.min.js'))
         .pipe(gulp.dest('dist/scripts/'));

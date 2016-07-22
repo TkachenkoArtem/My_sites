@@ -13,8 +13,7 @@ main {
   }
 }
 
-.slidercontainer {
-  &__circle {
+.circle {
     width: 12em;
     height: 12em;
     position: absolute;
@@ -57,8 +56,6 @@ main {
     }
   }
 
-}
-
 .moreBesideHead-up {
   @extend %Italic11Georgia;
   margin-left: 0.500em;
@@ -67,14 +64,14 @@ main {
   color: $darkGreen !important;
 }
 
-.fa-angle-left.fa-2x,
-.fa-angle-right.fa-2x {
-  font-size: 1.5em;
-}
-
-.pagination {
-  list-style: none;
-}
+// .fa-angle-left.fa-2x,
+// .fa-angle-right.fa-2x {
+//   font-size: 1.5em;
+// }
+//
+// .pagination {
+//   list-style: none;
+// }
 
 .post {
   @extend %Georgia13;
