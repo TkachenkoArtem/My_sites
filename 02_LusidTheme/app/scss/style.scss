@@ -95,10 +95,10 @@ ul {
     &__listitem {
         display: block;
         text-transform: uppercase;
+    }
 
-        &__anchor {
-            font: 700 0.700em "Arial";
-        }
+    &__anchor {
+        font: 700 0.700em "Arial";
     }
 }
 

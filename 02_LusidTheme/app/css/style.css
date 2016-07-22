@@ -92,8 +92,8 @@ ul {
   .rss__listitem {
     display: block;
     text-transform: uppercase; }
-    .rss__listitem__anchor {
-      font: 700 0.700em "Arial"; }
+  .rss__anchor {
+    font: 700 0.700em "Arial"; }
 
 .mainmenu {
   display: inline-block;
@@ -276,26 +276,27 @@ ul {
   @media only screen and (min-width: 320px) and (max-width: 991px) {
     .asideright {
       display: none; } }
-  .asideright__circle {
-    border-bottom: 2px groove lightgray;
-    text-align: center; }
-    .asideright__circle__inside {
-      margin: 0 0.300em;
-      width: 6.500em;
-      height: 6.500em;
-      border: 10px solid white;
-      border-radius: 3.250em;
-      text-align: center;
-      vertical-align: middle;
-      background-color: #5d9b9a; }
-    .asideright__circle__container {
-      display: inline-block; }
-    .asideright__circle__followers {
-      display: block;
-      padding: 0.600em 2.000em;
-      width: 100%;
-      font-size: 0.800em;
-      color: dimgray; }
+
+.circle {
+  border-bottom: 2px groove lightgray;
+  text-align: center; }
+  .circle__inside {
+    margin: 0 0.300em;
+    width: 6.500em;
+    height: 6.500em;
+    border: 10px solid white;
+    border-radius: 3.250em;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #5d9b9a; }
+  .circle__container {
+    display: inline-block; }
+  .circle__followers {
+    display: block;
+    padding: 0.600em 2.000em;
+    width: 100%;
+    font-size: 0.800em;
+    color: dimgray; }
 
 .fa-tumblr,
 .fa-twitter {
@@ -321,21 +322,21 @@ ul {
       margin-left: 10.700em; } }
   .paginator__menu {
     padding: 0; }
-    .paginator__menu__list {
-      display: inline-block;
-      margin-right: 0.600em;
-      padding-top: 0.3em;
-      width: 30px;
-      height: 30px;
-      border: 1px solid lightgray;
-      background-color: #f2f2f2;
-      text-align: center; }
-      .paginator__menu__list:hover {
-        border: 1px solid dimgray;
-        background-color: lightgray; }
-      .paginator__menu__list a {
-        vertical-align: middle;
-        font-weight: bold; }
+  .paginator__list {
+    display: inline-block;
+    margin-right: 0.600em;
+    padding-top: 0.3em;
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgray;
+    background-color: #f2f2f2;
+    text-align: center; }
+    .paginator__list:hover {
+      border: 1px solid dimgray;
+      background-color: lightgray; }
+    .paginator__list a {
+      vertical-align: middle;
+      font-weight: bold; }
 
 .search {
   margin: 2.000em auto 2.700em; }
@@ -381,9 +382,8 @@ ul {
   text-transform: uppercase; }
   .asidemenu__list {
     margin-top: 0.600em;
-    padding: .400em;
-    padding-left: .800em;
-    font-size: .800em;
+    padding: 0.400em 0.400em 0.400em 0.800em;
+    font-size: 0.800em;
     background-color: white;
     border-radius: 8px;
     color: lightgray; }
