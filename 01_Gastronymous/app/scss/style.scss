@@ -1,0 +1,238 @@
+//out: ../css/style.css
+@import "mixins/placeholder-color";
+@import "mixins/triangle";
+@import "mixins/media";
+@import "fonts";
+$darkGreen: #278f7f;
+$lightGreen: #99c9c2;
+$postAndInterrogation: #9c8c6a;
+
+* {
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  font-size: 16px;
+  @include respond-to(320) {
+    font-size: 12px;
+  }
+  @include respond-to(480) {
+    font-size: 13px;
+  }
+  @include respond-to(768) {
+    font-size: 14px;
+  }
+  @include respond-to(992) {
+    font-size: 15px;
+  }
+}
+
+body {
+  background: fixed $lightGreen url("../img/background.png");
+
+  &:before {
+    @extend %contentAbsolute;
+    width: 100%;
+    height: 547px;
+    left: 0;
+    z-index: -1;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 0.53)), to(rgba(237, 237, 237, 0.01)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 0.53) 47%, rgba(237, 237, 237, 0.01) 100%);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 0.53) 47%, rgba(237, 237, 237, 0.01) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 0.53) 47%, rgba(237, 237, 237, 0.01) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 0.53) 47%, rgba(237, 237, 237, 0.01) 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#ffffff', endColorstr='#ededed', GradientType=0);
+    opacity: 0.8;
+  }
+}
+
+h1 {
+  padding-top: 1.000em;
+  font: expanded 3.813em "Lady Copra";
+  letter-spacing: -1px;
+  text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.2);
+  color: $darkGreen;
+  @include respond-to(320) {
+    padding-top: 0.200em;
+  }
+  @include respond-to(480) {
+    padding-top: 0.200em;
+  }
+  @include respond-to(1200) {
+    padding-left: 0.600em;
+  }
+}
+
+h2 {
+  margin-bottom: 0.300em;
+  font: 1.250em "Georgia";
+  word-spacing: 2.5px;
+  text-align: justify;
+  color: $darkGreen;
+}
+
+h3 {
+  font: 700 1.000em "Interstate";
+  letter-spacing: 1.0px;
+  text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  color: #545454;
+}
+
+h4 {
+  font: 400 1.625em "Lady Copra";
+  text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.3);
+  color: inherit;
+  @include respond-to(320) {
+    font-size: 1.200em;
+  }
+}
+
+h5 {
+  color: blue;
+  border-top: 1px solid red;
+  border-radius: 6px;
+  text-shadow: ghostwhite;
+  letter-spacing: 0.6px;
+}
+
+h6 {
+  @extend %Italic12Georgia;
+  text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.5);
+  color: $darkGreen;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+a[href] {
+  text-decoration: none;
+  color: inherit;
+}
+
+#back-to-top {
+  width: 1.000em;
+  height: 1.000em;
+  position: fixed;
+  bottom: 0.300em;
+  right: 0.300em;
+  vertical-align: middle;
+  z-index: 9999;
+  border: 0;
+  border-radius: 0.5em;
+  background: $lightGreen;
+  transition: opacity 0.2s ease-out;
+  font-size: 3.000em;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  cursor: pointer;
+  @include respond(320, 768) {
+    background: transparent;
+    color: $lightGreen;
+  }
+}
+
+#back-to-top:hover {
+  background: $darkGreen;
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
+.github {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  color: $darkGreen;
+
+  &__link {
+    font: 0.813em "Lady Copra";
+  }
+}
+
+.fa-github:before {
+  color: $darkGreen;
+}
+
+.wrapper {
+  width: 98%;
+  @include respond-to(992) {
+    width: 970px;
+  }
+  @include respond-to(1200) {
+    width: 1018px;
+  }
+}
+
+.mobilesearch {
+  top: 0;
+  position: absolute;
+  display: none;
+  z-index: 99999;
+  @include respond(320, 768) {
+    display: block;
+  }
+
+  input[type=search] {
+    background: url("../img/mobileSearch.png") no-repeat 9px center;
+    border: none;
+    padding: 9px 10px 9px 30px;
+    width: 30px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+
+    &:focus {
+      width: 100%;
+      opacity: 0.7;
+      border: none;
+      background-color: $lightGreen;
+      outline: none;
+    }
+  }
+}
+
+.fa-facebook-square {
+  color: #3b5998 !important;
+}
+
+.fa-twitter-square {
+  color: #00acee !important;
+}
+
+.fa-rss-square {
+  color: #ff8d00 !important;
+}
+
+%Italic11Georgia {
+  font: italic 0.688em "Georgia";
+}
+
+%Italic12Georgia {
+  font: italic 0.750em "Georgia";
+}
+
+%Georgia13 {
+  font: 400 0.813em/1.385em "Georgia";
+}
+
+%notBorderNotOutline {
+  outline: none;
+  border: none;
+}
+
+%contentAbsolute {
+  content: '';
+  position: absolute;
+}
+@import "header";
+@import "nav";
+@import "burgerMenu";
+@import "main";
+@import "footer";

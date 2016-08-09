@@ -1,0 +1,138 @@
+//main: style.scss
+
+.burgermenu {
+    width: 100%;
+    top: 25px;
+    position: fixed;
+    z-index: 99999;
+    display: none;
+    @include respond(320, 768) {
+        display: block;
+    }
+
+    &__list {
+        position: relative;
+        float: left;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+            background: $darkGreen;
+            color: white;
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 0;
+            line-height: 25px;
+            padding: 0 15px;
+            overflow: hidden;
+            text-align: left;
+            cursor: pointer;
+
+            &:not(.fa) {
+                font: 1.188em "Glasgow-Medium";
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $lightGreen;
+                }
+            }
+
+            &.fa {
+                width: calc(100%/3);
+
+                &:nth-of-type(1) {
+                    text-align: right;
+                }
+
+                &:nth-of-type(2) {
+                    text-align: center;
+                }
+
+                &:nth-of-type(3) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+.burgermenu__check {
+    display: none;
+}
+
+.burgermenu__label {
+    float: left;
+    margin-left: 10px;
+    height: 60px;
+    cursor: pointer;
+
+    &:after {
+        @extend %contentAbsolute;
+        bottom: 7px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    span {
+        position: absolute;
+        top: 15px;
+        width: 20px;
+        height: 3px;
+        background: $darkGreen;
+        border-radius: 0.2em;
+
+        &:after,
+        &:before {
+            @extend %contentAbsolute;
+            left: 0;
+            top: 20px;
+            width: 20px;
+            height: 3px;
+            background: $darkGreen;
+            border-radius: 0.2em;
+        }
+
+        &:after {
+            top: 6px;
+        }
+
+        &:before {
+            top: -6px;
+        }
+    }
+}
+
+.burgermenu__label span:after .burgermenu__check:checked + .burgermenu__label:after {
+    content: "";
+}
+
+.burgermenu__check:checked + .burgermenu__label span {
+    height: 0;
+    width: 0;
+}
+
+.burgermenu__check:checked + .burgermenu__label span:after,
+.burgermenu__check:checked + .burgermenu__label span:before {
+    top: 6px;
+}
+
+.burgermenu__check:checked + .burgermenu__label span:before {
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+.burgermenu__check:checked + .burgermenu__label span:after {
+    -webkit-transform: rotate(-225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(-225deg);
+}
+
+#main-nav:checked ~ ul a {
+    height: 30px;
+}

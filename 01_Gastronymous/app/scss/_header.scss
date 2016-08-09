@@ -1,0 +1,133 @@
+//main: style.scss
+
+#header {
+    margin-bottom: 2.000em;
+    @include respond(320, 768) {
+        margin-bottom: 1.000em;
+    }
+
+    & > * {
+        width: 33%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    p {
+        text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.5);
+        color: #646767;
+    }
+
+    & > div:nth-of-type(1) {
+        @include respond-to(320) {
+            display: none;
+        }
+        @include respond-to(480) {
+            display: none;
+        }
+
+        p {
+            font: italic 400 0.688em/1.636em "Georgia";
+        }
+
+        h3 {
+            padding: 2.813em 0 0.750em;
+        }
+
+        a,
+        h3 {
+            display: inherit;
+        }
+    }
+
+    & > div:nth-of-type(2) {
+        @extend %Italic12Georgia;
+        text-align: center;
+        @include respond-to(320) {
+            width: 100%;
+            padding-left: 0;
+        }
+        @include respond-to(480) {
+            width: 100%;
+            padding-left: 0;
+        }
+        @include respond-to(768) {
+            width: 40%;
+        }
+
+        p {
+            @include respond-to(1200) {
+                padding-left: 2.000em;
+            }
+
+            &:after,
+            &:before {
+                content: '';
+                width: 16%;
+                display: inline-block;
+                vertical-align: middle;
+                border: none;
+                border-bottom: 0.2px solid #646767;
+            }
+
+            &:before {
+                margin-right: 0.667em;
+            }
+
+            &:after {
+                margin-left: 0.667em;
+            }
+        }
+    }
+
+    & > div:nth-of-type(3) {
+        padding: 4.125em 0 0 8.375em;
+        @include respond-to(320) {
+            display: none;
+        }
+        @include respond-to(480) {
+            display: none;
+        }
+        @include respond-to(768) {
+            width: 25%;
+            padding-left: 1.000em;
+        }
+
+        .searchFolder {
+            width: 100%;
+            padding-left: 0.875em;
+            border-radius: 13px;
+            box-shadow: inset 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
+            background-color: white;
+            padding-bottom: 2px;
+
+            input[type="search"] {
+                @extend %Italic11Georgia;
+                @extend %notBorderNotOutline;
+                width: 84%;
+                height: 17px;
+                background-color: transparent;
+                cursor: text;
+                @include respond-to(320) {
+                    width: 77%;
+                }
+                @include respond-to(480) {
+                    width: 80%;
+                }
+            }
+
+            input[type="search"]:focus {
+                font-style: normal;
+            }
+
+            input[type="submit"] {
+                display: none;
+            }
+        }
+
+        .fa-search {
+            font-size: 0.8em;
+            color: #aeb7bf;
+            cursor: pointer;
+        }
+    }
+}
