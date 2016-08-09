@@ -37,6 +37,16 @@ img {
   padding-right: 0.800em;
   vertical-align: middle; }
 
+.wrapper {
+  width: calc(100vw - 9.000em);
+  min-height: calc(100vh - 2.000em);
+  top: 1.000em;
+  bottom: -1.000em;
+  z-index: 99;
+  overflow: hidden;
+  background: #e7e5e4;
+  box-shadow: -2px -2px 15px 7px rgba(158, 158, 158, 0.82) inset; }
+
 .tablet {
   width: 100%;
   height: calc(100% + 2.000em);
@@ -62,15 +72,6 @@ img {
   top: 42%;
   left: 1%;
   background: white; }
-
-.wrapper {
-  width: calc(100vw - 9.000em);
-  top: 1.000em;
-  bottom: -1.000em;
-  z-index: 99;
-  overflow: hidden;
-  background: #e7e5e4;
-  box-shadow: -2px -2px 15px 7px rgba(158, 158, 158, 0.82) inset; }
 
 .elegantshadow {
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
@@ -131,14 +132,11 @@ img {
   text-align: right; }
 
 main {
-  padding-top: 5.500em;
-  padding-left: .500em;
-  padding-right: .500em;
-  padding-bottom: .500em; }
+  padding: 5.500em 0.500em 0.500em; }
 
 .elegantshadow--main {
   font-size: 8.000em;
-  padding: 0 0 .300em; }
+  padding: 0 0 0.300em; }
 
 .aboutme {
   width: 100%;

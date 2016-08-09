@@ -28,13 +28,13 @@
 /*Onload*/
 (function() {
     document.addEventListener("DOMContentLoaded", function() {
-        document.getElementsByTagName('main')[0].innerHTML = '<p class="elegantshadow elegantshadow--main">Junior<br>Web-developer</p>';
+        document.getElementsByTagName('main')[0].innerHTML = '<p class="elegantshadow elegantshadow--main">Junior</p> <p class="elegantshadow elegantshadow--main">Front-end developer</p>';
     });
 })();
 
 /*loadHome*/
 function loadHome() {
-    document.getElementsByTagName('main')[0].innerHTML = '<p class="elegantshadow elegantshadow--main">Junior<br>Web-developer</p>';
+    document.getElementsByTagName('main')[0].innerHTML = '<p class="elegantshadow elegantshadow--main">Junior</p> <p class="elegantshadow elegantshadow--main">Front-end developer</p>';
 }
 
 /*loadAboutme*/
@@ -49,5 +49,5 @@ function loadPortfolio() {
 
 /*loadContact*/
 function loadContact() {
-    document.getElementsByTagName('main')[0].innerHTML = '<div class="contacts"> <p class="elegantshadow">E-mail: <span class="contacts__link elegantshadow">igrfy87@gmail.com</span> </p><p class="elegantshadow">Skype: <span class="contacts__link elegantshadow">a.tkachenko177</span> </p><p class="elegantshadow">Viber: <span class="contacts__link elegantshadow">+380688891260</span> </p><a class="elegantshadow elegantshadow--contacts" href="http://codepen.io/Tkachenko/" target="_blank">Codepen: <span class="contacts__link elegantshadow">http://codepen.io/Tkachenko/</span> </a> <a class="elegantshadow elegantshadow--contacts" href="https://github.com/TkachenkoArtem/" target="_blank">Github: <span class="contacts__link elegantshadow">https://github.com/TkachenkoArtem/</span> </a></div>';
+    document.getElementsByTagName('main')[0].innerHTML = '<div class="contacts"> <p class="elegantshadow">E-mail: <a href="mailto:igrfy87@gmail.com" class="contacts__link elegantshadow">igrfy87@gmail.com</a> </p><p class="elegantshadow">Skype: <span class="contacts__link elegantshadow">a.tkachenko177</span> </p><p class="elegantshadow">Viber: <span class="contacts__link elegantshadow">+380688891260</span> </p><a class="elegantshadow elegantshadow--contacts" href="http://codepen.io/Tkachenko/" target="_blank">Codepen: <span class="contacts__link elegantshadow">http://codepen.io/Tkachenko/</span> </a> <a class="elegantshadow elegantshadow--contacts" href="https://github.com/TkachenkoArtem/" target="_blank">Github: <span class="contacts__link elegantshadow">https://github.com/TkachenkoArtem/</span> </a></div>';
 }

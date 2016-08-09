@@ -1,16 +1,12 @@
 //main: style.scss
 
-
 main {
-  padding-top: 5.500em;
-  padding-left: .500em;
-  padding-right: .500em;
-  padding-bottom: .500em;
+  padding: 5.500em 0.500em 0.500em;
 }
 
 .elegantshadow--main {
   font-size: 8.000em;
-  padding: 0 0 .300em;
+  padding: 0 0 0.300em;
 }
 
 .aboutme {
@@ -19,19 +15,22 @@ main {
   padding: 0;
   font-size: 2.000em;
   text-align: left;
+
   &__container {
     text-align: center;
   }
 }
 
-.contacts__link {
-  color: navy;
-  font-size: 1.200em;
-  font-weight: bold;
-  text-transform: lowercase;
-  text-shadow: none;
+.contacts {
+  &__link {
+    color: navy;
+    font-size: 1.200em;
+    font-weight: bold;
+    text-transform: lowercase;
+    text-shadow: none;
+  }
 }
 
-.elegantshadow--contacts{
+.elegantshadow--contacts {
   display: block;
 }
