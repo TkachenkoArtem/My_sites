@@ -1,0 +1,16 @@
+//main: style.scss
+@font-face {
+  font-family: 'Glasgow-Medium';
+  src: url('../fonts/Glasgow-Medium.eot');
+  src: url('../fonts/Glasgow-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Glasgow-Medium.woff2') format('woff2'), url('../fonts/Glasgow-Medium.woff') format('woff'), url('../fonts/Glasgow-Medium.ttf') format('truetype'), url('../fonts/Glasgow-Medium.svg#Glasgow-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AmericanTypewriter';
+  src: url('../fonts/AmericanTypewriter.eot');
+  src: url('../fonts/AmericanTypewriter.eot?#iefix') format('embedded-opentype'), url('../fonts/AmericanTypewriter.woff2') format('woff2'), url('../fonts/AmericanTypewriter.woff') format('woff'), url('../fonts/AmericanTypewriter.ttf') format('truetype'), url('../fonts/AmericanTypewriter.svg#AmericanTypewriter') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

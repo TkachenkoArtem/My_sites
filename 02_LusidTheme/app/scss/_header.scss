@@ -1,0 +1,12 @@
+//main: style.scss
+
+#header {
+    padding: 1.000em 0;
+    border-top: 10px solid rgba(0, 0, 0, 0.06);
+    @include respond(768, 1200) {
+        padding: 1.800em 6.500em;
+    }
+    @include respond-to(1200) {
+        padding: 0 6.500em;
+    }
+}
