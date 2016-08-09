@@ -5,18 +5,18 @@
   "author": "Tkachenko Artem",
   "license": "free",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-base64-inline": "^1.0.3",
-    "gulp-clean-css": "^2.0.9",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-haml": "^0.1.6",
-    "gulp-htmlmin": "^2.0.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-pngmin": "^0.1.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.1",
-    "gulp-uglify": "^1.5.3",
-    "gulp-uncss": "^1.0.5"
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-base64-inline": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat-css": "latest",
+    "gulp-haml": "latest",
+    "gulp-htmlmin": "latest",
+    "gulp-livereload": "latest",
+    "gulp-pngmin": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-uncss": "latest"
   }
 }
