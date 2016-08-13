@@ -192,6 +192,9 @@ a[href] {
 .fa-rss-square {
   color: #ff8d00 !important; }
 
+#ho_adv {
+  display: none !important; }
+
 #header > div:nth-of-type(3) .searchFolder input[type="search"], .navigation__text--bottom, .circle__text, .moreBesideHead-up, .aside .interrogation, .aside .emailFolder input[type="email"] {
   font: italic 0.688em "Georgia"; }
 
