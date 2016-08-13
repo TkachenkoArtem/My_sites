@@ -170,33 +170,33 @@ a[href] {
   }
 }
 
-.mobilesearch {
-  top: 0;
-  position: absolute;
-  display: none;
-  z-index: 99999;
-  @include respond(320, 768) {
-    display: block;
-  }
-
-  input[type=search] {
-    background: url("../img/mobileSearch.png") no-repeat 9px center;
-    border: none;
-    padding: 9px 10px 9px 30px;
-    width: 30px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-
-    &:focus {
-      width: 100%;
-      opacity: 0.7;
-      border: none;
-      background-color: $lightGreen;
-      outline: none;
-    }
-  }
-}
+// .mobilesearch {
+//   top: 0;
+//   position: absolute;
+//   display: none;
+//   z-index: 99999;
+//   @include respond(320, 768) {
+//     display: block;
+//   }
+//
+//   input[type=search] {
+//     background: url("../img/mobileSearch.png") no-repeat 9px center;
+//     border: none;
+//     padding: 9px 10px 9px 30px;
+//     width: 30px;
+//     -webkit-transition: all 0.5s;
+//     -moz-transition: all 0.5s;
+//     transition: all 0.5s;
+//
+//     &:focus {
+//       width: 100%;
+//       opacity: 0.7;
+//       border: none;
+//       background-color: $lightGreen;
+//       outline: none;
+//     }
+//   }
+// }
 
 .fa-facebook-square {
   color: #3b5998 !important;
