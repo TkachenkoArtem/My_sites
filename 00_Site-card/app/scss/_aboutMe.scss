@@ -1,0 +1,17 @@
+//main: style.scss
+
+section[name="section__aboutMe"] {
+  background: #FFD54F;
+  box-shadow: -2px -2px 15px 7px rgba(#FFB300,0.82) inset;
+}
+
+.aboutme {
+  width: 100%;
+  padding: 1.500em;
+  font-size: 2.000em;
+  text-align: left;
+
+  &__container {
+    text-align: center;
+  }
+}

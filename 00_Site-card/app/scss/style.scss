@@ -5,6 +5,7 @@
   position: relative;
   margin: 0 auto;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -21,6 +22,16 @@ html {
   @include respond-to(992) {
     font-size: 15px;
   }
+}
+
+h1 {
+  font-size: 8.000em !important;
+  padding: 0 !important;
+}
+
+h2 {
+  font-size: 2.500em !important;
+  padding: 0.500em 0 0 !important;
 }
 
 a {
@@ -46,48 +57,19 @@ img {
   vertical-align: middle;
 }
 
+section {
+  width: calc(100vw - 18px);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 1.000em 1.000em;
+}
+
 .wrapper {
-  width: calc(100vw - 9.000em);
-  min-height: calc(100vh - 2.000em);
-  top: 1.000em;
-  bottom: -1.000em;
-  z-index: 99;
-  overflow: hidden;
-  background: #e7e5e4;
-  box-shadow: -2px -2px 15px 7px rgba(158,158,158,0.82) inset;
-}
-
-.tablet {
   width: 100%;
-  height: calc(100% + 2.000em);
-  position: absolute;
-  z-index: 1;
-  background: black;
-  border-radius: 2.000em;
-}
-
-.fa-windows {
-  position: absolute;
-  top: 45%;
-  right: 0.8%;
-  z-index: 9999;
-  transform: rotate(90deg);
-  font-size: 3.000em;
-  color: white;
-}
-
-.speaker {
-  width: 3px;
-  height: 5vw;
-  position: absolute;
-  z-index: 9999;
-  top: 42%;
-  left: 1%;
-  background: white;
+  height: 100%;
 }
 
 .elegantshadow {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   font-size: 1.500em;
   padding: 1.000em;
   text-align: center;
@@ -96,6 +78,17 @@ img {
   color: #131313;
   letter-spacing: 0.15em;
   text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ho_adv {
+  display: none !important;
 }
 
 #back-to-top {
@@ -116,11 +109,15 @@ img {
 }
 
 #back-to-top:hover {
-  background: black;
+  background: #E57373;
+  box-shadow: 4px 3px 11px 5px rgba(#E53935,0.82);
+
 }
 
 #back-to-top.show {
   opacity: 0.85;
 }
-@import "header";
-@import "main";
+@import "home";
+@import "aboutMe";
+@import "portfolio";
+@import "contacts";
