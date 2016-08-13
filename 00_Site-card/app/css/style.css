@@ -153,7 +153,7 @@ section[name="section__portfolio"] {
     height: 400px;
     border: none;
     background: white; }
-  .portfolio__figcaption {
+  .portfolio__caption {
     margin: auto;
     padding: 1.000em;
     background: #43A047;
