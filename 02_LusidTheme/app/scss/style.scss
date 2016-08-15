@@ -3,6 +3,10 @@
 @import "fonts";
 
 $brandedcolor: #5d9b9a;
+$dimgray: dimgray;
+$gray: gray;
+$lightgray: lightgray;
+$white: white;
 
 * {
     position: relative;
@@ -12,7 +16,6 @@ $brandedcolor: #5d9b9a;
 }
 
 html {
-    background: url("../img/background.png");
     @include respond-to(320) {
         font-size: 75%;
     }
@@ -28,6 +31,10 @@ html {
     @include respond-to(1200) {
         font-size: 100%;
     }
+}
+
+body {
+  background: url("../img/background.png");
 }
 
 h1 {
@@ -64,6 +71,9 @@ figure {
     @include respond(320, 768) {
         text-align: center;
     }
+    & > ul > li {
+      display: inline-block;
+    }
 }
 
 ul {
@@ -80,9 +90,9 @@ ul {
 
 .rss {
     position: absolute;
-    top: 2.400em;
-    right: 8.500em;
-    color: dimgray;
+    top: 0;
+    right: 2.500em;
+    color: $dimgray;
     @include respond(100, 768) {
         display: none;
     }
@@ -105,6 +115,10 @@ ul {
 .mainmenu {
     display: inline-block;
     margin-right: 1.700em;
+}
+
+#ho_adv {
+  display: none !important;
 }
 
 #back-to-top {
@@ -133,6 +147,5 @@ ul {
     opacity: 1;
 }
 @import "header";
-@import "nav";
 @import "main";
 @import "footer";

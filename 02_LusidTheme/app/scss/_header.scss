@@ -1,12 +1,56 @@
 //main: style.scss
 
-#header {
-    padding: 1.000em 0;
-    border-top: 10px solid rgba(0, 0, 0, 0.06);
-    @include respond(768, 1200) {
-        padding: 1.800em 6.500em;
-    }
+.header {
+  &__nav {
+    padding: 0.150em 0;
+    background-color: $brandedcolor;
+    text-align: right;
     @include respond-to(1200) {
-        padding: 0 6.500em;
+      padding-right: 7.500em;
     }
+
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      border-bottom: 10px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .github {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      z-index: 9999;
+      color: white;
+      @include respond-to(320) {
+        display: none;
+      }
+
+      &__link {
+        font: 0.813em "AmericanTypewriter";
+      }
+    }
+
+    .fa-github:before {
+      color: white;
+    }
+  }
+
+  &__container {
+    @include respond(0, 992) {
+      margin: 1.000em 0;
+    }
+    @include respond(768, 4801) {
+      padding: 0 6.500em;
+    }
+  }
+
+}
+
+.mainmenu--nav {
+  font: 1.000em "Glasgow-Medium";
+  text-shadow: 0.5px 0.5px 0 $lightgray;
+  color: $white;
 }
