@@ -397,7 +397,7 @@ body:before, #nav:after, #nav:before, .rounding, .navigation:after, .navigation:
 
 .burgermenu {
   width: 100%;
-  top: 25px;
+  top: 0;
   position: fixed;
   z-index: 99999;
   display: none; }
