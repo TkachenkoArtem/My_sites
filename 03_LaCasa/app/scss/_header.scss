@@ -1,0 +1,127 @@
+//main: style.scss
+
+#header {
+  padding: 0.500em 2.500em 0;
+  background-color: $brandcolor;
+  @include respond-to(480) {
+    padding: 6.250em 3.500em 23.125em;
+  }
+  @include respond(480, 4801) {
+    background: url("../img/hero_small.png") bottom no-repeat $brandcolor;
+  }
+  @include respond(768, 4801) {
+    padding: 6.250em 12.500em 23.125em;
+  }
+}
+
+.header_top {
+  width: 100%;
+  padding: 0.500em;
+  @include respond(480, 4801) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(#b4b9bf, .45);
+  }
+  @include respond-to(992) {
+    padding: 1.414em 4.500em 0;
+  }
+  @include respond-to(1200) {
+    padding: 1.414em 12.500em 0;
+  }
+
+  &__left {
+    // @include respond(480, 4801) {
+    float: left;
+    // }
+  }
+
+  &__right {
+    // @include respond(480, 4801) {
+    float: right;
+    // }
+    &--bar {
+      // bottom: 0;
+      // right: 0;
+    }
+  }
+}
+
+.header_bottom {
+  @include respond-to(320) {
+    margin-top: 2.000em;
+  }
+}
+
+.fa-bed:before,
+.fa-fax:before,
+.fa-info:before,
+.fa-shopping-basket:before,
+.fa-shopping-cart:before,
+.fa-sign-in:before {
+  margin-right: 0.6em;
+}
+
+.fa-arrow-right,
+.fa-bars {
+  margin-top: 0.670em;
+
+  &:before {
+    float: right;
+    font-size: 2.000em;
+    color: white;
+  }
+}
+
+.navigation {
+  width: 6.250em;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 2.500em;
+  color: #ffffff;
+
+  &:hover {
+    outline: #ffffff solid 2px;
+    transition: 0.5s;
+    -moz-outline-radius: 2px;
+  }
+
+  span {
+    font: 1.000em "Lato";
+  }
+}
+
+h2 + ul {
+  position: absolute;
+  display: block;
+  width: 260px;
+  top: 100px;
+  left: 50%;
+  margin-left: -130px;
+  @include respond-to(320) {
+    display: none;
+  }
+  @include respond(480, 992) {
+    top: 80px;
+  }
+  @include respond(992, 1255) {
+    top: 200px;
+  }
+  @include respond(1255, 4801) {
+    top: 100px;
+  }
+}
+
+.under_h2 {
+  &__anchor {
+    padding: 0 0.800em;
+    font: 0.875em "Lato";
+    color: #ffffff;
+
+    &:not(.under_h2__anchor--last)::after {
+      content: " - ";
+      position: absolute;
+      padding: 0 0.600em;
+    }
+  }
+}
