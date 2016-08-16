@@ -27,6 +27,9 @@ h2 {
   font-size: 2.500em !important;
   padding: 0.500em 0 0 !important; }
 
+h3 {
+  margin-bottom: 1.000em; }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -160,11 +163,11 @@ section[name="section__portfolio"] {
     text-align: center; }
 
 section[name="section__contacts"] {
-  background: #A1887F;
-  box-shadow: -2px -2px 15px 7px rgba(109, 76, 65, 0.82) inset; }
+  background: #9575CD;
+  box-shadow: -2px -2px 15px 7px rgba(94, 53, 177, 0.82) inset; }
 
 .contacts__link {
-  color: #3E2723;
+  color: #311B92;
   font-size: 1.200em;
   font-weight: bold;
   text-transform: lowercase;

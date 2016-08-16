@@ -1,13 +1,13 @@
 //main: style.scss
 
 section[name="section__contacts"] {
-  background: #A1887F;
-  box-shadow: -2px -2px 15px 7px rgba(#6D4C41,0.82) inset;
+  background: #9575CD;
+  box-shadow: -2px -2px 15px 7px rgba(#5E35B1,0.82) inset;
 }
 
 .contacts {
   &__link {
-    color: #3E2723;
+    color: #311B92;
     font-size: 1.200em;
     font-weight: bold;
     text-transform: lowercase;
