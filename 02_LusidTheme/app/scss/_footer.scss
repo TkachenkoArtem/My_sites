@@ -3,46 +3,51 @@
 #footer {
   margin-bottom: 5.000em;
   padding: 0.500em;
-    border-top: 2px groove lightgray;
-    text-transform: uppercase;
-    @include respond(992, 4801) {
-        padding: 0.700em 7.000em;
-    }
+  border-top: 2px groove $lightgray;
+  text-transform: uppercase;
+  @include respond(992, 4801) {
+    padding: 0.700em 7.000em;
+  }
 
-    br {
-        display: none;
-        @include respond-to(320) {
-            display: block;
-        }
+  &::after {
+    @extend %clearfix;
+  }
+
+  br {
+    display: none;
+    @include respond-to(320) {
+      display: block;
     }
+  }
 }
 
 .rss--footer {
-    top: -4.300em;
-    right: 7.500em;
+  top: -4.300em;
+  right: 7.500em;
 }
 
-.mainmenu--footer {
-    color: dimgray;
-    font-size: 0.700em;
+.footer_left_part {
+  float: left;
+  font-size: 0.7500em;
+  padding-top: 0.300em;
+  color: $dimgray;
+
+  &__text {
+    margin-top: 0.200em;
+  }
 }
 
-.footerleftpart {
-    float: left;
-    font-size: 0.7500em;
-    padding-top: 0.300em;
-    color: dimgray;
+.footer_right_part {
+  float: right;
+  padding: 0;
 
-    &__text {
-        margin-top: 0.200em;
+  & > li {
+    display: inline-block;
+    margin-right: 1.200em;
+
+    & > a {
+      color: $dimgray;
+      font-size: 0.700em;
     }
-}
-
-.footerrightpart {
-    float: right;
-    padding: 0;
-
-    .mainmenu {
-        margin-right: 1.200em;
-    }
+  }
 }

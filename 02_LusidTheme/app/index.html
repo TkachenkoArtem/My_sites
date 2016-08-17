@@ -6,18 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LusidTheme</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <!--[if lt IE 9]>
-    <script src="https://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
-    <![endif]-->
-    <!--[if gte IE 9]
-    <style type="text/css">
-    #footer { filter: none; }
-    </style>
-    <![endif]-->
-    <!--[if lt IE 9]>
-    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -36,11 +24,11 @@
             <a href="https://github.com/TkachenkoArtem/My_sites/tree/master/02_LusidTheme" target="_blank"
                 class="github__link">Link to github</a>
           </div>
-          <ul>
-            <li class="mainmenu"><a href="#" class="mainmenu--nav" target="_blank">home</a></li>
-            <li class="mainmenu"><a href="#" class="mainmenu--nav" target="_blank">abort</a></li>
-            <li class="mainmenu"><a href="#" class="mainmenu--nav" target="_blank">categories</a></li>
-            <li class="mainmenu"><a href="#" class="mainmenu--nav" target="_blank">contact us</a></li>
+          <ul class="header__menu">
+            <li><a href="#" target="_blank">home</a></li>
+            <li><a href="#" target="_blank">abort</a></li>
+            <li><a href="#" target="_blank">categories</a></li>
+            <li><a href="#" target="_blank">contact us</a></li>
           </ul>
         </nav>
         <div class="header__container">
@@ -81,33 +69,29 @@
                   ab eius! Modi temporibus reprehenderit illo fugiat commodi, harum,
                   ut et dicta.</p>
               </div>
-              <figure>
-                <ul>
-                  <li><img src="img/img01.png" alt="img01" class="article_right_part__image"></li>
-                  <li><img src="img/img02.png" alt="img02" class="article_right_part__image"></li>
-                  <li><img src="img/img03.png" alt="img03" class="article_right_part__image"></li>
-                </ul>
-              </figure>
+              <ul class="article_right_part__image">
+                <li><img src="img/img01.png" alt="img01"></li>
+                <li><img src="img/img02.png" alt="img02"></li>
+                <li><img src="img/img03.png" alt="img03"></li>
+              </ul>
             </div>
             <div class="article_left_part">
-              <div class="article_left_part__soсial">
-                <ul class="article_left_part__soсial">
-                  <li class="fa fa-commenting"><span class="article__link">coments: 12</span></li>
-                  <li class="fa fa-heart"><span class="article__link">liked: 31 people</span></li>
-                  <li class="fa fa-user-plus"><span class="article__link">by: admin</span></li>
-                </ul>
-                <div class="article_left_part__category">
-                  <a href="#" class="article__link article__link--category_and_tags">category:</a>
-                  <a href="#" class="article_link__tag">unnamed 1</a>
-                </div>
-                <div class="article_left_part__tags">
-                  <a href="#" class="article__link article__link--category_and_tags">tags:</a>
-                  <br>
-                  <a href="#" class="article_link__tag">demo tag 1</a>
-                  <a href="#" class="article_link__tag">demo tag 2</a>
-                  <a href="#" class="article_link__tag">demo tag 3</a>
-                  <a href="#" class="article_link__tag">demo tag 4</a>
-                </div>
+              <ul class="article_left_part__soсial">
+                <li class="fa fa-commenting"><span>coments: 12</span></li>
+                <li class="fa fa-heart"><span>liked: 31 people</span></li>
+                <li class="fa fa-user-plus"><span>by: admin</span></li>
+              </ul>
+              <div class="article_left_part__category">
+                <a href="#" class="article__link article__link--category_and_tags">category:</a>
+                <a href="#" class="article_link__tag">unnamed 1</a>
+              </div>
+              <div class="article_left_part__tags">
+                <a href="#" class="article__link article__link--category_and_tags">tags:</a>
+                <br>
+                <a href="#">demo tag 1</a>
+                <a href="#">demo tag 2</a>
+                <a href="#">demo tag 3</a>
+                <a href="#">demo tag 4</a>
               </div>
             </div>
           </article>
@@ -136,21 +120,19 @@
                   ab eius! Modi temporibus reprehenderit illo fugiat commodi, harum,
                   ut et dicta.</p>
               </div>
-              <figure>
-                <ul>
-                  <li><img src="img/img01.png" alt="img01" class="article_right_part__image"></li>
-                  <li><img src="img/img02.png" alt="img02" class="article_right_part__image"></li>
-                  <li><img src="img/img02.png" alt="img02" class="article_right_part__image"></li>
-                  <li><img src="img/img03.png" alt="img03" class="article_right_part__image"></li>
-                  <li><img src="img/img03.png" alt="img03" class="article_right_part__image"></li>
-                </ul>
-              </figure>
+              <ul class="article_right_part__image">
+                <li><img src="img/img01.png" alt="img01"></li>
+                <li><img src="img/img02.png" alt="img02"></li>
+                <li><img src="img/img02.png" alt="img02"></li>
+                <li><img src="img/img03.png" alt="img03"></li>
+                <li><img src="img/img03.png" alt="img03"></li>
+              </ul>
             </div>
             <div class="article_left_part">
               <ul class="article_left_part__soсial">
-                <li class="fa fa-commenting"><span class="article__link">coments: 12</span></li>
-                <li class="fa fa-heart"><span class="article__link">liked: 31 people</span></li>
-                <li class="fa fa-user-plus"><span class="article__link">by: admin</span></li>
+                <li class="fa fa-commenting"><span>coments: 12</span></li>
+                <li class="fa fa-heart"><span>liked: 31 people</span></li>
+                <li class="fa fa-user-plus"><span>by: admin</span></li>
               </ul>
               <div class="article_left_part__category">
                 <a href="#" class="article__link article__link--category_and_tags">category:</a>
@@ -159,10 +141,10 @@
               <div class="article_left_part__tags">
                 <a href="#" class="article__link article__link--category_and_tags">tags:</a>
                 <br>
-                <a href="#" class="article_link__tag">demo tag 1</a>
-                <a href="#" class="article_link__tag">demo tag 2</a>
-                <a href="#" class="article_link__tag">demo tag 3</a>
-                <a href="#" class="article_link__tag">demo tag 4</a>
+                <a href="#">demo tag 1</a>
+                <a href="#">demo tag 2</a>
+                <a href="#">demo tag 3</a>
+                <a href="#">demo tag 4</a>
               </div>
             </div>
           </article>
@@ -191,18 +173,16 @@
                   ab eius! Modi temporibus reprehenderit illo fugiat commodi, harum,
                   ut et dicta.</p>
               </div>
-              <figure>
-                <ul>
-                  <li><img src="img/img02.png" alt="img02" class="article_right_part__image"></li>
-                  <li><img src="img/img03.png" alt="img03" class="article_right_part__image"></li>
-                </ul>
-              </figure>
+              <ul class="article_right_part__image">
+                <li><img src="img/img02.png" alt="img02"></li>
+                <li><img src="img/img03.png" alt="img03"></li>
+              </ul>
             </div>
             <div class="article_left_part">
               <ul class="article_left_part__soсial">
-                <li class="fa fa-commenting"><span class="article__link">coments: 12</span></li>
-                <li class="fa fa-heart"><span class="article__link">liked: 31 people</span></li>
-                <li class="fa fa-user-plus"><span class="article__link">by: admin</span></li>
+                <li class="fa fa-commenting"><span>coments: 12</span></li>
+                <li class="fa fa-heart"><span>liked: 31 people</span></li>
+                <li class="fa fa-user-plus"><span>by: admin</span></li>
               </ul>
               <div class="article_left_part__category">
                 <a href="#" class="article__link article__link--category_and_tags">category:</a>
@@ -211,10 +191,10 @@
               <div class="article_left_part__tags">
                 <a href="#" class="article__link article__link--category_and_tags">tags:</a>
                 <br>
-                <a href="#" class="article_link__tag">demo tag 1</a>
-                <a href="#" class="article_link__tag">demo tag 2</a>
-                <a href="#" class="article_link__tag">demo tag 3</a>
-                <a href="#" class="article_link__tag">demo tag 4</a>
+                <a href="#">demo tag 1</a>
+                <a href="#">demo tag 2</a>
+                <a href="#">demo tag 3</a>
+                <a href="#">demo tag 4</a>
               </div>
             </div>
           </article>
@@ -238,37 +218,37 @@
             <input type="search" placeholder="site search" autocomplete="on" class="search__fild">
             <input type="submit" value="search" class="search__button">
           </form>
-          <div>
-            <div class="poster">
-              <p class="poster__text">125 X 125</p>
+          <div class="posters">
+            <div>
+              <p>125 X 125</p>
             </div>
-            <div class="poster">
-              <p class="poster__text">125 X 125</p>
+            <div>
+              <p>125 X 125</p>
             </div>
-            <div class="poster">
-              <p class="poster__text">125 X 125</p>
+            <div>
+              <p>125 X 125</p>
             </div>
-            <div class="poster">
-              <p class="poster__text">125 X 125</p>
+            <div>
+              <p>125 X 125</p>
             </div>
           </div>
           <div class="aside_menu">
             <h3>focus</h3>
-            <ul>
-              <li class="aside_menu__list"><a href="#">all</a></li>
-              <li class="aside_menu__list"><a href="#">code &#38; design</a></li>
-              <li class="aside_menu__list"><a href="#">graphic art</a></li>
-              <li class="aside_menu__list"><a href="#">illustation</a></li>
-              <li class="aside_menu__list"><a href="#">miscellaneous</a></li>
+            <ul class="aside_menu__list">
+              <li><a href="#">all</a></li>
+              <li><a href="#">code &#38; design</a></li>
+              <li><a href="#">graphic art</a></li>
+              <li><a href="#">illustation</a></li>
+              <li><a href="#">miscellaneous</a></li>
             </ul>
           </div>
         </aside>
         <div class="paginator">
           <ul class="paginator__menu">
-            <li class="paginator__list"><a href="#">1</a></li>
-            <li class="paginator__list"><a href="#">2</a></li>
-            <li class="paginator__list"><a href="#">3</a></li>
-            <li class="paginator__list"><a href="#">4</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
           </ul>
         </div>
       </main>
@@ -280,16 +260,16 @@
           <li class="rss__listitem"><a href="#" class="rss__anchor"><span class="fa fa-rss fa-2x"></span>subscribe to our rss feed</a></li>
           <li class="rss__listitem"><a href="#" class="rss__anchor"><span class="fa fa-envelope fa-2x"></span>contact us now!</a></li>
         </ul>
-        <ul class="footerrightpart">
-          <li class="mainmenu"><a href="#" class="mainmenu--footer">home</a></li>
-          <li class="mainmenu"><a href="#" class="mainmenu--footer">abort</a></li>
+        <ul class="footer_right_part">
+          <li><a href="#">home</a></li>
+          <li><a href="#">abort</a></li>
           <br>
-          <li class="mainmenu"><a href="#" class="mainmenu--footer">categories</a></li>
-          <li class="mainmenu"><a href="#" class="mainmenu--footer">contact us</a></li>
+          <li><a href="#">categories</a></li>
+          <li><a href="#">contact us</a></li>
         </ul>
-        <div class="footerleftpart">
+        <div class="footer_left_part">
           <h4>&#169; 2011 lusid theme</h4>
-          <p class="footerleftpart__text">by <a href="#">weeklyy.com</a></p>
+          <p class="footer_left_part__text">by <a href="#">weeklyy.com</a></p>
         </div>
       </footer>
     </div>

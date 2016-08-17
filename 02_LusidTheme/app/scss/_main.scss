@@ -18,11 +18,15 @@ main {
 }
 
 .article {
+  &::after {
+    @extend %clearfix;
+  }
+
   &__link {
     padding: 0 0 0.800em 0.800em;
     font: 0.800em "Arial";
     text-transform: uppercase;
-    color:$gray;
+    color: $gray;
 
     &--category_and_tags {
       padding: 0;
@@ -39,19 +43,13 @@ main {
   .fa {
     width: 100%;
     padding-bottom: 0.300em;
-    text-transform: upper case;
+    text-transform: uppercase;
     text-align: center;
     color: $dimgray;
 
     &::after {
       font: 0.750em Arial;
       color: $dimgray;
-    }
-
-    & > br {
-      @include respond(992, 4801) {
-        display: none;
-      }
     }
     @include respond(992, 4801) {
       text-align: left;
@@ -72,6 +70,10 @@ main {
   &__soсial {
     padding-bottom: 0.800em;
     border-bottom: 2px groove $lightgray;
+
+    span {
+      @extend .article__link;
+    }
   }
 
   &__category {
@@ -79,9 +81,12 @@ main {
   }
 
   &__tags {
-    .article_link__tag {
+    & > a:not(.article__link--category_and_tags) {
       display: block;
       padding-top: 0.400em;
+      font: 0.750em Arial;
+      text-transform: uppercase;
+      color: $dimgray;
     }
   }
 
@@ -125,9 +130,19 @@ main {
   }
 
   &__image {
-    display: inline-block;
-    margin: 0.800em 0.100em 0.200em 0.900em;
-    border: 3px solid $brandedcolor;
+    margin: auto;
+    @include respond(320, 768) {
+      text-align: center;
+    }
+
+    & > li {
+      display: inline-block;
+    }
+
+    img {
+      margin: 0.800em 0.100em 0.200em 0.900em;
+      border: 3px solid $brandedcolor;
+    }
   }
 }
 
@@ -189,6 +204,7 @@ main {
 }
 
 .paginator {
+  position: relative;
   margin-top: 3.000em;
   @include respond(320, 768) {
     margin-bottom: 1.000em;
@@ -207,26 +223,26 @@ main {
 
   &__menu {
     padding: 0;
-  }
 
-  &__list {
-    display: inline-block;
-    margin-right: 0.600em;
-    padding-top: 0.3em;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $lightgray;
-    background-color: #f2f2f2;
-    text-align: center;
+    & > li {
+      display: inline-block;
+      margin-right: 0.600em;
+      padding-top: 0.3em;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $lightgray;
+      background-color: #f2f2f2;
+      text-align: center;
 
-    &:hover {
-      border: 1px solid $dimgray;
-      background-color: $lightgray;
-    }
+      &:hover {
+        border: 1px solid $dimgray;
+        background-color: $lightgray;
+      }
 
-    a {
-      vertical-align: middle;
-      font-weight: bold;
+      a {
+        vertical-align: middle;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -265,22 +281,24 @@ main {
 
 }
 
-.poster {
-  display: inline-block;
-  margin: 0.250em;
-  width: 110px;
-  height: 110px;
-  background-color: $white;
-  border: 1px solid $lightgray;
-
-  &__text {
+.posters {
+  & > div {
     display: inline-block;
-    width: 100%;
-    text-align: center;
-    font-size: 0.750em;
-    line-height: 110px;
-    vertical-align: middle;
-    color: $lightgray;
+    margin: 0.250em;
+    width: 110px;
+    height: 110px;
+    background-color: $white;
+    border: 1px solid $lightgray;
+
+    & > p {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-size: 0.750em;
+      line-height: 110px;
+      vertical-align: middle;
+      color: $lightgray;
+    }
   }
 }
 
@@ -289,15 +307,17 @@ main {
   text-transform: uppercase;
 
   &__list {
-    margin-top: 0.600em;
-    padding: 0.400em 0.400em 0.400em 0.800em;
-    font-size: 0.800em;
-    background-color: $white;
-    border-radius: 8px;
-    color: $lightgray;
+    & > li {
+      margin-top: 0.600em;
+      padding: 0.400em 0.400em 0.400em 0.800em;
+      font-size: 0.800em;
+      background-color: $white;
+      border-radius: 8px;
+      color: $lightgray;
 
-    &:hover {
-      color: black;
+      &:hover {
+        color: black;
+      }
     }
   }
 }
