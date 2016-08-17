@@ -129,6 +129,18 @@ p {
 #back-to-top.show {
   opacity: 1; }
 
+.github {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 9999;
+  color: white; }
+  @media only screen and (min-width: 0px) and (max-width: 479px) {
+    .github {
+      display: none; } }
+  .github__link {
+    font: 0.813em "AmericanTypewriter"; }
+
 .header__nav {
   position: relative;
   padding: 0.150em 0;
@@ -144,18 +156,6 @@ p {
     bottom: -10px;
     left: 0;
     border-bottom: 10px solid rgba(0, 0, 0, 0.06); }
-
-.header .github {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  z-index: 9999;
-  color: white; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    .header .github {
-      display: none; } }
-  .header .github__link {
-    font: 0.813em "AmericanTypewriter"; }
 
 .header__menu > li {
   display: inline-block;
