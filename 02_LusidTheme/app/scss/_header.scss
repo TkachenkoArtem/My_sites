@@ -2,6 +2,7 @@
 
 .header {
   &__nav {
+    position: relative;
     padding: 0.150em 0;
     background-color: $brandedcolor;
     text-align: right;
@@ -17,28 +18,38 @@
       left: 0;
       border-bottom: 10px solid rgba(0, 0, 0, 0.06);
     }
+  }
 
-    .github {
-      position: absolute;
-      top: 0;
-      left: 10px;
-      z-index: 9999;
-      color: white;
-      @include respond-to(320) {
-        display: none;
-      }
-
-      &__link {
-        font: 0.813em "AmericanTypewriter";
-      }
+  .github {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 9999;
+    color: white;
+    @include respond-to(320) {
+      display: none;
     }
 
-    .fa-github:before {
-      color: white;
+    &__link {
+      font: 0.813em "AmericanTypewriter";
+    }
+  }
+
+  &__menu {
+    & > li {
+      display: inline-block;
+      margin-right: 1.700em;
+
+      & > a {
+        font: 1.000em "Glasgow-Medium";
+        text-shadow: 0.5px 0.5px 0 $lightgray;
+        color: $white;
+      }
     }
   }
 
   &__container {
+    position: relative;
     @include respond(0, 992) {
       margin: 1.000em 0;
     }
@@ -49,8 +60,4 @@
 
 }
 
-.mainmenu--nav {
-  font: 1.000em "Glasgow-Medium";
-  text-shadow: 0.5px 0.5px 0 $lightgray;
-  color: $white;
-}
+.mainmenu--nav {}
