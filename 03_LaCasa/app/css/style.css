@@ -103,16 +103,26 @@ img {
 
 .github {
   position: absolute;
-  top: 3.100em;
-  left: 0.500em;
+  top: 0.65em;
+  left: 4.500em;
   z-index: 9999;
   color: white; }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .github {
+      top: 0.450em; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .github {
+      top: 0.400em; } }
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
+    .github {
+      top: 3.100em;
+      left: 0.500em; } }
   .github__link {
     font: 0.500em "Bitter"; }
 
 .fa-github:before {
   font-size: 0.750em;
-  color: #dadada; }
+  color: white; }
 
 #ho_adv {
   display: none !important; }
