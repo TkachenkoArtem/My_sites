@@ -94,13 +94,13 @@ gulp.task('copyfonts', function() {
 
 /*инициализация*/
 gulp.task('init', () => {
-    gulp.src('bower_components/font-awesome/css/font-awesome.css')
+    gulp.src('node_modules/font-awesome/css/font-awesome.css')
         .pipe(rename('font-awesome.vendor.css'))
         .pipe(gulp.dest('app/css/'));
-    gulp.src('bower_components/normalize-css/normalize.css')
+    gulp.src('node_modules/normalize-css/normalize.css')
         .pipe(rename('normalize.vendor.css'))
         .pipe(gulp.dest('app/css/'));
-    gulp.src('bower_components/font-awesome/fonts/*.{ttf,woff,woff2,eot,otf,svg}')
+    gulp.src('node_modules/font-awesome/fonts/*.{ttf,woff,woff2,eot,otf,svg}')
         .pipe(gulp.dest('app/fonts'));
     gulp.src('app/img/*.ico')
         .pipe(gulp.dest('dist/img'));
