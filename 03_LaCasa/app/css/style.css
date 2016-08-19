@@ -80,7 +80,7 @@ ul {
   padding: 0;
   list-style: none; }
 
-li:not(.footer_menu__list):not(.about_us) {
+li {
   display: inline-block; }
 
 img {
@@ -104,13 +104,14 @@ img {
 .github {
   position: absolute;
   top: 3.100em;
-  left: .500em;
+  left: 0.500em;
   z-index: 9999;
   color: white; }
   .github__link {
-    font: 0.813em "Bitter"; }
+    font: 0.500em "Bitter"; }
 
 .fa-github:before {
+  font-size: 0.750em;
   color: #dadada; }
 
 #ho_adv {
@@ -139,6 +140,11 @@ img {
 #back-to-top.show {
   opacity: 1; }
 
+.header_top::after {
+  content: "";
+  display: table;
+  clear: both; }
+
 #header {
   padding: 0.500em 2.500em 0;
   background-color: #dadada; }
@@ -153,6 +159,7 @@ img {
       padding: 6.250em 12.500em 23.125em; } }
 
 .header_top {
+  position: relative;
   width: 100%;
   padding: 0.500em; }
   @media only screen and (min-width: 480px) and (max-width: 4800px) {
@@ -193,20 +200,20 @@ img {
     font-size: 2.000em;
     color: white; }
 
-.navigation {
+.bar > li {
   width: 6.250em;
   vertical-align: middle;
   text-align: center;
   line-height: 2.500em;
   color: #ffffff; }
-  .navigation:hover {
+  .bar > li:hover {
     outline: #ffffff solid 2px;
     transition: 0.5s;
     -moz-outline-radius: 2px; }
-  .navigation span {
+  .bar > li span {
     font: 1.000em "Lato"; }
 
-h2 + ul {
+.motto {
   position: absolute;
   display: block;
   width: 260px;
@@ -214,26 +221,25 @@ h2 + ul {
   left: 50%;
   margin-left: -130px; }
   @media only screen and (min-width: 0px) and (max-width: 479px) {
-    h2 + ul {
+    .motto {
       display: none; } }
   @media only screen and (min-width: 480px) and (max-width: 991px) {
-    h2 + ul {
+    .motto {
       top: 80px; } }
   @media only screen and (min-width: 992px) and (max-width: 1254px) {
-    h2 + ul {
+    .motto {
       top: 200px; } }
   @media only screen and (min-width: 1255px) and (max-width: 4800px) {
-    h2 + ul {
+    .motto {
       top: 100px; } }
-
-.under_h2__anchor {
-  padding: 0 0.800em;
-  font: 0.875em "Lato";
-  color: #ffffff; }
-  .under_h2__anchor:not(.under_h2__anchor--last)::after {
-    content: " - ";
-    position: absolute;
-    padding: 0 0.600em; }
+  .motto a {
+    padding: 0 0.800em;
+    font: 0.875em "Lato";
+    color: #ffffff; }
+    .motto a:not(.j)::after {
+      content: " - ";
+      position: absolute;
+      padding: 0 0.600em; }
 
 .main_menu {
   height: 3.000em;
@@ -397,7 +403,7 @@ h2 + ul {
     .figure__top {
       height: 230px;
       overflow: hidden; } }
-  .figure__top__price {
+  .figure__price {
     position: absolute;
     top: 0.500em;
     left: 0.700em;
@@ -464,7 +470,8 @@ input[type=button] {
   @media only screen and (min-width: 768px) and (max-width: 4800px) {
     .footer_menu {
       width: calc(70%/3); } }
-  .footer_menu__list, .about_us {
+  .footer_menu li {
+    display: block;
     padding-bottom: 1.100em;
     font: 1.000em "Lato";
     color: #ffffff; }
@@ -485,7 +492,9 @@ input[type=button] {
 .about_us {
   padding-bottom: 1.500em;
   line-height: 2.000em;
-  text-align: justify; }
+  text-align: justify;
+  font: 1.000em "Lato";
+  color: #ffffff; }
 
 h4 a {
   font-weight: bold; }

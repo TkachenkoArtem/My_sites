@@ -15,6 +15,7 @@
 }
 
 .header_top {
+  position: relative;
   width: 100%;
   padding: 0.500em;
   @include respond(480, 4801) {
@@ -30,20 +31,16 @@
     padding: 1.414em 12.500em 0;
   }
 
+  &::after {
+    @extend %clearfix;
+  }
+
   &__left {
-    // @include respond(480, 4801) {
     float: left;
-    // }
   }
 
   &__right {
-    // @include respond(480, 4801) {
     float: right;
-    // }
-    &--bar {
-      // bottom: 0;
-      // right: 0;
-    }
   }
 }
 
@@ -73,25 +70,27 @@
   }
 }
 
-.navigation {
-  width: 6.250em;
-  vertical-align: middle;
-  text-align: center;
-  line-height: 2.500em;
-  color: #ffffff;
+.bar {
+  & > li {
+    width: 6.250em;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 2.500em;
+    color: #ffffff;
 
-  &:hover {
-    outline: #ffffff solid 2px;
-    transition: 0.5s;
-    -moz-outline-radius: 2px;
-  }
+    &:hover {
+      outline: #ffffff solid 2px;
+      transition: 0.5s;
+      -moz-outline-radius: 2px;
+    }
 
-  span {
-    font: 1.000em "Lato";
+    span {
+      font: 1.000em "Lato";
+    }
   }
 }
 
-h2 + ul {
+.motto {
   position: absolute;
   display: block;
   width: 260px;
@@ -110,15 +109,13 @@ h2 + ul {
   @include respond(1255, 4801) {
     top: 100px;
   }
-}
 
-.under_h2 {
-  &__anchor {
+  a {
     padding: 0 0.800em;
     font: 0.875em "Lato";
     color: #ffffff;
 
-    &:not(.under_h2__anchor--last)::after {
+    &:not(.j)::after {
       content: " - ";
       position: absolute;
       padding: 0 0.600em;

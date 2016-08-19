@@ -1,241 +1,240 @@
 //main: style.scss
 
 .main_menu {
-    height: 3.000em;
-    padding: 0.500em;
-    background-color: #bfd9f2;
-    letter-spacing: 0.100em;
+  height: 3.000em;
+  padding: 0.500em;
+  background-color: #bfd9f2;
+  letter-spacing: 0.100em;
+  @include respond(768, 1200) {
+    padding: 0.500em 2.500em;
+  }
+  @include respond-to(1200) {
+    padding: 2.200em 12.500em 4.000em;
+  }
+
+  &__link,
+  &__question {
+    font: 1.250em "Lato";
+    text-transform: uppercase;
+    color: #95badf;
+  }
+
+  &__question {
+    float: left;
+    margin-top: 0.2em;
+  }
+
+  &__list {
+    width: 100%;
+    position: absolute;
+    top: 99px;
+    left: 0;
+    display: none;
+    z-index: 101;
+    padding: 4.000em 12.000em 1.000em 4.500em;
+    background-color: #cbe0f4;
+    border: 1px solid #aac8e4;
+    @include respond(320, 768) {
+      top: 36px;
+      padding: 1.000em;
+      text-align: center;
+    }
     @include respond(768, 1200) {
-        padding: 0.500em 2.500em;
-    }
-    @include respond-to(1200) {
-        padding: 2.200em 12.500em 4.000em;
+      top: 42px;
     }
 
-    &__link,
-    &__question {
-        font: 1.250em "Lato";
-        text-transform: uppercase;
-        color: #95badf;
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      right: 2.500em;
+      @include respond(1200, 4801) {
+        right: 12.500em;
+      }
     }
 
-    &__question {
-        float: left;
-        margin-top: 0.2em;
+    &:before {
+      top: -16px;
+      z-index: 2;
+      @include triangle(1.500em, #cbe0f4, up);
+      @include respond(320, 768) {
+        top: -9px;
+      }
+      @include respond(768, 1200) {
+        top: -10px;
+      }
+      @include respond(1200, 4801) {
+         @include triangle(2.000em, #cbe0f4, up);
+      }
     }
 
-    &__list {
-        width: 100%;
-        position: absolute;
-        top: 99px;
-        left: 0;
-        display: none;
-        z-index: 101;
-        padding: 4.000em 12.000em 1.000em 4.500em;
-        background-color: #cbe0f4;
-        border: 1px solid #aac8e4;
-        @include respond(320, 768) {
-            top: 36px;
-            padding: 1.000em;
-            text-align: center;
-        }
-        @include respond(768, 1200) {
-            top: 42px;
-        }
-
-        &:after,
-        &:before {
-            content: "";
-            position: absolute;
-            right: 2.500em;
-            @include respond(1200, 4801) {
-                right: 12.500em;
-            }
-        }
-
-        &:before {
-            top: -16px;
-            z-index: 2;
-            @include triangle(1.500em, #cbe0f4, up);
-            @include respond(320, 768) {
-                top: -9px;
-            }
-            @include respond(768, 1200) {
-                top: -10px;
-            }
-            @include respond(1200, 4801) {
-                 @include triangle(2.000em, #cbe0f4, up);
-            }
-        }
-
-        &:after {
-            top: -17px;
-            z-index: 1;
-            @include triangle(1.500em, #aac8e4, up);
-            @include respond(320, 768) {
-                top: -10px;
-            }
-            @include respond(768, 1200) {
-                top: -11px;
-            }
-            @include respond(1200, 4801) {
-                 @include triangle(2.000em, #aac8e4, up);
-            }
-        }
-
-        &__link {
-            padding-left: 0.400em;
-            line-height: 86.5px;
-            @include respond(320, 836) {
-                line-height: 1.250em;
-
-            }
-        }
-
-        &--border_right {
-            border-right: 2px solid #aac8e4;
-            @include respond(320, 836) {
-                border-right: transparent;
-            }
-        }
-
-        hr {
-            width: 100%;
-            margin: 1.900em auto;
-            border: 0;
-            border-bottom: 2px solid #aac8e4;
-            @include respond(320, 836) {
-                display: none;
-            }
-        }
-
-    }
-
-    li {
-        width: 47%;
-        padding-right: 4.500em;
-        margin-right: 2.000em;
-        @include respond(320, 836) {
-            width: 100%;
-            padding: 1.000em;
-            margin-right: auto;
-        }
-        @include respond(835, 1403) {
-            width: 45%;
-        }
-
-        i {
-            float: right;
-            top: 1.500em;
-            font: normal normal normal 1.250em/1 FontAwesome;
-            color: #95badf;
-        }
-    }
-
-    .fa-cog {
-        float: right;
-        color: #a1c4e6;
-        cursor: pointer;
-    }
-
-    .fa-calendar-check-o {
-        @include respond(320, 836) {
-            display: none;
-        }
-    }
-}
-
-.no_hidden {
-    display: block;
-}
-
-.main_container {
-    text-align: center;
-    @include respond-to(992) {
-        padding: 3.300em 1.500em 0;
-    }
-    @include respond-to(1200) {
-        padding-top: 6.300em;
-        padding-left: 12.500em;
-        padding-right: calc(12.500em - 40px);
-    }
-    @include respond(1200, 1600) {
-        padding-left: 1.500em;
-        padding-right: calc(1.500em - 40px);
-    }
-}
-
-.figure {
-    display: inline-block;
-    width: 46%;
-    margin: 0.500em;
-    @include respond-to(992) {
-        width: 30%;
-    }
-    @include respond-to(1200) {
-        width: 340px;
-        margin: auto 40px 2.500em auto;
-    }
-
-    &__top {
-        @include respond-to(1200) {
-            height: 230px;
-            overflow: hidden;
-        }
-
-        &__price {
-            position: absolute;
-            top: 0.500em;
-            left: 0.700em;
-            padding: 0.850em 1.300em;
-            z-index: 100;
-            font: bold 1.000em "Lato";
-            border-radius: 4px;
-            background-color: #ffffff;
-            color: #524f4f;
-        }
+    &:after {
+      top: -17px;
+      z-index: 1;
+      @include triangle(1.500em, #aac8e4, up);
+      @include respond(320, 768) {
+        top: -10px;
+      }
+      @include respond(768, 1200) {
+        top: -11px;
+      }
+      @include respond(1200, 4801) {
+         @include triangle(2.000em, #aac8e4, up);
+      }
     }
 
     &__link {
-        font: 0.750em "Lato";
-        letter-spacing: 0.030em;
-        color: #9d9d9d;
-
-        & + * {
-            font: 0.750em "Lato";
-            letter-spacing: 0.030em;
-            text-align: left;
-            color: #676767;
-        }
+      padding-left: 0.400em;
+      line-height: 86.5px;
+      @include respond(320, 836) {
+        line-height: 1.250em;
+      }
     }
+
+    &--border_right {
+      border-right: 2px solid #aac8e4;
+      @include respond(320, 836) {
+        border-right: transparent;
+      }
+    }
+
+    hr {
+      width: 100%;
+      margin: 1.900em auto;
+      border: 0;
+      border-bottom: 2px solid #aac8e4;
+      @include respond(320, 836) {
+        display: none;
+      }
+    }
+
+  }
+
+  li {
+    width: 47%;
+    padding-right: 4.500em;
+    margin-right: 2.000em;
+    @include respond(320, 836) {
+      width: 100%;
+      padding: 1.000em;
+      margin-right: auto;
+    }
+    @include respond(835, 1403) {
+      width: 45%;
+    }
+
+    i {
+      float: right;
+      top: 1.500em;
+      font: normal normal normal 1.250em/1 FontAwesome;
+      color: #95badf;
+    }
+  }
+
+  .fa-cog {
+    float: right;
+    color: #a1c4e6;
+    cursor: pointer;
+  }
+
+  .fa-calendar-check-o {
+    @include respond(320, 836) {
+      display: none;
+    }
+  }
+}
+
+.no_hidden {
+  display: block;
+}
+
+.main_container {
+  text-align: center;
+  @include respond-to(992) {
+    padding: 3.300em 1.500em 0;
+  }
+  @include respond-to(1200) {
+    padding-top: 6.300em;
+    padding-left: 12.500em;
+    padding-right: calc(12.500em - 40px);
+  }
+  @include respond(1200, 1600) {
+    padding-left: 1.500em;
+    padding-right: calc(1.500em - 40px);
+  }
+}
+
+.figure {
+  display: inline-block;
+  width: 46%;
+  margin: 0.500em;
+  @include respond-to(992) {
+    width: 30%;
+  }
+  @include respond-to(1200) {
+    width: 340px;
+    margin: auto 40px 2.500em auto;
+  }
+
+  &__top {
+    @include respond-to(1200) {
+      height: 230px;
+      overflow: hidden;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    top: 0.500em;
+    left: 0.700em;
+    padding: 0.850em 1.300em;
+    z-index: 100;
+    font: bold 1.000em "Lato";
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #524f4f;
+  }
+
+  &__link {
+    font: 0.750em "Lato";
+    letter-spacing: 0.030em;
+    color: #9d9d9d;
+
+    & + * {
+      font: 0.750em "Lato";
+      letter-spacing: 0.030em;
+      text-align: left;
+      color: #676767;
+    }
+  }
 }
 
 figcaption {
-    margin-top: -4px;
-    padding: 0 1.250em 1.600em;
-    border: 2px solid #f2f1f1;
-    text-align: left;
-    @include respond-to(1200) {
-        margin-top: auto;
-    }
+  margin-top: -4px;
+  padding: 0 1.250em 1.600em;
+  border: 2px solid #f2f1f1;
+  text-align: left;
+  @include respond-to(1200) {
+    margin-top: auto;
+  }
 }
 
 input[type=button] {
-    left: calc(50% - 15em/2);
-    width: 15.000em;
-    height: 3.000em;
-    margin: 0.500em auto 1.000em;
-    outline: none;
-    border: 2px solid #afcce7;
-    background-color: transparent;
-    border-radius: 30px;
-    font: 1.000em "Lato";
-    text-transform: uppercase;
-    color: #afcce7;
-    @include respond-to(1200) {
-        left: calc(50% - 264px/2);
-        width: 16.500em;
-        height: 3.750em;
-        margin: 3.800em auto 6.200em;
-    }
+  left: calc(50% - 15em/2);
+  width: 15.000em;
+  height: 3.000em;
+  margin: 0.500em auto 1.000em;
+  outline: none;
+  border: 2px solid #afcce7;
+  background-color: transparent;
+  border-radius: 30px;
+  font: 1.000em "Lato";
+  text-transform: uppercase;
+  color: #afcce7;
+  @include respond-to(1200) {
+    left: calc(50% - 264px/2);
+    width: 16.500em;
+    height: 3.750em;
+    margin: 3.800em auto 6.200em;
+  }
 }
