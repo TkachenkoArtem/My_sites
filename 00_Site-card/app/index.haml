@@ -14,111 +14,123 @@
 
     .wrapper
 
-        %a#back-to-top.fa.fa-arrow-up{href:"#", title:"Back to top"}
+        %a#back-to-top{href:"#", title:"Back to top"} %p &#9650;
 
               -#  _____HOME_____
 
         %section{name:"section__home"}
-            %a{name:"home"}
-            .home__avatar
 
-            %ul.home__nav
-              %li
-                %a.elegantshadow{href:"#aboutMe"} About me
-              %li
-                %a.elegantshadow{href:"#portfolio"} Portfolio
-              %li
-                %a.elegantshadow{href:"#contacts"} Contacts
+            .home_container_avatar_and_nav
+                %figure.home__avatar
+                    %div
+                    %figcaption  %strong Artem Tkachenko
 
-            .center
-                %h1.elegantshadow Junior Front-end developer
+                %ul.home__nav
+                    %li
+                      %a.elegantshadow{href:"#aboutMe"} About me
+                    %li
+                      %a.elegantshadow{href:"#portfolio"} Portfolio
+                    %li
+                      %a.elegantshadow{href:"#contacts"} Contacts
+
+            %h1.elegantshadow.elegantshadow--h1 Junior Front-end developer
 
               -#  _____ABOUT ME_____
 
         %section{name:"section__aboutMe"}
             %a{name:"aboutMe"}
-            %h2.elegantshadow About me
+            %h2.elegantshadow.elegantshadow--h2 About me
 
             %p.elegantshadow.aboutme Have practical skills in:
                 .aboutme__container
-                  	%a{href:"https://atom.io/", target:"_blank"} %img{src:"img/Atom-logo.png", alt="atom"}
-                  	%a{href:"https://www.sourcetreeapp.com/", target:"_blank"} %img{src:"img/SourceTree-logo.png", alt="atom"}
-                  	%a{href:"http://gulpjs.com/", target:"_blank"} %img{src:"img/gulp-logo.png", alt="gulpjs"}
-                  	%a{href:"http://codepen.io/", target:"_blank"} %img{src:"img/codepen-logo.png", alt="codepen"}
-                  	%a{href:"https://git-scm.com/", target:"_blank"} %img{src:"img/git-logo.png", alt="git"}
-                  	%a{href:"https://www.npmjs.com/", target:"_blank"} %img{src:"img/npm-logo.png", alt="npm"}
-                  	%a{href:"http://sass-lang.com/", target:"_blank"} %img{src:"img/sass-logo.png", alt="sass"}
-                  	%a{href:"https://github.com/", target:"_blank"} %img{src:"img/githab-logo.png", alt="github"}
-                    %a{href:"http://www.w3schools.com/css/css3_intro.asp", target:"_blank"} %img{src:"img/css3-logo.png", alt="css3"}
-                    %a{href:"http://www.w3schools.com/html/default.asp", target:"_blank"} %img{src:"img/html5-logo.png", alt="html5"}
-                    %a{href:"http://www.w3schools.com/js/default.asp", target:"_blank"} %img{src:"img/javascript-logo.png", alt="JS"}
-                    %a{href:"http://getbootstrap.com/", target:"_blank"} %img{src:"img/bootstrap-logo.png", alt="bootstrap"}
-                    %a{href:"https://bower.io/", target:"_blank"} %img{src:"img/bower-logo.png", alt="bower"}
-                    %a{href:"http://fontawesome.io/", target:"_blank"} %img{src:"img/fontawesome.png", alt="fontawesome"}
-                    %a{href:"http://kenwheeler.github.io/slick/", target:"_blank"} %img{src:"img/slick-logo.png", alt="slick"}
-                    %a{href:"https://necolas.github.io/normalize.css/", target:"_blank"} %img{src:"img/normalizecss-logo.png", alt="normalize.css"}
-                    %a{href:"http://bourbon.io/docs/", target:"_blank"} %img{src:"img/bourbon-logo.png", alt="bourbon"}
-                    %a.bem{href:"http://getbem.com/", target:"_blank"} BEM
-                    %a{href:"http://haml.info/", target:"_blank"} %img{src:"img/haml-logo.png", alt="haml"}
+                  	%a{href:"https://atom.io/", target:"_blank", data-img:"atom"}
+                  	%a{href:"https://www.sourcetreeapp.com/", target:"_blank", data-img:"SourceTree"}
+                  	%a{href:"http://gulpjs.com/", target:"_blank", data-img:"gulp"}
+                  	%a.wide{href:"http://codepen.io/", target:"_blank", data-img:"codepen"}
+                  	%a{href:"https://git-scm.com/", target:"_blank", data-img:"git"}
+                  	%a.wide{href:"https://www.npmjs.com/", target:"_blank", data-img:"npm"}
+                  	%a{href:"http://sass-lang.com/", target:"_blank", data-img:"sass"}
+                  	%a{href:"https://github.com/", target:"_blank", data-img:"github"}
+                    %a{href:"http://www.w3schools.com/css/css3_intro.asp", target:"_blank", data-img:"css3"}
+                    %a{href:"http://www.w3schools.com/html/default.asp", target:"_blank", data-img:"html5"}
+                    %a{href:"http://www.w3schools.com/js/default.asp", target:"_blank", data-img:"javascript"}
+                    %a{href:"http://getbootstrap.com/", target:"_blank", data-img:"bootstrap"}
+                    %a{href:"https://bower.io/", target:"_blank", data-img:"bower"}
+                    %a.wide{href:"http://fontawesome.io/", target:"_blank", data-img:"fontawesome"}
+                    %a{href:"http://kenwheeler.github.io/slick/", target:"_blank", data-img:"slick"}
+                    %a{href:"https://necolas.github.io/normalize.css/", target:"_blank", data-img:"normalizecss"}
+                    %a.wide{href:"http://bourbon.io/docs/", target:"_blank", data-img:"bourbon"}
+                    %a.wide{href:"http://haml.info/", target:"_blank", data-img:"haml"}
 
             %p.elegantshadow.aboutme Have theoretical skills in:
                 .aboutme__container
-                    %a{href:"http://www.json.org/", target:"_blank"} %img{src:"img/JSON-logo.png", alt="json"}
-                    %a{href:"http://www.w3schools.com/ajax/", target:"_blank"} %img{src:"img/AJAX-logo.png", alt="ajax"}
-                    %a{href:"http://underscorejs.org/", target:"_blank"} %img{src:"img/underscore-logo.png", alt="underscore.js"}
-                    %a{href:"http://www.w3schools.com/xml/", target:"_blank"} %img{src:"img/XML-logo.png", alt="xml"}
-                    %a{href:"https://www.mongodb.com/", target:"_blank"} %img{src:"img/MongoDB-logo.png", alt="mongodb"}
-                    %a{href:"https://www.adobe.com/products/photoshop-lightroom.html?promoid=KLXLX", target:"_blank"} %img{src:"img/Lightroom-logo.png", alt="Lightroom"}
-                    %a{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank"} %img{src:"img/AdobePhotoshop-logo.png", alt="Photoshop"}
-                    %a{href:"http://jade-lang.com/", target:"_blank"} %img{src:"img/jade-logo.png", alt="jade"}
-                    %a{href:"https://wordpress.org/", target:"_blank"} %img{src:"img/wordpress-logo.png", alt="wordpress"}
-                    %a{href:"http://www.autodesk.ru/products/autocad/overview", target:"_blank"} %img{src:"img/autocad-logo.png", alt="autocad"}
-                    %a{href:"https://babeljs.io/", target:"_blank"} %img{src:"img/babel-logo.png", alt="babel.js"}
-                    %a{href:"https://jquery.com/", target:"_blank"} %img{src:"img/jquery-logo.png", alt="jquery"}
-                    %a{href:"http://fontello.com/", target:"_blank"} %img{src:"img/fontello-logo.png", alt="fontello"}
-                    %a{href:"http://flipclockjs.com/", target:"_blank"} %img{src:"img/FlipClock.js-logo.png", alt="FlipClock.js"}
-                    %a{href:"http://vodkabears.github.io/remodal/", target:"_blank"} %img{src:"img/remodal-logo.png", alt="Remodal.js"}
-                    %a{href:"http://reactivex.io/", target:"_blank"} %img{src:"img/rx-logo.png", alt="reactivex"}
+                    %a{href:"http://www.json.org/", target:"_blank", data-img:"JSON"}
+                    %a.wide{href:"http://www.w3schools.com/ajax/", target:"_blank", data-img:"AJAX"}
+                    %a.wide{href:"http://underscorejs.org/", target:"_blank", data-img:"underscore"}
+                    %a{href:"http://www.w3schools.com/xml/", target:"_blank", data-img:"XML"}
+                    %a.wide{href:"https://www.mongodb.com/", target:"_blank", data-img:"MongoDB"}
+                    %a{href:"https://www.adobe.com/products/photoshop-lightroom.html?promoid=KLXLX", target:"_blank", data-img:"Lightroom"}
+                    %a{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank", data-img:"AdobePhotoshop"}
+                    %a.wide{href:"http://jade-lang.com/", target:"_blank", data-img:"jade"}
+                    %a{href:"https://wordpress.org/", target:"_blank", data-img:"wordpress"}
+                    %a.wide{href:"http://www.autodesk.ru/products/autocad/overview", target:"_blank", data-img:"autocad"}
+                    %a.wide{href:"https://babeljs.io/", target:"_blank", data-img:"babel"}
+                    %a{href:"https://jquery.com/", target:"_blank", data-img:"jquery"}
+                    %a.wide{href:"http://fontello.com/", target:"_blank", data-img:"fontello"}
+                    %a.wide{href:"http://flipclockjs.com/", target:"_blank", data-img:"FlipClock"}
+                    %a.wide{href:"http://vodkabears.github.io/remodal/", target:"_blank", data-img:"remodal"}
+                    %a{href:"http://reactivex.io/", target:"_blank", data-img:"rx"}
 
-            %p.elegantshadow.aboutme Now I learn:
+            %p.elegantshadow.aboutme Now I familiarize:
                 .aboutme__container
-                    %a{href:"http://riotjs.com/", target:"_blank"} %img{src:"img/riot-logo.png", alt="riotjs"}
-                    %a{href:"http://coffeescript.org/", target:"_blank"} %img{src:"img/cs-logo.png", alt="coffescript"}
-                    %a{href:"https://nodejs.org/en/", target:"_blank"} %img{src:"img/nodejs-logo.png", alt="nodejs"}
-                    %a{href:"http://backbonejs.org/", target:"_blank"} %img{src:"img/BackboneJS_logo.png", alt="backbonejs"}
+                    %a.wide{href:"http://riotjs.com/", target:"_blank", data-img:"riot"}
+                    %a.wide{href:"http://coffeescript.org/", target:"_blank", data-img:"cs"}
+                    %a{href:"https://nodejs.org/en/", target:"_blank", data-img:"nodejs"}
+                    %a.wide{href:"http://backbonejs.org/", target:"_blank", data-img:"BackboneJS"}
+                    %a.wide{href:"https://ornaorg.github.io/", target:"_blank", data-img:"ornanajs"}
 
               -#  _____PORTFOLIO_____
 
         %section{name:"section__portfolio"}
             %a{name:"portfolio"}
-            %h2.elegantshadow Portfolio
+            %h2.elegantshadow.elegantshadow--h2 Portfolio
 
             %figure.portfolio
                 %iframe.portfolio__iframe{src:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", scrolling:"auto"} Ваш браузер не поддерживает встроенные фреймы!
                 %figcaption.portfolio__caption
-                    %h3 Gastronymous
-                    %p em + media-queries. Исходник: HTML + Sass. Сборка проекта: Gulp.
+                    %h3 %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank"} Gastronymous
+                    %p em + media-queries. Исходник: HTML + Sass. Пакетные менеджеры: npm и bower. Сборка проекта: Gulp.
             %figure.portfolio
                 %iframe.portfolio__iframe{src:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", scrolling:"auto"} Ваш браузер не поддерживает встроенные фреймы!
                 %figcaption.portfolio__caption
-                    %h3 Lusid Theme
-                    %p % + media-queries. Исходник: HTML + Sass. Сборка проекта: Gulp.
+                    %h3 %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank"} Lusid Theme
+                    %p % + media-queries. Исходник: HTML + Sass. Пакетный менеджер: npm. Сборка проекта: Gulp.
             %figure.portfolio
                 %iframe.portfolio__iframe{src:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", scrolling:"auto"} Ваш браузер не поддерживает встроенные фреймы!
                 %figcaption.portfolio__caption
-                    %h3 La Casa
-                    %p em + media-queries. Исходник: HTML + Sass. Сборка проекта: Gulp.
+                    %h3 %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank"} La Casa
+                    %p em + media-queries. Исходник: HTML + Sass. Пакетный менеджер: npm. Сборка проекта: Gulp.
             %figure.portfolio
                 %iframe.portfolio__iframe{src:"", scrolling:"auto"} Ваш браузер не поддерживает встроенные фреймы!
                 %figcaption.portfolio__caption
-                    %h3 Ikaros
-                    %p em + media-queries. Исходник: HAML + Sass. Сборка проекта: Gulp.
+                    %h3 %a{href:"http://tkachenko.ho.ua/04_Ikaros/index.min.html", target:"_blank"} Ikaros
+                    %p em + media-queries. Исходник: HAML + Sass. Пакетный менеджер: npm. Сборка проекта: Gulp.
+            %figure.portfolio
+                %iframe.portfolio__iframe{src:"", scrolling:"auto"} Ваш браузер не поддерживает встроенные фреймы!
+                %figcaption.portfolio__caption
+                    %h3 %a{href:"http://tkachenko.ho.ua/05_MagBlog/index.min.html", target:"_blank"} Magazine Blog
+                    %p em + media-queries. Исходник: HAML + Sass. Верстка выполнена с использованием Flexbox. Пакетный менеджер: npm. Сборка проекта: Gulp.
+            %figure.portfolio
+                %iframe.portfolio__iframe{src:"", scrolling:"auto"} Ваш браузер не поддерживает встроенные фреймы!
+                %figcaption.portfolio__caption
+                    %h3 %a{href:"http://tkachenko.ho.ua/06_MediaGrup Portfolio/index.min.html", target:"_blank"} MediaGrup Portfolio
+                    %p Bootstrap. Исходник: HAML + Sass. Пакетный менеджер: npm. Сборка проекта: Gulp.
 
               -#  _____CONTACTS_____
 
         %section{name:"section__contacts"}
             %a{name:"contacts"}
-            %h2.elegantshadow Contacts
+            %h2.elegantshadow.elegantshadow--h2 Contacts
 
           .contacts.center
               %p.elegantshadow E-mail:

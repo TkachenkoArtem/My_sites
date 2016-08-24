@@ -2,8 +2,7 @@
 @import "mixins/media";
 
 * {
-  position: relative;
-  margin: 0 auto;
+  // position: relative;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -24,71 +23,20 @@ html {
   }
 }
 
-h1 {
-  font-size: 8.000em !important;
-  padding: 0 !important;
-}
-
-h2 {
-  font-size: 2.500em !important;
-  padding: 0.500em 0 0 !important;
-}
-
-h3 {
-  margin-bottom: 1.000em;
-}
-
 a {
+  display: inline-block;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  display: inline-block;
-}
-
-img {
-  max-width: 8.000em;
-  max-height: 4.000em;
-  padding-top: 0.500em;
-  padding-right: 0.800em;
-  vertical-align: middle;
-}
-
 section {
-  width: calc(100vw - 18px);
-  min-height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 0 1.000em 1.000em;
-}
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-.elegantshadow {
-  font-size: 1.500em;
-  padding: 1.000em;
-  text-align: center;
-  text-transform: uppercase;
-  text-rendering: optimizeLegibility;
-  color: #131313;
-  letter-spacing: 0.15em;
-  text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include respond(768, 4801) {
+    min-height: calc(100vh + 20px);
+  }
 }
 
 #ho_adv {
@@ -97,30 +45,43 @@ section {
 
 #back-to-top {
   position: fixed;
-  bottom: 0.300em;
+  bottom: 0.500em;
   right: 1.400em;
-  width: 1.000em;
-  height: 1.000em;
+  width: 1.500em;
+  height: 1.500em;
   z-index: 9999;
-  vertical-align: middle;
-  border: 0;
-  border-radius: 0.500em;
+  padding-top: 0.150em;
+  border-radius: 0.750em;
   transition: opacity 0.2s ease-out;
-  font-size: 3.000em;
+  font-size: 2.000em;
   text-align: center;
-  color: white;
   opacity: 0;
+  p {
+    margin: 0;
+    color: #90A4AE;
+    &:hover {
+      color: #263238;
+    }
+  }
 }
 
 #back-to-top:hover {
-  background: #E57373;
-  box-shadow: 4px 3px 11px 5px rgba(#E53935,0.82);
-
+  background: #546E7A;
+  box-shadow: 4px 3px 11px 5px rgba(#BDBDBD,0.82);
 }
 
 #back-to-top.show {
+  background: #CFD8DC;
   opacity: 0.85;
 }
+
+%clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@import "general";
 @import "home";
 @import "aboutMe";
 @import "portfolio";

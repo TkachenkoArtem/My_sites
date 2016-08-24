@@ -20,7 +20,6 @@
     "gulp-uncss": "latest"
   },
   "dependencies": {
-    "font-awesome": "latest",
     "install": "latest",
     "normalize.css": "latest",
     "npm": "latest"
