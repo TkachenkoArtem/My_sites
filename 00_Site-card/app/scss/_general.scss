@@ -18,15 +18,12 @@
     font-size: 3.000em;
     padding: 0;
     @include respond-to(768) {
-      margin-top: 0.750em;
       font-size: 7.000em;
     }
     @include respond-to(992) {
-      margin-top: 0.400em;
       font-size: 8.000em;
     }
     @include respond(1200, 4801) {
-      margin-top: 0.500em;
       font-size: 9.000em;
     }
   }

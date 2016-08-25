@@ -35,7 +35,7 @@ a[data-img].wide {
                 AJAX, underscore, XML, MongoDB, Lightroom,
                 AdobePhotoshop, jade, wordpress, autocad,
                 babel, jquery, fontello, FlipClock, remodal, rx,
-                riot, cs, nodejs, BackboneJS, ornanajs {
+                riot, cs, nodejs, BackboneJS, ornanajs, webpack {
   a[data-img="#{$image}"] {
     background: inline('#{$image}-logo.png') center/contain no-repeat;
   }

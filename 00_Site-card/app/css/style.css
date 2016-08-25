@@ -16,6 +16,12 @@ html {
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     html {
       font-size: 15px; } }
+  @media only screen and (min-width: 2560px) and (max-width: 4800px) {
+    html {
+      font-size: 20px; } }
+
+body, h3 {
+  margin: 0; }
 
 a {
   display: inline-block;
@@ -85,15 +91,12 @@ section {
     padding: 0; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .elegantshadow--h1 {
-        margin-top: 0.750em;
         font-size: 7.000em; } }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .elegantshadow--h1 {
-        margin-top: 0.400em;
         font-size: 8.000em; } }
     @media only screen and (min-width: 1200px) and (max-width: 4800px) {
       .elegantshadow--h1 {
-        margin-top: 0.500em;
         font-size: 9.000em; } }
   .elegantshadow--h2 {
     font-size: 2.500em;
@@ -103,6 +106,18 @@ section {
 section[name="section__home"] {
   background: #64B5F6;
   box-shadow: -2px -2px 15px 7px rgba(30, 136, 229, 0.82) inset; }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .home_container_avatar_and_nav {
+    margin-bottom: 2.25em; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .home_container_avatar_and_nav {
+    margin-bottom: 1.2em; } }
+
+@media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  .home_container_avatar_and_nav {
+    margin-bottom: 1.5em; } }
 
 .home__avatar {
   float: left;
@@ -278,6 +293,9 @@ a[data-img="BackboneJS"] {
 a[data-img="ornanajs"] {
   background: inline("ornanajs-logo.png") center/contain no-repeat; }
 
+a[data-img="webpack"] {
+  background: inline("webpack-logo.png") center/contain no-repeat; }
+
 section[name="section__portfolio"] {
   background: #81C784;
   box-shadow: -2px -2px 15px 7px rgba(67, 160, 71, 0.82) inset; }
@@ -286,32 +304,56 @@ section[name="section__portfolio"] {
   display: inline-block;
   width: calc(50% - 1.500em*2);
   margin: 1.500em;
-  vertical-align: middle; }
-  .portfolio__iframe {
+  vertical-align: middle;
+  border: none; }
+  .portfolio a,
+  .portfolio img {
+    width: 100%; }
+  .portfolio img {
     display: none;
-    width: 100%;
     height: 400px;
-    border: none;
-    background: white; }
+    border: none; }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
-      .portfolio__iframe {
+      .portfolio img {
         display: block; } }
   .portfolio__caption {
     margin: auto;
     padding: 1.000em;
-    height: 253px;
+    height: 18em;
     background: #43A047;
-    text-align: center; }
+    text-align: center;
+    border: none; }
     @media only screen and (min-width: 480px) and (max-width: 767px) {
       .portfolio__caption {
-        height: 185px; } }
+        height: 11.000em; } }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
       .portfolio__caption {
         margin-top: 0.500em;
-        height: 156.75px; } }
+        height: 8.000em; } }
     @media only screen and (min-width: 992px) and (max-width: 4800px) {
       .portfolio__caption {
-        height: 152px; } }
+        height: 7.500em; } }
+
+img[data-cite="Gastronymous"] {
+  background: url("../img/cite-Gastronymous.png") center/cover no-repeat; }
+
+img[data-cite="LusidTheme"] {
+  background: url("../img/cite-LusidTheme.png") center/cover no-repeat; }
+
+img[data-cite="LaCasa"] {
+  background: url("../img/cite-LaCasa.png") center/cover no-repeat; }
+
+img[data-cite="Ikaros"] {
+  background: url("../img/cite-Ikaros.png") center/cover no-repeat; }
+
+img[data-cite="MagBlog"] {
+  background: url("../img/cite-MagBlog.png") center/cover no-repeat; }
+
+img[data-cite="MediaGrup"] {
+  background: url("../img/cite-MediaGrup.png") center/cover no-repeat; }
+
+img[data-cite="Flat"] {
+  background: url("../img/cite-Flat.png") center/cover no-repeat; }
 
 section[name="section__contacts"] {
   background: #9575CD;
