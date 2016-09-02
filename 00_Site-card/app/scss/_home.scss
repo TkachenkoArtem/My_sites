@@ -10,6 +10,15 @@ section[name="section__home"] {
     &::after {
       @extend %clearfix;
     }
+    @include respond-to(768) {
+      margin-bottom: 0.750em * 3;
+    }
+    @include respond-to(992) {
+      margin-bottom: 0.400em * 3;
+    }
+    @include respond(1200, 4801) {
+      margin-bottom: 0.500em * 3;
+    }
   }
 
   &__avatar {
@@ -37,7 +46,7 @@ section[name="section__home"] {
         text-rendering: optimizeLegibility;
         color: #131313;
         letter-spacing: 0.15em;
-        text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474;
+        // text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474;
       }
     }
   }
@@ -55,6 +64,12 @@ section[name="section__home"] {
 
     li {
       display: inline-block;
+
+      &:hover {
+        outline: #131313 solid 2px;
+        transition: 0.5s;
+        -moz-outline-radius: 2px;
+      }
     }
   }
 }

@@ -1,0 +1,75 @@
+//main: style.scss
+
+section[name="section__skills"] {
+  background: #81C784;
+  box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
+}
+
+.legend {
+  text-align: right;
+
+  li {
+    display: inline-block;
+    padding: 1.000em;
+    list-style-type: none;
+
+    &:before {
+      content: "\274d ";
+      padding-right: 0.500em;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  margin-bottom: 2.000em;
+  border: 1px solid #43A047;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.12), 0 1px 2px 0 rgba(0,0,0,.24);
+  border-collapse: collapse;
+}
+
+td,
+th {
+  width: 25%;
+  padding-left: 2%;
+  border: 1px solid #43A047;
+}
+
+th {
+  background: #66BB6A;
+}
+
+.practical_knowledge {
+  color: #01579B;
+}
+
+.theoretical_knowledge {
+  color: #E65100;
+}
+
+.no_knowledge {
+  color: #3E2723;
+}
+
+.section__image_skills {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a[data-img] {
+  display: inline-block;
+  width: 2.000em;
+  height: 3.000em;
+  margin: 0.500em;
+  vertical-align: middle;
+}
+
+a[data-img].wide {
+  width: 6.000em;
+}
+@each $image in atom, SourceTree, gulp, codepen, git, npm, sass, github, css3, html5, javascript, bootstrap, bower, fontawesome, slick, normalizecss, bourbon, haml, JSON, AJAX, underscore, XML, MongoDB, Lightroom, AdobePhotoshop, jade, wordpress, autocad, babel, jquery, fontello, FlipClock, remodal, rx, riot, cs, ornanajs, webpack {
+  a[data-img="#{$image}"] {
+    background: inline('#{$image}-logo.png') center/contain no-repeat;
+  }
+}

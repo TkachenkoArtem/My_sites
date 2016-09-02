@@ -2,7 +2,6 @@
 @import "mixins/media";
 
 * {
-  // position: relative;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -21,6 +20,13 @@ html {
   @include respond-to(992) {
     font-size: 15px;
   }
+  @include respond(2560, 4801) {
+    font-size: 20px;
+  }
+}
+
+body, h3 {
+  margin: 0;
 }
 
 a {
@@ -82,7 +88,8 @@ section {
 }
 
 @import "general";
+@import "tooltip";
 @import "home";
-@import "aboutMe";
+@import "skills";
 @import "portfolio";
 @import "contacts";

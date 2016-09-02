@@ -7,8 +7,7 @@ section[name="section__contacts"] {
 
 .contacts {
   &__link {
-    display: block;
-    font-size: 0.700em;
+    font-size: 0.750em;
     font-weight: bold;
     text-transform: lowercase;
     text-shadow: none;
@@ -19,6 +18,6 @@ section[name="section__contacts"] {
   }
 }
 
-.elegantshadow--contacts {
+.main_style--contacts {
   display: block;
 }

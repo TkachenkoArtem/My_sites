@@ -1,4 +1,4 @@
-"use strict";
+/*jshint esversion: 6 */
 
 var gulp = require('gulp');
 var concatCSS = require('gulp-concat-css');
@@ -21,8 +21,8 @@ gulp.task('haml', function () {
     .pipe(htmlmin({
         collapseWhitespace: true
     }))
-    .pipe(rename('index.min.html'))
-        .pipe(gulp.dest('dist'))
+    .pipe(rename('index.html'))
+        .pipe(gulp.dest('TkachenkoArtem.github.io'))
     .pipe(livereload());
 
 });
@@ -32,7 +32,7 @@ gulp.task('vendorCSS', () => {
     return gulp.src('app/css/*.vendor.css')
         .pipe(concatCSS('vendor.css'))
         .pipe(uncss({
-            html: ['dist/index.min.html']
+            html: ['TkachenkoArtem.github.io/index.html']
         }))
         .pipe(cleanCSS({
             debug: true
@@ -41,7 +41,7 @@ gulp.task('vendorCSS', () => {
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
         .pipe(rename('vendor.min.css'))
-        .pipe(gulp.dest('dist/css/'));
+        .pipe(gulp.dest('TkachenkoArtem.github.io/css/'));
 });
 
 /*создание css*/
@@ -66,7 +66,7 @@ gulp.task('css', () => {
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
         .pipe(rename('style.min.css'))
-        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest('TkachenkoArtem.github.io/css/'))
         .pipe(livereload());
 });
 
@@ -75,7 +75,14 @@ gulp.task('compress', () => {
     return gulp.src('app/scripts/*.js')
         .pipe(uglify())
         .pipe(rename('script.min.js'))
-        .pipe(gulp.dest('dist/scripts/'));
+        .pipe(gulp.dest('TkachenkoArtem.github.io/scripts/'));
+});
+
+/*минимизация png*/
+gulp.task('png', () => {
+    return gulp.src('app/img/cite/*.png')
+        .pipe(pngmin())
+        .pipe(gulp.dest('TkachenkoArtem.github.io/img'));
 });
 
 /*инициализация*/
@@ -84,13 +91,14 @@ gulp.task('init', () => {
         .pipe(rename('normalize.vendor.css'))
         .pipe(gulp.dest('app/css/'));
     gulp.src('app/img/*.ico')
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('TkachenkoArtem.github.io/img'));
 });
 
 /*WATCH*/
 gulp.task('watch', () => {
     livereload.listen();
     gulp.watch('app/*.haml', ['haml']) /*следить за haml, запускать haml*/
+    gulp.watch('app/img/cite/*.png', ['png']) /*следить за изображениями, запускать png*/
     gulp.watch('app/css/*.min.css', ['vendorCSS']) /*следить за сторонними css, запускать vendorCSS*/
     gulp.watch('app/scss/**/*.scss', ['sass']) /*следить за SASS, запускать sass*/
     gulp.watch('app/css/style.css', ['css']) /*следить за style.css, запускать css*/
@@ -98,6 +106,6 @@ gulp.task('watch', () => {
 });
 
 /*BUILD*/
-gulp.task('build', ['haml', 'sass', 'css', 'compress', 'vendorCSS'], function() {
+gulp.task('build', ['init', 'haml', 'png', 'sass', 'css', 'compress', 'vendorCSS'], function() {
     console.log('Building completed!');
 })
