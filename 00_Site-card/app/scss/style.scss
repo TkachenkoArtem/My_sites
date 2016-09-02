@@ -2,7 +2,6 @@
 @import "mixins/media";
 
 * {
-  // position: relative;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -89,7 +88,8 @@ section {
 }
 
 @import "general";
+@import "tooltip";
 @import "home";
-@import "aboutMe";
+@import "skills";
 @import "portfolio";
 @import "contacts";

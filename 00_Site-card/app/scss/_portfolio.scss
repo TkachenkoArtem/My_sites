@@ -1,8 +1,8 @@
 //main: style.scss
 
 section[name="section__portfolio"] {
-  background: #81C784;
-  box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
+  background: #FFD54F;
+  box-shadow: -2px -2px 15px 7px rgba(#FFB300,0.82) inset;
 }
 
 .portfolio {
@@ -30,7 +30,7 @@ section[name="section__portfolio"] {
     margin: auto;
     padding: 1.000em;
     height: 18em;
-    background: #43A047;
+    background: #FFB300;
     text-align: center;
     border: none;
     @include respond-to(480) {

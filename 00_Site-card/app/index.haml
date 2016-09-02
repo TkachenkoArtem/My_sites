@@ -8,6 +8,7 @@
     %link{rel:"shortcut icon", href:"img/favicon.ico", type:"image/x-icon"}
     %link{href:"https://fonts.googleapis.com/css?family=Roboto", rel:"stylesheet", type:"text/css"}
     %link{rel:"stylesheet", href:"css/vendor.min.css"}
+    -# %link{rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity:"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin:"anonymous"}
     %link{rel:"stylesheet", href:"css/style.min.css"}
 
   %body
@@ -27,108 +28,187 @@
 
                 %ul.home__nav
                     %li
-                      %a.elegantshadow{href:"#aboutMe"} About me
+                      %a.main_style{href:"#skills"} Skills
                     %li
-                      %a.elegantshadow{href:"#portfolio"} Portfolio
+                      %a.main_style{href:"#portfolio"} Portfolio
                     %li
-                      %a.elegantshadow{href:"#contacts"} Contacts
+                      %a.main_style{href:"#contacts"} Contacts
 
-            %h1.elegantshadow.elegantshadow--h1 Junior
-            %h1.elegantshadow.elegantshadow--h1 Front-end
-            %h1.elegantshadow.elegantshadow--h1 developer
-              -#  _____ABOUT ME_____
+            %h1.main_style.main_style--h1 Junior
+            %h1.main_style.main_style--h1 Front-end
+            %h1.main_style.main_style--h1 developer
 
-        %section{name:"section__aboutMe"}
-            %a{name:"aboutMe"}
-            %h2.elegantshadow.elegantshadow--h2 About me
+              -#  _____SKILLS_____
 
-            %p.elegantshadow.aboutme Have practical skills in:
-                .aboutme__container
-                  	%a{href:"https://atom.io/", target:"_blank", data-img:"atom"}
-                  	%a{href:"http://webpack.github.io/", target:"_blank", data-img:"webpack"}
-                  	%a{href:"https://www.sourcetreeapp.com/", target:"_blank", data-img:"SourceTree"}
-                  	%a{href:"http://gulpjs.com/", target:"_blank", data-img:"gulp"}
-                  	%a.wide{href:"http://codepen.io/", target:"_blank", data-img:"codepen"}
-                  	%a{href:"https://git-scm.com/", target:"_blank", data-img:"git"}
-                  	%a.wide{href:"https://www.npmjs.com/", target:"_blank", data-img:"npm"}
-                  	%a{href:"http://sass-lang.com/", target:"_blank", data-img:"sass"}
-                  	%a{href:"https://github.com/", target:"_blank", data-img:"github"}
-                    %a{href:"http://www.w3schools.com/css/css3_intro.asp", target:"_blank", data-img:"css3"}
-                    %a{href:"http://www.w3schools.com/html/default.asp", target:"_blank", data-img:"html5"}
-                    %a{href:"http://www.w3schools.com/js/default.asp", target:"_blank", data-img:"javascript"}
-                    %a{href:"http://getbootstrap.com/", target:"_blank", data-img:"bootstrap"}
-                    %a{href:"https://bower.io/", target:"_blank", data-img:"bower"}
-                    %a.wide{href:"http://fontawesome.io/", target:"_blank", data-img:"fontawesome"}
-                    %a{href:"http://kenwheeler.github.io/slick/", target:"_blank", data-img:"slick"}
-                    %a{href:"https://necolas.github.io/normalize.css/", target:"_blank", data-img:"normalizecss"}
-                    %a.wide{href:"http://bourbon.io/docs/", target:"_blank", data-img:"bourbon"}
-                    %a.wide{href:"http://haml.info/", target:"_blank", data-img:"haml"}
+        %section{name:"section__skills"}
+            %a{name:"skills"}
+            %h2.main_style.main_style--h2 Skills
 
-            %p.elegantshadow.aboutme Have theoretical skills in:
-                .aboutme__container
-                    %a{href:"http://www.json.org/", target:"_blank", data-img:"JSON"}
-                    %a.wide{href:"http://www.w3schools.com/ajax/", target:"_blank", data-img:"AJAX"}
-                    %a.wide{href:"http://underscorejs.org/", target:"_blank", data-img:"underscore"}
-                    %a{href:"http://www.w3schools.com/xml/", target:"_blank", data-img:"XML"}
-                    %a.wide{href:"https://www.mongodb.com/", target:"_blank", data-img:"MongoDB"}
-                    %a{href:"https://www.adobe.com/products/photoshop-lightroom.html?promoid=KLXLX", target:"_blank", data-img:"Lightroom"}
-                    %a{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank", data-img:"AdobePhotoshop"}
-                    %a.wide{href:"http://jade-lang.com/", target:"_blank", data-img:"jade"}
-                    %a{href:"https://wordpress.org/", target:"_blank", data-img:"wordpress"}
-                    %a.wide{href:"http://www.autodesk.ru/products/autocad/overview", target:"_blank", data-img:"autocad"}
-                    %a.wide{href:"https://babeljs.io/", target:"_blank", data-img:"babel"}
-                    %a{href:"https://jquery.com/", target:"_blank", data-img:"jquery"}
-                    %a.wide{href:"http://fontello.com/", target:"_blank", data-img:"fontello"}
-                    %a.wide{href:"http://flipclockjs.com/", target:"_blank", data-img:"FlipClock"}
-                    %a.wide{href:"http://vodkabears.github.io/remodal/", target:"_blank", data-img:"remodal"}
-                    %a{href:"http://reactivex.io/", target:"_blank", data-img:"rx"}
+            .legend
+                %ul
+                  %li.practical_knowledge have practical skills
+                  %li.theoretical_knowledge have theoretical skills
+                  %li.no_knowledge learning now
 
-            %p.elegantshadow.aboutme Now I familiarize:
-                .aboutme__container
-                    %a.wide{href:"http://riotjs.com/", target:"_blank", data-img:"riot"}
-                    %a.wide{href:"http://coffeescript.org/", target:"_blank", data-img:"cs"}
-                    %a{href:"https://nodejs.org/en/", target:"_blank", data-img:"nodejs"}
-                    %a.wide{href:"http://backbonejs.org/", target:"_blank", data-img:"BackboneJS"}
-                    %a.wide{href:"https://ornaorg.github.io/", target:"_blank", data-img:"ornanajs"}
+            %table
+                %thead
+                  %tr
+                    %th Languages
+                    %th Preprocessors
+                    %th IDE
+                    %th OS
+                %tr.practical_knowledge
+                  %td HTML5
+                  %td HAML
+                  %td Atom
+                  %td Windows 7, 10
+                %tr.practical_knowledge
+                  %td CSS3
+                  %td.theoretical_knowledge Jade
+                  %td.theoretical_knowledge Sublime
+                  %td Linux
+                %tr.practical_knowledge
+                  %td JavaScript
+                  %td SASS
+                  %td Gulp
+                  %td
+                %tr
+                  %td.theoretical_knowledge C/C++
+                  %td.no_knowledge CoffeeScript
+                  %td.practical_knowledge Webpack
+                  %td
+                %tr.theoretical_knowledge
+                  %td XML
+                  %td Less
+                  %td Grunt
+                  %td
+
+            %table
+                %thead
+                  %tr
+                    %th{colspan:"2"} Libraries and frameworks
+                    %th Programs
+                    %th Package managers, CMS, other
+                %tr.practical_knowledge
+                  %td jQwery
+                  %td Bootstrap 3
+                  %td AdobePhotoshop
+                  %td npm
+                %tr.practical_knowledge
+                  %td Slick.js
+                  %td Normalize.css
+                  %td GitHub
+                  %td Bower
+                %tr.practical_knowledge
+                  %td Font Awesome
+                  %td Bourbon
+                  %td SourceTree
+                  %td Git
+                %tr.practical_knowledge
+                  %td Babel.js
+                  %td Fontello
+                  %td Autocad
+                  %td Wordpress
+                %tr.practical_knowledge
+                  %td.theoretical_knowledge jQweryUI
+                  %td.theoretical_knowledge Underscore.js
+                  %td Lightroom
+                  %td Codepen
+                %tr.theoretical_knowledge
+                  %td FlipClock.js
+                  %td Remodal.js
+                  %td
+                  %td MongoDB
+                %tr
+                  %td.no_knowledge Node.js
+                  %td.no_knowledge RIOT.js
+                  %td
+                  %td.theoretical_knowledge JSON
+                %tr
+                  %td.no_knowledge Orna.js
+                  %td.no_knowledge ReactiveX
+                  %td
+                  %td.theoretical_knowledge AJAX
+
+
+            .section__image_skills
+                %a{href:"https://atom.io/", target:"_blank", data-img:"atom"}
+                %a{href:"http://webpack.github.io/", target:"_blank", data-img:"webpack"}
+                %a{href:"https://www.sourcetreeapp.com/", target:"_blank", data-img:"SourceTree"}
+                %a{href:"http://gulpjs.com/", target:"_blank", data-img:"gulp"}
+                %a.wide{href:"http://codepen.io/", target:"_blank", data-img:"codepen"}
+                %a{href:"https://git-scm.com/", target:"_blank", data-img:"git"}
+                %a.wide{href:"https://www.npmjs.com/", target:"_blank", data-img:"npm"}
+                %a{href:"http://sass-lang.com/", target:"_blank", data-img:"sass"}
+                %a{href:"https://github.com/", target:"_blank", data-img:"github"}
+                %a{href:"http://www.w3schools.com/css/css3_intro.asp", target:"_blank", data-img:"css3"}
+                %a{href:"http://www.w3schools.com/html/default.asp", target:"_blank", data-img:"html5"}
+                %a{href:"http://www.w3schools.com/js/default.asp", target:"_blank", data-img:"javascript"}
+                %a{href:"http://getbootstrap.com/", target:"_blank", data-img:"bootstrap"}
+                %a{href:"https://bower.io/", target:"_blank", data-img:"bower"}
+                %a.wide{href:"http://fontawesome.io/", target:"_blank", data-img:"fontawesome"}
+                %a{href:"http://kenwheeler.github.io/slick/", target:"_blank", data-img:"slick"}
+                %a{href:"https://necolas.github.io/normalize.css/", target:"_blank", data-img:"normalizecss"}
+                %a.wide{href:"http://bourbon.io/docs/", target:"_blank", data-img:"bourbon"}
+                %a.wide{href:"http://haml.info/", target:"_blank", data-img:"haml"}
+                %a{href:"http://www.json.org/", target:"_blank", data-img:"JSON"}
+                %a.wide{href:"http://www.w3schools.com/ajax/", target:"_blank", data-img:"AJAX"}
+                %a.wide{href:"http://underscorejs.org/", target:"_blank", data-img:"underscore"}
+                %a{href:"http://www.w3schools.com/xml/", target:"_blank", data-img:"XML"}
+                %a.wide{href:"https://www.mongodb.com/", target:"_blank", data-img:"MongoDB"}
+                %a{href:"https://www.adobe.com/products/photoshop-lightroom.html?promoid=KLXLX", target:"_blank", data-img:"Lightroom"}
+                %a{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank", data-img:"AdobePhotoshop"}
+                %a.wide{href:"http://jade-lang.com/", target:"_blank", data-img:"jade"}
+                %a{href:"https://wordpress.org/", target:"_blank", data-img:"wordpress"}
+                %a.wide{href:"http://www.autodesk.ru/products/autocad/overview", target:"_blank", data-img:"autocad"}
+                %a.wide{href:"https://babeljs.io/", target:"_blank", data-img:"babel"}
+                %a{href:"https://jquery.com/", target:"_blank", data-img:"jquery"}
+                %a.wide{href:"http://fontello.com/", target:"_blank", data-img:"fontello"}
+                %a.wide{href:"http://flipclockjs.com/", target:"_blank", data-img:"FlipClock"}
+                %a.wide{href:"http://vodkabears.github.io/remodal/", target:"_blank", data-img:"remodal"}
+                %a{href:"http://reactivex.io/", target:"_blank", data-img:"rx"}
+                %a.wide{href:"http://riotjs.com/", target:"_blank", data-img:"riot"}
+                %a.wide{href:"http://coffeescript.org/", target:"_blank", data-img:"cs"}
+                %a.wide{href:"https://ornaorg.github.io/", target:"_blank", data-img:"ornanajs"}
 
               -#  _____PORTFOLIO_____
 
         %section{name:"section__portfolio"}
             %a{name:"portfolio"}
-            %h2.elegantshadow.elegantshadow--h2 Portfolio
+            %h2.main_style.main_style--h2 Portfolio
 
             %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank"} %img{data-cite:"Gastronymous"}
+                %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
                 %figcaption.portfolio__caption
                     %h3 Gastronymous
                     %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp.
             %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank"} %img{data-cite:"LusidTheme"}
+                %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
                 %figcaption.portfolio__caption
                     %h3 Lusid Theme
                     %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
             %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank"} %img{data-cite:"LaCasa"}
+                %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
                 %figcaption.portfolio__caption
                     %h3 La Casa
                     %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/04_Ikaros/index.min.html", target:"_blank"} %img{data-cite:"Ikaros"}
+            %figure.portfolio{style:"display:none"}
+                %a{href:"http://tkachenko.ho.ua/04_Ikaros/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Ikaros"}
                 %figcaption.portfolio__caption
                     %h3 Ikaros
                     %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/06_MagBlog/index.min.html", target:"_blank"} %img{data-cite:"MagBlog"}
+            %figure.portfolio{style:"display:none"}
+                %a{href:"http://tkachenko.ho.ua/06_MagBlog/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MagBlog"}
                 %figcaption.portfolio__caption
                     %h3 Magazine Blog
                     %p em + media-queries. Source code: HAML + Sass. Performed using Flexbox. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/07_MediaGrupPortfolio/index.min.html", target:"_blank"} %img{data-cite:"MediaGrup"}
+            %figure.portfolio{style:"display:none"}
+                %a{href:"http://tkachenko.ho.ua/07_MediaGrupPortfolio/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MediaGrup"}
                 %figcaption.portfolio__caption
                     %h3 MediaGrup Portfolio
                     %p Bootstrap. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/05_FlatStyleWebsite/index.min.html", target:"_blank"} %img{data-cite:"Flat"}
+            %figure.portfolio{style:"display:none"}
+                %a{href:"http://tkachenko.ho.ua/05_FlatStyleWebsite/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Flat"}
                 %figcaption.portfolio__caption
                     %h3 FlatStyleWebsite
                     %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Webpack.
@@ -137,19 +217,22 @@
 
         %section{name:"section__contacts"}
             %a{name:"contacts"}
-            %h2.elegantshadow.elegantshadow--h2 Contacts
+            %h2.main_style.main_style--h2 Contacts
 
           .contacts.center
-              %p.elegantshadow E-mail:
-                  %a.contacts__link.elegantshadow{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
-              %p.elegantshadow Skype:
-                  %span.contacts__link.elegantshadow a.tkachenko177
-              %p.elegantshadow Viber:
-                  %span.contacts__link.elegantshadow +380688891260
-              %a.elegantshadow.elegantshadow--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank"} Codepen:
-                  %span.contacts__link.elegantshadow http://codepen.io/Tkachenko/
-              %a.elegantshadow.elegantshadow--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank"} Github:
-                  %span.contacts__link.elegantshadow https://github.com/TkachenkoArtem/
+              %p.main_style E-mail:
+                  %a.contacts__link.main_style{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
+              %p.main_style Skype:
+                  %span.contacts__link.main_style a.tkachenko177
+              %p.main_style Viber:
+                  %span.contacts__link.main_style +380688891260
+              %a.main_style.main_style--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in Codepen!"} Codepen:
+                  %span.contacts__link.main_style http://codepen.io/Tkachenko/
+              %a.main_style.main_style--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in GitHub!"} Github:
+                  %span.contacts__link.main_style https://github.com/TkachenkoArtem/
+              %a.main_style.main_style--contacts{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in LinkedIn!"} Linkedin:
+                  %span.contacts__link.main_style https://www.linkedin.com/in/artem-tkachenko
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+    %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity:"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin:"anonymous"}
     %script{src:"scripts/script.min.js"}
