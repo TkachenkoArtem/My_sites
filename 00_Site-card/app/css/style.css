@@ -20,8 +20,13 @@ html {
     html {
       font-size: 20px; } }
 
-body, h3 {
+body, h3, h4 {
   margin: 0; }
+
+h4 {
+  margin-bottom: 0.750em;
+  text-align: center;
+  font-size: 1.500em; }
 
 a {
   display: inline-block;
@@ -67,7 +72,7 @@ section {
   background: #CFD8DC;
   opacity: 0.85; }
 
-.home_container_avatar_and_nav::after {
+.home_container_avatar_and_nav::after, .codepen_container::after {
   content: "";
   display: table;
   clear: both; }
@@ -496,6 +501,19 @@ img[data-cite="MediaGrup"] {
 
 img[data-cite="Flat"] {
   background: url("../img/cite-Flat.png") center/cover no-repeat; }
+
+.codepen_container {
+  padding: 1.000em; }
+  .codepen_container__annotation {
+    width: 25%;
+    padding: 1.000em;
+    float: left; }
+    .codepen_container__annotation p {
+      font-size: 1.500em;
+      text-align: justify; }
+  .codepen_container__example {
+    width: 75%;
+    float: right; }
 
 section[name="section__contacts"] {
   background: #9575CD;

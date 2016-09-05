@@ -177,41 +177,80 @@
             %a{name:"portfolio"}
             %h2.main_style.main_style--h2 Portfolio
 
-            %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
-                %figcaption.portfolio__caption
-                    %h3 Gastronymous
-                    %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp.
-            %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
-                %figcaption.portfolio__caption
-                    %h3 Lusid Theme
-                    %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio
-                %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
-                %figcaption.portfolio__caption
-                    %h3 La Casa
-                    %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio{style:"display:none"}
-                %a{href:"http://tkachenko.ho.ua/04_Ikaros/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Ikaros"}
-                %figcaption.portfolio__caption
-                    %h3 Ikaros
-                    %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio{style:"display:none"}
-                %a{href:"http://tkachenko.ho.ua/06_MagBlog/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MagBlog"}
-                %figcaption.portfolio__caption
-                    %h3 Magazine Blog
-                    %p em + media-queries. Source code: HAML + Sass. Performed using Flexbox. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio{style:"display:none"}
-                %a{href:"http://tkachenko.ho.ua/07_MediaGrupPortfolio/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MediaGrup"}
-                %figcaption.portfolio__caption
-                    %h3 MediaGrup Portfolio
-                    %p Bootstrap. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
-            %figure.portfolio{style:"display:none"}
-                %a{href:"http://tkachenko.ho.ua/05_FlatStyleWebsite/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Flat"}
-                %figcaption.portfolio__caption
-                    %h3 FlatStyleWebsite
-                    %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Webpack.
+            .cite_container
+                %h3.main_style My sites:
+                %figure.portfolio
+                    %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
+                    %figcaption.portfolio__caption
+                        %h3 Gastronymous
+                        %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp.
+                %figure.portfolio
+                    %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
+                    %figcaption.portfolio__caption
+                        %h3 Lusid Theme
+                        %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                %figure.portfolio
+                    %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
+                    %figcaption.portfolio__caption
+                        %h3 La Casa
+                        %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                %figure.portfolio{style:"display:none"}
+                    %a{href:"http://tkachenko.ho.ua/04_Ikaros/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Ikaros"}
+                    %figcaption.portfolio__caption
+                        %h3 Ikaros
+                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                %figure.portfolio{style:"display:none"}
+                    %a{href:"http://tkachenko.ho.ua/06_MagBlog/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MagBlog"}
+                    %figcaption.portfolio__caption
+                        %h3 Magazine Blog
+                        %p em + media-queries. Source code: HAML + Sass. Performed using Flexbox. Packet manager: npm. Build system automating tasks: Gulp.
+                %figure.portfolio{style:"display:none"}
+                    %a{href:"http://tkachenko.ho.ua/07_MediaGrupPortfolio/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MediaGrup"}
+                    %figcaption.portfolio__caption
+                        %h3 MediaGrup Portfolio
+                        %p Bootstrap. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                %figure.portfolio{style:"display:none"}
+                    %a{href:"http://tkachenko.ho.ua/05_FlatStyleWebsite/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Flat"}
+                    %figcaption.portfolio__caption
+                        %h3 FlatStyleWebsite
+                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Webpack.
+
+            .codepen_container
+                %h3.main_style My works in Codepen:
+
+              .codepen_container
+                .codepen_container__annotation
+                    %h4 1. E-mail
+                    %p.main_style
+                .codepen_container__example
+                    <p data-height="400" data-theme-id="25315" data-slug-hash="kXQqyX" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/kXQqyX/">HAML-email</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+              .codepen_container
+                .codepen_container__annotation
+                    %h4 2. JavaScript. Events
+                    %p.main_style
+                .codepen_container__example
+                    <p data-height="400" data-theme-id="25315" data-slug-hash="JKVpQq" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/JKVpQq/">JS-events</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+              .codepen_container
+                .codepen_container__annotation
+                    %h4 3. CSS. display: grid
+                    %p The experimental technology not included in the official specification.
+                .codepen_container__example
+                    <p data-height="400" data-theme-id="25315" data-slug-hash="OXqxxb" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/OXqxxb/">CSS -gridLayout</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+              .codepen_container
+                .codepen_container__annotation
+                    %h4 4. Phonebook
+                    %p.main_style
+                .codepen_container__example
+                    <p data-height="400" data-theme-id="25315" data-slug-hash="LkvdYP" data-default-tab="js,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/LkvdYP/">JS-phonebook</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+              -# .codepen_container
+              -#   .codepen_container__annotation
+              -#       %h4 5.
+              -#       %p.main_style
+              -#   .codepen_container__example
 
               -#  _____CONTACTS_____
 
@@ -235,4 +274,5 @@
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity:"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin:"anonymous"}
+    -# %script{async:"async", src:"//assets.codepen.io/assets/embed/ei.js"}
     %script{src:"scripts/script.min.js"}
