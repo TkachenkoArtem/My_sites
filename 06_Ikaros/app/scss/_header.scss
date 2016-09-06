@@ -1,0 +1,58 @@
+//main: style.scss
+
+#header {
+  overflow: hidden;
+  border: 0.001em solid blue;
+  background: $brandcolor;
+  border-bottom: 0.313em solid $brandcolor__line;
+}
+
+.header {
+  &__logo {
+    float: left;
+    margin: 1.850em auto 1.250em;
+
+  }
+
+  &__nav {
+    float: right;
+    padding: 0;
+    margin: auto;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      height: 100%;
+      padding-top: 2.700em;
+      padding-bottom: 1.250em;
+      color: white;
+
+      &:hover {
+        background: $brandcolor__hover;
+        color: $links;
+      }
+    }
+  }
+
+}
+
+.gradient {
+  border-width: 2px 0 2px 2px;
+  border-style: solid;
+  -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from(#292c2d), to(#424547)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(right, #292c2d, #424547) 1 100%;
+  -moz-border-image: -moz-linear-gradient(right, #292c2d, #424547) 1 100%;
+  -o-border-image: -o-linear-gradient(right, #292c2d, #424547) 1 100%;
+  border-image: linear-gradient(to right, #292c2d, #424547) 1 100%;
+
+  // &--right {
+  //     border-width: 2px 2px 2px 0;
+  // }
+
+  &__link {
+    padding: 0 1.800em 0 1.300em;
+    font: 0.750em allerregular;
+    text-transform: uppercase;
+    color: inherit;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ikaros",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Tkachenko Artem",
+  "license": "free",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-base64-inline": "latest",
+    "gulp-haml": "latest",
+    "gulp-htmlmin": "latest",
+    "gulp-livereload": "latest",
+    "gulp-pngmin": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-uncss": "latest",
+    "gulp.spritesmith": "latest"
+  }
+}

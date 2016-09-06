@@ -1,0 +1,103 @@
+//out: ../css/style.css
+@import "mixins/media";
+@import "fonts";
+
+@function em($pxval, $base: 16px) {
+    @return ($pxval / $base) * 1em;
+}
+
+$brandcolor: #3a3d40;
+$brandcolor__hover: #35373a;
+$brandcolor__line: #4a4d50;
+$footerbottom: #2f3235;
+$footerform: #2d3032;
+$links: #90b2c8;
+
+* {
+  box-sizing: border-box;
+  color: #555555;
+}
+
+html {
+  @include respond-to(320) {
+    font-size: 75%;
+  }
+  @include respond-to(480) {
+    font-size: 80%;
+  }
+  @include respond-to(768) {
+    font-size: 87.5%;
+  }
+  @include respond-to(992) {
+    font-size: 95%;
+  }
+  @include respond-to(1200) {
+    font-size: 100%;
+  }
+}
+
+h1 {
+  font: 1.000em allerbold;
+}
+
+h2 {
+  font: em(30px) allerbold;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 1500px;
+  margin: 0 auto;
+  border: 0.001em solid red;
+}
+
+#footer,
+#header,
+main {
+  padding: 0 16.875em;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 0.300em;
+  right: 0.300em;
+  width: 1.000em;
+  height: 1.000em;
+  z-index: 9999;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0.500em;
+  background: $brandcolor;
+  transition: opacity 0.2s ease-out;
+  font-size: 3.000em;
+  text-align: center;
+  color: white;
+  opacity: 0;
+}
+
+#back-to-top:hover {
+  background: $brandcolor__hover;
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
+%clearfloat {
+  content: "";
+  display: block;
+  clear: both;
+}
+@import "header";
+@import "main";
+@import "footer";

@@ -1,0 +1,76 @@
+!!! 5
+%html{lang:"en"}
+
+  %head
+    %meta{charset:"UTF-8"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1.0"}
+    %title Ikaros
+    %link{rel:"shortcut icon", href:"img/favicon.ico", type:"image/x-icon"}
+    -# %link{rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Droid+Sans"}
+    %link{rel:"stylesheet", href:"https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"}
+    %link{rel:"stylesheet", href:"https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"}
+    %link{rel:"stylesheet", href:"https://cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css"}
+    %link{rel:"stylesheet", href:"css/vendor.min.css"}
+    %link{rel:"stylesheet", href:"css/style.min.css"}
+
+  %body
+
+    .wrapper
+
+      %a#back-to-top.fa.fa-arrow-up{href:"#", title:"Back to top"}
+
+            -#  _____HEADER_____
+
+      %header#header
+        %img.header__logo{src:"img/logo.png", alt:"Ikaros"}
+        %ul.header__nav
+          %li.gradient
+            %a.gradient__link{href:"#"} Home
+          %li.gradient
+            %a.gradient__link{href:"#"} Service
+          %li.gradient
+            %a.gradient__link{href:"#"} Portfolio
+          %li.gradient
+            %a.gradient__link{href:"#"} About
+          %li.gradient
+            %a.gradient__link{href:"#"} Blog
+          %li.gradient
+            %a.gradient__link{href:"#"} Contact
+
+            -#  _____MAIN_____
+
+      %main
+
+        .slick
+          %img{src:"img/Slider_01.png", alt:"img1"}
+          %img{src:"img/Slider_01.png", alt:"img2"}
+          %img{src:"img/Slider_01.png", alt:"img3"}
+          %img{src:"img/Slider_01.png", alt:"img4"}
+
+        .our_servise
+          %h2 Our Services
+          %p.our_servise__text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+        .tabs
+          %input{id:"tab1", type:"radio", name:"tabs", checked:"checked"}
+          %label{for:"tab1", title:"Web Design"} Web Design
+          %input{id:"tab2", type:"radio", name:"tabs"}
+          %label{for:"tab2", title:"Photography"} Photography
+          %input{id:"tab3", type:"radio", name:"tabs" }
+          %label{for:"tab3", title:"Graphics"} Graphics
+
+          %section#content1
+            %p What number's bigger? 1
+          %section#content2
+            %p What number's bigger? 2
+          %section#content3
+            %p What number's bigger? 3
+
+            -#  _____FOOTER_____
+
+      %footer#footer
+
+    %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+    %script{src:"https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"}
+    %script $('.slick').slick({ autoplay: true });
+    -# %script{src:"scripts/script.min.js"}

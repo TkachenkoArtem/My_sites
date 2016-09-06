@@ -1,0 +1,83 @@
+//main: style.scss
+
+main {
+  border: 0.001em solid green;
+}
+
+.slick {
+  margin-top: 3.100em;
+
+  &-prev {
+    left: 30px;
+  }
+
+  &-next {
+    right: 30px;
+  }
+
+  &-next,
+  &-prev {
+    z-index: 999;
+
+    &::before {
+      font-size: 35px;
+    }
+  }
+}
+
+.our_servise {
+  text-align: center;
+  color: #555555;
+  &__text {
+    font: em(20px) allerlightr;
+    color: inherit;
+  }
+}
+
+.tabs {
+   input {
+    display: none;
+  }
+
+   label {
+    /* Стили вкладок (табов) */
+    display: inline-block;
+    margin: 0 0 -1px;
+    width: 7.000em;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    border-radius: 3px 3px 0 0;
+  }
+
+   label:hover {
+    /* изменения стиля заголовков вкладок при наведении */
+    color: #888;
+    cursor: pointer;
+  }
+
+   input:checked + label {
+    /* стили для активной вкладки */
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 1px solid #009933;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+  }
+}
+
+section {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
