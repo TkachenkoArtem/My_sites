@@ -87,7 +87,7 @@ gulp.task('png', () => {
 
 /*инициализация*/
 gulp.task('init', () => {
-    gulp.src('node_modules/normalize-css/normalize.css')
+    gulp.src('node_modules/normalize.css/normalize.css')
         .pipe(rename('normalize.vendor.css'))
         .pipe(gulp.dest('app/css/'));
     gulp.src('app/img/*.ico')

@@ -45,9 +45,31 @@ section[name="section__portfolio"] {
     }
   }
 }
-@each $image in Gastronymous, LusidTheme, LaCasa, Ikaros,
-                MagBlog, MediaGrup, Flat {
+@each $image in Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat {
   img[data-cite="#{$image}"] {
     background: url("../img/cite-#{$image}.png") center/cover no-repeat;
+  }
+}
+
+.codepen_container {
+  padding: 1.000em;
+
+  &::after {
+    @extend %clearfix;
+  }
+
+  &__annotation {
+    width: 25%;
+    padding: 1.000em;
+    float: left;
+    p {
+      font-size: 1.500em;
+      text-align: justify;
+    }
+  }
+
+  &__example {
+    width: 75%;
+    float: right;
   }
 }
