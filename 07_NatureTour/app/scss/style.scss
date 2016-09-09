@@ -1,0 +1,49 @@
+//out: ../css/style.css
+@import "mixins/media";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  @include respond-to(320) {
+    font-size: 12px;
+  }
+  @include respond-to(480) {
+    font-size: 13px;
+  }
+  @include respond-to(768) {
+    font-size: 14px;
+  }
+  @include respond-to(992) {
+    font-size: 15px;
+  }
+  @include respond(2560, 4801) {
+    font-size: 20px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#ho_adv { //It`s for hosting
+  display: none !important;
+}
+
+%clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+%position_relative {
+  position: relative;
+}
+
+@import "header";
+@import "main";
+@import "footer";
