@@ -4,17 +4,20 @@
 }
 
 .main_style {
-  font-size: 1.500em;
   margin: 0;
   padding: 0.500em;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 1.500em;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
   color: #131313;
   letter-spacing: 0.15em;
 
   &--h1 {
-    font-size: 3.000em;
     padding: 0;
+    font-size: 3.000em;
+    color: #1976D2;
     @include respond-to(768) {
       font-size: 7.000em;
     }
@@ -27,8 +30,57 @@
   }
 
   &--h2 {
-    font-size: 2.500em;
     margin: 0;
     padding: 0.500em 0 0;
+    font-size: 2.500em;
+  }
+
+  &--contacts {
+    display: block;
+  }
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+
+  li {
+    display: inline-block;
+    @include respond(320, 481) {
+      display: block;
+    }
+
+    &:nth-child(1):hover {
+      background: $bg_skills;
+    }
+
+    &:nth-child(2):hover {
+      background: $bg_portfolio;
+    }
+
+    &:nth-child(3):hover {
+      background: $bg_contacts;
+    }
+
+    &:hover {
+      border-radius: 12px;
+    }
+
+    & > a {
+      color: white;
+      @include respond(320, 481) {
+        padding: 0;
+        font-size: 1.000em;
+      }
+
+      &:hover {
+        border-right: 6px;
+        color: #131313;
+      }
+    }
   }
 }

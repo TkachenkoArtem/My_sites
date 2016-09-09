@@ -16,7 +16,7 @@ var haml = require('gulp-haml');
 
 /*создание haml*/
 gulp.task('haml', function () {
-  gulp.src('app/*.haml')
+  gulp.src('app/index.haml')
     .pipe(haml())
     .pipe(htmlmin({
         collapseWhitespace: true

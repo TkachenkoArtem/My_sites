@@ -1,6 +1,11 @@
 //out: ../css/style.css
 @import "mixins/media";
 
+$bg_home: #64B5F6;
+$bg_skills: #81C784;
+$bg_portfolio: #FFD54F;
+$bg_contacts: #9575CD;
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -25,7 +30,10 @@ html {
   }
 }
 
-body, h3, h4 {
+body,
+figure,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -58,7 +66,7 @@ section {
 #back-to-top {
   position: fixed;
   bottom: 0.500em;
-  right: 1.400em;
+  right: 1.000em;
   width: 1.500em;
   height: 1.500em;
   z-index: 9999;
@@ -68,9 +76,11 @@ section {
   font-size: 2.000em;
   text-align: center;
   opacity: 0;
+
   p {
     margin: 0;
     color: #90A4AE;
+
     &:hover {
       color: #263238;
     }
@@ -80,6 +90,7 @@ section {
 #back-to-top:hover {
   background: #546E7A;
   box-shadow: 4px 3px 11px 5px rgba(#BDBDBD,0.82);
+  @extend %trans_scale;
 }
 
 #back-to-top.show {
@@ -93,8 +104,16 @@ section {
   clear: both;
 }
 
+%trans_scale {
+  transform: scale(1.2);
+}
+
+%position_relative {
+  position: relative;
+}
 @import "general";
 @import "tooltip";
+@import "btn_download";
 @import "home";
 @import "skills";
 @import "portfolio";

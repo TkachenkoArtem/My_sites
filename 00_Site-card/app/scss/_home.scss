@@ -1,74 +1,35 @@
 //main: style.scss
 
 section[name="section__home"] {
-  background: #64B5F6;
+  padding: 2.000em;
+  background: $bg_home;
   box-shadow: -2px -2px 15px 7px rgba(#1E88E5,0.82) inset;
 }
 
 .home {
-  &_container_avatar_and_nav {
-    &::after {
-      @extend %clearfix;
-    }
-    @include respond-to(768) {
-      margin-bottom: 0.750em * 3;
-    }
-    @include respond-to(992) {
-      margin-bottom: 0.400em * 3;
-    }
-    @include respond(1200, 4801) {
-      margin-bottom: 0.500em * 3;
-    }
-  }
-
   &__avatar {
-    float: left;
-    width: 40%;
-    margin: 0;
-    text-align: center;
+    @extend %position_relative;
     @include respond(768, 4801) {
-      width: 30%;
-    }
-
-    & > div {
-      display: inline-block;
       width: 6.000em;
       height: 6.000em;
-      margin: 2.000em 0 0;
+      top: -10px;
+      left: 10px;
       border-radius: 3.000em;
       background: inline('img01.png') center/contain no-repeat;
     }
 
+    &:hover {
+      @extend %trans_scale;
+    }
+
     & > figcaption {
-      & > strong {
-        font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-        text-transform: uppercase;
-        text-rendering: optimizeLegibility;
-        color: #131313;
-        letter-spacing: 0.15em;
-        // text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474;
-      }
-    }
-  }
-
-  &__nav {
-    float: right;
-    width: 60%;
-    margin-top: 2.000em;
-    padding: 0;
-    list-style: none;
-    text-align: right;
-    @include respond(768, 4801) {
-      width: 70%;
-    }
-
-    li {
-      display: inline-block;
-
-      &:hover {
-        outline: #131313 solid 2px;
-        transition: 0.5s;
-        -moz-outline-radius: 2px;
+      @extend %position_relative;
+      bottom: -6.000em;
+      letter-spacing: 0.15em;
+      text-align: center;
+      color: #1976D2;
+        @include respond(320, 481) {
+        bottom: 0;
       }
     }
   }
