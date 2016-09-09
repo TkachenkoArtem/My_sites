@@ -8,7 +8,6 @@
     %link{rel:"shortcut icon", href:"img/favicon.ico", type:"image/x-icon"}
     %link{href:"https://fonts.googleapis.com/css?family=Roboto", rel:"stylesheet", type:"text/css"}
     %link{rel:"stylesheet", href:"css/vendor.min.css"}
-    -# %link{rel:"stylesheet", href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity:"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin:"anonymous"}
     %link{rel:"stylesheet", href:"css/style.min.css"}
 
   %body
@@ -21,18 +20,18 @@
 
         %section{name:"section__home"}
 
-            .home_container_avatar_and_nav
-                %figure.home__avatar
-                    %div
-                    %figcaption  %strong Artem Tkachenko
+            -# .home_container_avatar_and_nav
+            %figure.home__avatar
+                -# %div
+                %figcaption %p Artem Tkachenko
 
-                %ul.home__nav
-                    %li
-                      %a.main_style{href:"#skills"} Skills
-                    %li
-                      %a.main_style{href:"#portfolio"} Portfolio
-                    %li
-                      %a.main_style{href:"#contacts"} Contacts
+            %ul.navigation
+                %li
+                  %a.main_style{href:"#skills"} Skills
+                %li
+                  %a.main_style{href:"#portfolio"} Portfolio
+                %li
+                  %a.main_style{href:"#contacts"} Contacts
 
             %h1.main_style.main_style--h1 Junior
             %h1.main_style.main_style--h1 Front-end
@@ -64,7 +63,7 @@
                   %td Windows 7, 10
                 %tr.practical_knowledge
                   %td CSS3
-                  %td.theoretical_knowledge Jade
+                  %td.theoretical_knowledge Pug.js (jade)
                   %td.theoretical_knowledge Sublime
                   %td Linux
                 %tr.practical_knowledge
@@ -90,9 +89,9 @@
                     %th Programs
                     %th Package managers, CMS, other
                 %tr.practical_knowledge
-                  %td jQwery
+                  %td jQuery
                   %td Bootstrap 3
-                  %td AdobePhotoshop
+                  %td Adobe Photoshop
                   %td npm
                 %tr.practical_knowledge
                   %td Slick.js
@@ -121,7 +120,7 @@
                   %td MongoDB
                 %tr
                   %td.no_knowledge Node.js
-                  %td.no_knowledge RIOT.js
+                  %td.no_knowledge React
                   %td
                   %td.theoretical_knowledge JSON
                 %tr
@@ -129,6 +128,11 @@
                   %td.no_knowledge ReactiveX
                   %td
                   %td.theoretical_knowledge AJAX
+                %tr
+                  %td.no_knowledge RIOT.js
+                  %td
+                  %td
+                  %td
 
 
             .section__image_skills
@@ -158,7 +162,6 @@
                 %a.wide{href:"https://www.mongodb.com/", target:"_blank", data-img:"MongoDB"}
                 %a{href:"https://www.adobe.com/products/photoshop-lightroom.html?promoid=KLXLX", target:"_blank", data-img:"Lightroom"}
                 %a{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank", data-img:"AdobePhotoshop"}
-                %a.wide{href:"http://jade-lang.com/", target:"_blank", data-img:"jade"}
                 %a{href:"https://wordpress.org/", target:"_blank", data-img:"wordpress"}
                 %a.wide{href:"http://www.autodesk.ru/products/autocad/overview", target:"_blank", data-img:"autocad"}
                 %a.wide{href:"https://babeljs.io/", target:"_blank", data-img:"babel"}
@@ -183,32 +186,52 @@
                     %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
                     %figcaption.portfolio__caption
                         %h3 Gastronymous
-                        %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp.
+                        %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp. PerfectPixel.
+                    .btn_download
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/01_Gastronymous.png" download> Download PNG
+                            %span.icon_container
+                                %i.icon_download
+                        </a>
+
                 %figure.portfolio
                     %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
                     %figcaption.portfolio__caption
                         %h3 Lusid Theme
-                        %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                        %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                    .btn_download
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/02_LusidTheme.png" download> Download PNG
+                            %span.icon_container
+                                %i.icon_download
+                        </a>
                 %figure.portfolio
                     %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
                     %figcaption.portfolio__caption
                         %h3 La Casa
-                        %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                        %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                    .btn_download
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/03_LaCasa.png" download> Download PNG
+                            %span.icon_container
+                                %i.icon_download
+                        </a>
+
                 %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/04_Ikaros/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Ikaros"}
+                    %a{href:"http://tkachenko.ho.ua/06_Ikaros/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Ikaros"}
                     %figcaption.portfolio__caption
                         %h3 Ikaros
-                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+
                 %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/06_MagBlog/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MagBlog"}
+                    %a{href:"http://tkachenko.ho.ua/04_Magazine_Blog/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MagBlog"}
                     %figcaption.portfolio__caption
                         %h3 Magazine Blog
-                        %p em + media-queries. Source code: HAML + Sass. Performed using Flexbox. Packet manager: npm. Build system automating tasks: Gulp.
+                        %p em + media-queries. Source code: HAML + Sass. Performed using Flexbox. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+
                 %figure.portfolio{style:"display:none"}
                     %a{href:"http://tkachenko.ho.ua/07_MediaGrupPortfolio/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MediaGrup"}
                     %figcaption.portfolio__caption
                         %h3 MediaGrup Portfolio
-                        %p Bootstrap. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp.
+                        %p Bootstrap. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+
                 %figure.portfolio{style:"display:none"}
                     %a{href:"http://tkachenko.ho.ua/05_FlatStyleWebsite/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Flat"}
                     %figcaption.portfolio__caption
@@ -220,37 +243,45 @@
 
               .codepen_container
                 .codepen_container__annotation
-                    %h4 1. E-mail
-                    %p.main_style
+                    %h4 1. React
+                    %p I learning it now!
                 .codepen_container__example
-                    <p data-height="400" data-theme-id="25315" data-slug-hash="kXQqyX" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/kXQqyX/">HAML-email</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="YGXjLZ" data-default-tab="result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/YGXjLZ/">React</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
-                    %h4 2. JavaScript. Events
-                    %p.main_style
+                    %h4 2. E-mail
+                    %p This project is implemented imposition e-mail using the preprocessor HAML.
                 .codepen_container__example
-                    <p data-height="400" data-theme-id="25315" data-slug-hash="JKVpQq" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/JKVpQq/">JS-events</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="kXQqyX" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/kXQqyX/">HAML-email</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
-                    %h4 3. CSS. display: grid
+                    %h4 3. JavaScript. Events
+                    %p This project shows how to work out the events by clicking on event.target.
+                .codepen_container__example
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="JKVpQq" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/JKVpQq/">JS-events</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+              .codepen_container
+                .codepen_container__annotation
+                    %h4 4. CSS. display: grid
                     %p The experimental technology not included in the official specification.
                 .codepen_container__example
-                    <p data-height="400" data-theme-id="25315" data-slug-hash="OXqxxb" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/OXqxxb/">CSS -gridLayout</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="OXqxxb" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/OXqxxb/">CSS -gridLayout</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
-                    %h4 4. Phonebook
-                    %p.main_style
+                    %h4 5. Phonebook
+                    %p In this project, it implements a simple phone book to save the contact in localStorage. Functionality: checking the validity of input data, sorting and deleting.
                 .codepen_container__example
-                    <p data-height="400" data-theme-id="25315" data-slug-hash="LkvdYP" data-default-tab="js,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/LkvdYP/">JS-phonebook</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-              -# .codepen_container
-              -#   .codepen_container__annotation
-              -#       %h4 5.
-              -#       %p.main_style
-              -#   .codepen_container__example
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="LkvdYP" data-default-tab="js,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/LkvdYP/">JS-phonebook</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+              .codepen_container
+                .codepen_container__annotation
+                    %h4 6. OrnaJS
+                    %p I learning it now!
+                .codepen_container__example
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="vXOVpG" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/vXOVpG/">OrnaJS</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               -#  _____CONTACTS_____
 
@@ -274,5 +305,4 @@
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity:"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin:"anonymous"}
-    -# %script{async:"async", src:"//assets.codepen.io/assets/embed/ei.js"}
     %script{src:"scripts/script.min.js"}

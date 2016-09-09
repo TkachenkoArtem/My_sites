@@ -1,7 +1,7 @@
 //main: style.scss
 
 section[name="section__skills"] {
-  background: #81C784;
+  background: $bg_skills;
   box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
 }
 
@@ -9,9 +9,11 @@ section[name="section__skills"] {
   text-align: right;
 
   li {
-    display: inline-block;
-    padding: 1.000em;
     list-style-type: none;
+    @include respond(768, 4801) {
+      display: inline-block;
+      padding: 1.000em;
+    }
 
     &:before {
       content: "\274d ";
@@ -52,9 +54,13 @@ th {
 }
 
 .section__image_skills {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
+  display: none;
+  @include respond(768, 4801) {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 a[data-img] {
@@ -63,12 +69,16 @@ a[data-img] {
   height: 3.000em;
   margin: 0.500em;
   vertical-align: middle;
+
+  &:hover {
+    @extend %trans_scale;
+  }
 }
 
 a[data-img].wide {
   width: 6.000em;
 }
-@each $image in atom, SourceTree, gulp, codepen, git, npm, sass, github, css3, html5, javascript, bootstrap, bower, fontawesome, slick, normalizecss, bourbon, haml, JSON, AJAX, underscore, XML, MongoDB, Lightroom, AdobePhotoshop, jade, wordpress, autocad, babel, jquery, fontello, FlipClock, remodal, rx, riot, cs, ornanajs, webpack {
+@each $image in atom, SourceTree, gulp, codepen, git, npm, sass, github, css3, html5, javascript, bootstrap, bower, fontawesome, slick, normalizecss, bourbon, haml, JSON, AJAX, underscore, XML, MongoDB, Lightroom, AdobePhotoshop, wordpress, autocad, babel, jquery, fontello, FlipClock, remodal, rx, riot, cs, ornanajs, webpack {
   a[data-img="#{$image}"] {
     background: inline('#{$image}-logo.png') center/contain no-repeat;
   }
