@@ -1,7 +1,7 @@
 {
   "name": "Site-card",
   "description": "",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Tkachenko Artem",
   "license": "free",
   "devDependencies": {
