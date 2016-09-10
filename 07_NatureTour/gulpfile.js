@@ -13,6 +13,7 @@ var uncss = require('gulp-uncss');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
 var haml = require('gulp-haml');
+var spritesmith = require('gulp.spritesmith');
 
 /*создание haml*/
 gulp.task('haml', function () {
@@ -80,9 +81,28 @@ gulp.task('compress', () => {
 
 /*минимизация png*/
 gulp.task('png', () => {
-    return gulp.src('app/img/cite/*.png')
+    return gulp.src('app/img/forDist/*.png')
         .pipe(pngmin())
         .pipe(gulp.dest('dist/img'));
+});
+
+/*создание спрайта*/
+gulp.task('sprite', function() {
+    var spriteData =
+        gulp.src('app/img/sprite/*.png') // путь, откуда берем картинки для спрайта
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: '_sprite.scss',
+                cssFormat: 'scss',
+                algorithm: 'left-right',
+                cssTemplate: 'cssTemplate.scss',
+                cssVarMap: function(sprite) {
+                    sprite.name = 'sprite_' + sprite.name;
+                }
+            }));
+
+    spriteData.img.pipe(gulp.dest('dist/img')); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('app/scss')); // путь, куда сохраняем стили
 });
 
 /*инициализация*/

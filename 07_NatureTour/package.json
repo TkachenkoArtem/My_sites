@@ -17,7 +17,8 @@
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
-    "gulp-uncss": "latest"
+    "gulp-uncss": "latest",
+    "gulp.spritesmith": "latest"
   },
   "dependencies": {
     "install": "latest",

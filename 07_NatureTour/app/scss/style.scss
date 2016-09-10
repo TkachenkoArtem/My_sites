@@ -1,7 +1,8 @@
 //out: ../css/style.css
 @import "mixins/media";
+@import "fonts";
 
-* {
+*, *::after, *::before  {
   box-sizing: border-box;
 }
 
@@ -30,8 +31,24 @@ a {
   cursor: pointer;
 }
 
-#ho_adv { //It`s for hosting
+body {
+  background: inline('bgi.png') repeat;
+}
+
+.wrapper {
+  width: 990px;
+  margin: 0 auto;
+  @extend %tmp;
+}
+
+#ho_adv {
+  //It`s for hosting
   display: none !important;
+}
+
+%tmp {
+  min-height: 250px;
+  border: 1px solid gray;
 }
 
 %clearfix {
@@ -43,7 +60,6 @@ a {
 %position_relative {
   position: relative;
 }
-
 @import "header";
 @import "main";
 @import "footer";
