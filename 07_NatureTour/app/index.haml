@@ -13,16 +13,55 @@
 
     .wrapper
 
-          -# HEADER
-      #header
+          -# HEADER start
+      %header#header
 
-          -# MAIN
+        .header_container
+          .header_left
+            %h1 NATURETOUR
+            %p.header_left__motto Spend Holidays with Nature
+
+          .header_right
+            %span For Friendly, Expert advice call
+            %p.header_right__phone 12 (0) 1234 567890
+            %nav.header_right__pages_navigation
+              %ul
+                %li %a.header_right__pages{href:"#", target:"_blank"} Home
+                %li %a.header_right__pages{href:"#", target:"_blank"} How To Book
+                %li %a.header_right__pages{href:"#", target:"_blank"} FAQs
+                %li %a.header_right__pages{href:"#", target:"_blank"} Visit Us
+                %li %a.header_right__pages{href:"#", target:"_blank"} Contact Us
+
+        %nav.general_navigation
+              %ul
+                %li %a.general_navigation__link{href:"#", target:"_blank"} DESTINATIONS
+                %li %a.general_navigation__link{href:"#", target:"_blank"} SPECIES
+                %li %a.general_navigation__link{href:"#", target:"_blank"} TOUR TYPES
+                %li %a.general_navigation__link{href:"#", target:"_blank"} TOUR LEADERS
+                %li %a.general_navigation__link{href:"#", target:"_blank"} LATE AVAILABILITY
+                %li %a.general_navigation__link{href:"#", target:"_blank"} LATEST NEWS
+                %li %a.general_navigation__link{href:"#", target:"_blank"} ABOUT US
+
+          -# HEADER end
+
+      %p.page Home
+
+          -# MAIN start
       %main
+        %aside.sidebar
+          %form
+            %h3 Holiday Search
+        .main_contauner
+          %figure.slider_container
+            .slick
+              %img{src:"img/slider_img01.png", alt:"img1"}
 
-          -# FOOTER
-      #footer
+          -# MAIN end
 
+          -# FOOTER start
+      %footer#footer
 
+          -# FOOTER end
 
     %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"}

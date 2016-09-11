@@ -118,7 +118,7 @@ gulp.task('init', () => {
 gulp.task('watch', () => {
     livereload.listen();
     gulp.watch('app/*.haml', ['haml']) /*следить за haml, запускать haml*/
-    gulp.watch('app/img/cite/*.png', ['png']) /*следить за изображениями, запускать png*/
+    gulp.watch('app/img/forDist/*.png', ['png']) /*следить за изображениями, запускать png*/
     gulp.watch('app/css/*.min.css', ['vendorCSS']) /*следить за сторонними css, запускать vendorCSS*/
     gulp.watch('app/scss/**/*.scss', ['sass']) /*следить за SASS, запускать sass*/
     gulp.watch('app/css/style.css', ['css']) /*следить за style.css, запускать css*/

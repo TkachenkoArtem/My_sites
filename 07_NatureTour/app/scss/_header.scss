@@ -1,3 +1,137 @@
 //main: style.scss
 
-#header{}
+.header_ {
+  &container {
+    padding: {
+      top: em(10px);
+      left: em(20px);
+    };
+
+    &:after {
+      @extend %clearfix;
+    }
+  }
+  //&container
+
+  &left {
+    float: left;
+    width: 50%;
+    padding: {
+      top: em(20px);
+      left: em(32px);
+    };
+    background: inline('logo.png') no-repeat;
+    background-position: center left;
+
+    &__motto {
+      padding: {
+        left: em(5px);
+        bottom: em(10px);
+      };
+      font: 600 em(11px) "Myriad Pro";
+      text: {
+        transform: uppercase;
+        shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.75);
+      };
+      letter-spacing: 1.2px;
+      color: #848588;
+    }
+    //&__motto
+  }
+  //&left
+
+  &right {
+    float: right;
+    width: 31%;
+    text-align: right;
+
+    & > span {
+      font: 400 em(12px) "Myriad Pro";
+      text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.75);
+      color: #585755;
+    }
+    //& > span
+
+    &__phone {
+      font: 400 em(20px) "Myriad Pro";
+      color: #373737;
+    }
+    //&__phone
+
+    &__pages_navigation {
+      ul {
+        @extend %reset_list_style;
+        text-align: left;
+      }
+      //ul
+
+      li {
+        @extend %inline_block;
+
+        &:not(:last-of-type) {
+          padding: {
+            top: em(12px);
+            right: em(8px);
+          };
+        }
+        //&:not(:last-of-type)
+      }
+      //li
+    }
+    //&__pages_navigation
+
+    &__pages {
+      font: 600 em(13px) "ZurichBT Roman";
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      color: $brandcolor;
+    }
+    //&__pages
+  }
+  //&right
+}
+//.header_
+
+.general_navigation {
+  margin: {
+    top: em(21px);
+  };
+  padding: {
+    top: em(11px);
+    left: em(24px);
+    bottom: em(11px);
+  };
+  background: {
+    color: #43ac2d;
+    image: linear-gradient(to top, #0f941a 0%, #66c13e 100%);
+  };
+  border: 1px solid #0c932f;
+  border-radius: 5px;
+  box-shadow: inset 2px 2.2px 0 #81de41;
+
+  ul {
+    @extend %reset_list_style;
+  }
+  //ul
+
+  li {
+    @extend %inline_block;
+
+    &:not(:last-of-type) {
+      padding: {
+        right: em(50px);
+      };
+    }
+    //&:not(:last-of-type)
+  }
+  //li
+  &__link {
+    font: em(15px) "ZurichBT Bold";
+    text-transform: uppercase;
+    text-shadow: 0 -2px 0 rgba(0, 92, 19, 0.63);
+    letter-spacing: -1.3px;
+    color: #ffffff;
+  }
+  //&__link
+}
+//.general_navigation

@@ -1,44 +1,45 @@
 //out: ../css/style.css
 @import "mixins/media";
 @import "fonts";
+@import "reboot";
 
-*, *::after, *::before  {
-  box-sizing: border-box;
+@function em($pxval, $base: 16px) {
+   @return ($pxval / $base) * 1em;
 }
 
-html {
-  font-size: 16px;
-  @include respond-to(320) {
-    font-size: 12px;
-  }
-  @include respond-to(480) {
-    font-size: 13px;
-  }
-  @include respond-to(768) {
-    font-size: 14px;
-  }
-  @include respond-to(992) {
-    font-size: 15px;
-  }
-  @include respond(2560, 4801) {
-    font-size: 20px;
-  }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
+$brandcolor: #28b028;
 
 body {
-  background: inline('bgi.png') repeat;
+  background: inline('bgi.png') repeat fixed;
+}
+
+h1 {
+  font: em(34px) "Klavika Medium";
+  text-transform: uppercase;
+  color: #221e1f;
+}
+
+h3 {
+  font: 400 em(14px) "Myriad Pro";
+  text-transform: uppercase;
+  color: #3e3a2f;
 }
 
 .wrapper {
   width: 990px;
   margin: 0 auto;
-  @extend %tmp;
+  font-size: inherit;
+}
+
+.page {
+  margin: {
+    top: em(11px, 12px);
+    left: em(22px, 12px);
+    bottom: em(7px, 12px);
+  };
+  font: 400 em(12px) "Arial";
+  text-shadow: 0.5px 0.9px 0 rgb(255, 255, 255);
+  color: #14961c;
 }
 
 #ho_adv {
@@ -47,7 +48,6 @@ body {
 }
 
 %tmp {
-  min-height: 250px;
   border: 1px solid gray;
 }
 
@@ -59,6 +59,14 @@ body {
 
 %position_relative {
   position: relative;
+}
+
+%reset_list_style {
+  list-style: none;
+}
+
+%inline_block {
+  display: inline-block;
 }
 @import "header";
 @import "main";
