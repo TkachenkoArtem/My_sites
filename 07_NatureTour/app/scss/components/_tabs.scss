@@ -1,0 +1,117 @@
+//main: style.scss
+
+#tab1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.tabs {
+  @extend %reset_list_style;
+
+  &__content {
+    margin: {
+      top: em(23px);
+    };
+  }
+
+  &__active {
+    // pointer-events: none;
+    background-image: linear-gradient(to top, #0f941a 0%, #66c13e 100%) !important;
+    border: 1px solid #0c932f !important;
+    box-shadow: inset 2px 2.2px 0 #81de41 !important;
+    color: #ffffff !important;
+
+    &:before {
+      @extend %contentAbsolute;
+      @include triangle(8px, #0c932f, down);
+      bottom: -5px;
+      left: calc(50% - 12px);
+    }
+    //&:before
+  }
+  //&__active эти стили должны примениться обязательно!!
+
+  li {
+    @extend %inline_block;
+    @extend %position_relative;
+    width: calc(100%/3);
+    height: 39px;
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, #f4f3f1 0%, #ffffff 100%);
+    border: 1px solid #cfccc4;
+    box-shadow: inset 0 -2px 0 #ffffff;
+    vertical-align: middle;
+    line-height: 39px;
+    text-align: center;
+
+    &:first-of-type {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    //&:first-of-type при таких псевдоклассах точно можно добавлять новые элементы
+    &:last-of-type {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    //&:last-of-type при таких псевдоклассах точно можно добавлять новые элементы
+
+    & > a {
+      width: 100%;
+      display: inline-block;
+      font: em(18px) "ZurichBT Roman";
+      letter-spacing: -0.5px;
+      color: #444137;
+    }
+    //& > a width и display для отклика по клику в любом месте заголовка вкладки
+  }
+  //li
+
+  &__triangle {
+    &:after {
+      @extend %contentAbsolute;
+      @include triangle(8px, #0f941a, right);
+      top: 42%;
+      left: 5%;
+    }
+    //&:after
+  }
+  //&__triangle
+}
+//tabs
+.tab1_article {
+  width: 31%;
+  margin: {
+    bottom: em(15px);
+  };
+
+  &__image_container {
+    height: 100px;
+    overflow: hidden;
+    margin: {
+      bottom: em(14px);
+    };
+    border: 3px solid #e0dacd;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 2px #ffffff;
+
+    & > img {
+      border-radius: 5px;
+    }
+    //& > img
+  }
+  //&__image_container
+
+  &__text {
+    font: 400 em(12px) "Arial";
+    color: #393630;
+    line-height: 19px;
+    margin: {
+      top: em(8px);
+    };
+  }
+  //&__text
+}
+//.tab1_article

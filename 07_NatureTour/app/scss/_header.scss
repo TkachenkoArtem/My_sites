@@ -3,7 +3,7 @@
 .header_ {
   &container {
     padding: {
-      top: em(10px);
+      top: em(11px);
       left: em(20px);
     };
 
@@ -31,7 +31,7 @@
       font: 600 em(11px) "Myriad Pro";
       text: {
         transform: uppercase;
-        shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.75);
+        shadow: 0.5px 0.9px 0 rgba(#ffffff, 0.75);
       };
       letter-spacing: 1.2px;
       color: #848588;
@@ -47,7 +47,7 @@
 
     & > span {
       font: 400 em(12px) "Myriad Pro";
-      text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.75);
+      text-shadow: 0.5px 0.9px 0 rgba(#ffffff, 0.75);
       color: #585755;
     }
     //& > span
@@ -94,7 +94,7 @@
 
 .general_navigation {
   margin: {
-    top: em(21px);
+    top: em(20px);
   };
   padding: {
     top: em(11px);
@@ -128,7 +128,7 @@
   &__link {
     font: em(15px) "ZurichBT Bold";
     text-transform: uppercase;
-    text-shadow: 0 -2px 0 rgba(0, 92, 19, 0.63);
+    text-shadow: 0 -2px 0 rgba(#005c13, 0.63);
     letter-spacing: -1.3px;
     color: #ffffff;
   }

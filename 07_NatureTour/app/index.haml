@@ -48,18 +48,207 @@
 
           -# MAIN start
       %main
+
         %aside.sidebar
-          %form
+          %form(novalidate=true)
             %h3 Holiday Search
-        .main_contauner
+            %p Start your holiday search here:
+            %select#region
+              %option{value:"hide"} Select region
+              %option{value:"Europe", rel:"icon-temperature"} Europe
+              %option{value:"Asia"} Asia
+              %option{value:"America"} America
+            %select#category
+              %option{value:"hide"} Select Category
+              %option{value:"Car", rel:"icon-temperature"} Car
+              %option{value:"Walk"} Walk
+              %option{value:"Moto"} Moto
+                -# для нижеприведенного селекта взять запросить дизайн календаря
+                -# у стандартного поддержка не очень... http://prntscr.com/chd8u1
+            %select#date
+              %option{value:"hide"} Select Date
+              %option{value:"01/01/16", rel:"icon-temperature"} 01/01/16
+              %option{value:"02/01/16"} 02/01/16
+              %option{value:"03/01/16"} 03/01/16
+            %select#price
+              %option{value:"hide"} Select Price
+              %option{value:"100$", rel:"icon-temperature"} 100$
+              %option{value:"200$"} 200$
+              %option{value:"300$"} 300$
+
+              -# обсудить с коллегами как красиво сделать без костылей,
+              -# если никак, то с дизайнером возможность изменения
+              -# формы
+              -# Мои варианты: 1. 2 треугольника сбоку, но как на бордер
+              -# градиент повесить? 2. инпут спрятать, сверху див с картинкой
+              -# спрайтом два варианта и валидно ли? 3. Справа от инпута 2 квадрата
+              -# с нижним бордером и стороной равной гипотенузе (2 катета известны)
+              -# но тогда не будет закругления острия разве что как-то куда-то
+              -# эллипсы подсунуть..... ))))
+            %input.button_submit{type:"submit", value:"SEARCH HOLIDAYS", onclick:"event.preventDefault()"}
+
+          %form(novalidate=true)
+            %h3 Quick Search
+            %p Enter a country or tour code:
+            %input{type:"search", placeholder:"Country/Code ...", onclick:"event.preventDefault()"}
+            %input{type:"submit", value:"SEARCH", onclick:"event.preventDefault()"}
+
+              -# Узнать у дизайнера почему перед Quick Search нет полосы и
+              -# если она там быть должна повесить линии на after форм.
+              -# и в css padding на sidebar повесить, а не на form
+          %hr
+
+          %form(novalidate=true)
+            %h3 Newsletter Signup
+            %p New tours, special offers, extra departures and latest news
+            %input{type:"email", placeholder:"Enter Email ...", onclick:"event.preventDefault()"}
+            %input{type:"text", placeholder:"Enter Name ...", onclick:"event.preventDefault()"}
+            %input{type:"submit", value:"SEARCH", onclick:"event.preventDefault()"}
+
+          %hr
+
+          %h3.pl Latest News
+
+          %article.article
+            %h5 Watch Brown Bears in Sweden
+            %time 2010-05-11
+              -# значение 11/05/2010 не валидно, обсудить
+            %p.article__text Experience the forest at night and watch Brown Bears – join one of our short breaks i...
+
+          %article.article
+            %h5 Watch Brown Bears in Sweden
+            %time 2010-05-11
+            %p.article__text Experience the forest at night and watch Brown Bears – join one of our short breaks i...
+
+
+          %article.article
+            %h5 Watch Brown Bears in Sweden
+            %time 2010-05-11
+            %p.article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo dignissim sagittis. Ut mollis facilisis urna, ut pretium augue pellentesque in. Vestibulum nec finibus mi, a feugiat magna. Mauris porttitor ex in nibh dictum malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Morbi et massa non nisi fermentum congue ut ac mauris. Pellentesque id euismod elit. Pellentesque eget maximus sapien. Etiam vel magna lacinia, consectetur tortor a, tincidunt neque. Aenean interdum sapien at erat sodales egestas. Nunc luctus placerat est in elementum. Sed porta sagittis arcu sollicitudin ultrices. Nunc ante felis, volutpat sagittis vestibulum.
+
+        .main_container
+
           %figure.slider_container
             .slick
               %img{src:"img/slider_img01.png", alt:"img1"}
+
+            %figcaption.slider_caption
+              %h2.slider_caption__header Our
+                %span New Tours
+              %p.slider_caption__text At Naturetour we are constantly adding to and improving our portfolio of wildlife holidays to provide you with an even greater choice of wildlife viewing experiences.
+              %a.slider_caption__link{href:"#", target:"_blank"} View new tours...
+
+              %ul.paginator
+                %li
+                %li
+                %li
+                %li
+
+          .row.row--under_slider
+            .information
+              %h2.information__header Naturetour  Wild life Holidays
+              %p.information__text A selection of worldwide bird watching, wild flower and natural history holidays (including wildlife tours, treks and cruises), all led by expert &#160;
+                %a.information__link{href:"#", target:"_blank"} naturalist guides.
+
+            .photographer
+              %img{src:"img/photographer.png", alt:"photographer"}
+
+          %ul.tabs
+            %li.tabs__active
+              %a{href:"#tab1"} By Destinatio
+            %li.tabs__triangle
+              %a{href:"#tab2"} By Species
+            %li.tabs__triangle
+              %a{href:"#tab3"} By Tour Type
+
+          #tab1.tabs__content
+
+            %figure.tab1_article
+              .tab1_article__image_container
+                %img{src:"img/africa.png", alt:"africa"}
+              %figcaption
+                %h4 Africa Holidays
+                %p.tab1_article__text Few wildlife enthusiasts can resist Africa. Its exceptional abundance and variety of wild animals make it one of the world’s top wildlife holiday destinations.
+
+            %figure.tab1_article
+              .tab1_article__image_container
+                %img{src:"img/america.png", alt:"africa"}
+              %figcaption
+                %h4 Americas Holidays
+                %p.tab1_article__text North, South and Central America are home to an incredible diversity of habitats and species, providing opportunities for wildlife holidays to suit all tastes.
+
+            %figure.tab1_article
+              .tab1_article__image_container
+                %img{src:"img/antarctica.png", alt:"africa"}
+              %figcaption
+                %h4 Antarctica Holidays
+                %p.tab1_article__text The ‘Great White Continent’ is perhaps the last true wilderness left on earth and ultimate wildlife holiday destination.
+
+            %figure.tab1_article
+              .tab1_article__image_container
+                %img{src:"img/asia.png", alt:"africa"}
+              %figcaption
+                %h4 Asia Holidays
+                %p.tab1_article__text Choose a Naturetour wildlife holiday to Asia and benefit from our experience of over 20 years, and amazing network of local contacts, on this incredibly diverse continent.
+
+            %figure.tab1_article
+              .tab1_article__image_container
+                %img{src:"img/australia.png", alt:"africa"}
+              %figcaption
+                %h4 Australasia Holidays
+                %p.tab1_article__text Australia and New Zealand offer extraordinary wildlife in safe, peaceful surroundings. Our tours focus on this continent's unique flora and fauna.
+
+            %figure.tab1_article
+              .tab1_article__image_container
+                %img{src:"img/europe.png", alt:"africa"}
+              %figcaption
+                %h4 Europe holidays
+                %p.tab1_article__text Naturetour wildlife holidays in Europe focus on the outstanding wildlife habitats and species that can be found in the region.
+
+          #tab2.tabs__content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at eros dapibus, finibus eros sed, varius erat. Sed eget tincidunt leo. Curabitur facilisis ultrices sapien id eleifend. Phasellus molestie lacinia nulla, vitae ultrices ante ornare et. Aenean eu turpis nisl. Vestibulum faucibus vel velit eget finibus. Curabitur hendrerit viverra interdum.
+          #tab3.tabs__content Suspendisse in ultrices massa, id aliquam diam. Praesent tempus elit est, molestie feugiat ex aliquam sollicitudin. Sed at metus sem. Nulla facilisi. Etiam quis neque vel tellus fermentum faucibus. In hac habitasse platea dictumst. Phasellus pretium eu turpis ac semper. Quisque non luctus odio, eget egestas nulla. Vestibulum ante lorem.
+
 
           -# MAIN end
 
           -# FOOTER start
       %footer#footer
+        %p.footer_caption Naturetour has 25 years experience in operating wildlife holidays.  Contact Us for friendly traval advice
+        .footer_container
+          .follow_us_on
+            %h6 Follow us on twitter
+            %p
+              %span * 4 days ago
+              The new website is now live. We hope you enjoy it and any feedback is welcome.
+            %button{type:"button"}
+              %span join us on facebook
+          .quick_links
+            %h6 Quick Links
+              %ul
+                %li Holidays by destination
+                %li Holidays by species
+                %li Holidays by tour type
+                %li Late availability
+                %li Tour leaders
+                %li How to book
+                %li FAQs
+                %li Visit Us
+                %li Terms & conditions
+                %li Privacy Policy
+                %li Latest news
+                %li Request a brochure
+                %li Subscribe to newsletter
+                %li Contact Us
+          .contact_us
+            %h6 Contact US
+            %p Tel: 12345 67890
+            %p Email: info@naturetour.com
+            .row
+            %p Naturetour, Your City,
+            %p Your state, 123 456 789
+
+      %p © Naturetour 2010.
+      %p No portion of this website may be reproduced without the prior written consent of Naturetour. All rights reserve
 
           -# FOOTER end
 

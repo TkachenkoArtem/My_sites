@@ -1,16 +1,28 @@
 //out: ../css/style.css
 @import "mixins/media";
+@import "mixins/triangle";
 @import "fonts";
 @import "reboot";
-
 @function em($pxval, $base: 16px) {
    @return ($pxval / $base) * 1em;
 }
 
 $brandcolor: #28b028;
+$sidebarPaddingLeft: em(20px);
 
 body {
   background: inline('bgi.png') repeat fixed;
+}
+
+main {
+  background-color: #ffffff;
+  border: 1px solid #e0dacd;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px #ffffff;
+
+  &:after {
+    @extend %clearfix;
+  }
 }
 
 h1 {
@@ -23,6 +35,25 @@ h3 {
   font: 400 em(14px) "Myriad Pro";
   text-transform: uppercase;
   color: #3e3a2f;
+
+  & + p {
+    margin: {
+      top: em(5px, 12px);
+      bottom: em(11px, 12px);
+    };
+    font: 400 em(12px, 14px) "Arial";
+    letter-spacing: -0.9px;
+    color: inherit;
+  }
+  &.pl {
+    padding-left: em(20px, 14px);
+  } //пояснение на 17 строке _main_aside.scss
+}
+
+h4 {
+  font: bold em(14px) "Arial";
+  text-transform: capitalize;
+  color: #393630;
 }
 
 .wrapper {
@@ -35,11 +66,22 @@ h3 {
   margin: {
     top: em(11px, 12px);
     left: em(22px, 12px);
-    bottom: em(7px, 12px);
+    bottom: em(8px, 12px);
   };
   font: 400 em(12px) "Arial";
-  text-shadow: 0.5px 0.9px 0 rgb(255, 255, 255);
+  text-shadow: 0.5px 0.9px 0 #ffffff;
   color: #14961c;
+}
+
+.row {
+  position: relative;
+
+  &--under_slider {
+    margin: {
+      top: em(23px);
+      bottom: em(18px);
+    };
+  }
 }
 
 #ho_adv {
@@ -68,6 +110,19 @@ h3 {
 %inline_block {
   display: inline-block;
 }
+
+%notBorderNotOutline {
+  outline: none;
+  border: none;
+}
+
+%contentAbsolute {
+  content: '';
+  position: absolute;
+}
 @import "header";
-@import "main";
+@import "main_container";
+@import "components/tabs";
+@import "main_aside";
+@import "components/select";
 @import "footer";

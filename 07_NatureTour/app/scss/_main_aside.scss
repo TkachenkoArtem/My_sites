@@ -1,0 +1,151 @@
+//main: style.scss
+
+.sidebar {
+  @extend %position_relative;
+  float: right;
+  width: 25%;
+  padding: {
+    top: em(19px);
+  };
+  background-color: #f4f1eb;
+  border: 1px solid #e0dacd;
+
+  form {
+    padding-left: $sidebarPaddingLeft;
+  }
+  //form !!! это тут потому что перед Quick Search нет полосы
+}
+//.sidebar
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin: {
+    top: em(24px);
+    bottom: em(21px);
+  };
+  border: 1px solid transparent;
+  background-color: #e1dbce;
+  box-shadow: 0.5px 0.9px 0 #ffffff;
+}
+//hr !!! margin bottom убрать на каскад ниже при переносе в form::after
+
+input[type="email"],
+input[type="search"],
+input[type="text"] {
+  width: 119px;
+  margin: {
+    right: 13px;
+  };
+  text-indent: 6px;
+}
+//input[type="search, text, email"]
+
+input {
+  @extend %inline_block;
+  height: 25px;
+  background: {
+    color: #ffffff;
+    image: linear-gradient(to top, #f4f3f1 0%, #ffffff 100%);
+  };
+  border: 1px solid #cfcdc5;
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px #e8e5de, inset 0 -2px 0 #ffffff;
+  font: 400 em(11px) "Arial";
+  color: #666666;
+
+  &:focus {
+    box-shadow: none;
+  }
+  //&:focus
+}
+//input
+
+input[type="email"] {
+  display: block;
+  width: 199px;
+  margin: {
+    top: em(18px, 11px);
+    bottom: em(12px, 11px);
+  };
+}
+//input[type="email"]
+
+input[type="submit"] {
+  background: {
+    color: #43ac2d;
+    image: linear-gradient(to top, #0f941a 0%, #66c13e 100%);
+  };
+  border: 1px solid #0c932f;
+  box-shadow: 0 0 0 3px #d8d5cc, inset 2px 2.2px 0 #81de41;
+  font: em(15px) "Klavika Medium";
+  text: {
+    align: left;
+    transform: uppercase;
+    shadow: 0 -2px 0 rgba(#005c13, 0.63);
+  };
+  color: #ffffff;
+
+  &:hover {
+    background-image: linear-gradient(to top, #66c13e 0%, #0f941a 100%);
+  }
+  //&:hover
+  &:active {
+    box-shadow: none;
+
+    & ~ .submit_container__triangle--back {
+      display: none;
+    }
+    //& ~ .submit_container__triangle--back
+  }
+  //&:active
+  &.button_submit {
+    width: 200px;
+    height: 36px;
+    padding: {
+      left: em(20px);
+    };
+    border-top-right-radius: 80px 35px;
+    border-bottom-right-radius: 80px 35px;
+    margin: {
+      bottom: em(20px, 15px);
+    };
+  }
+  //.button_submit !!! Данный класс должен быть именно здесь т.к. его вес меньше веса перекрываемого
+
+}
+//input[type="submit"]
+
+.article {
+  margin: {
+    top: em(7px);
+    bottom: em(16px);
+  };
+  padding-left: $sidebarPaddingLeft; //пояснение на 17 строке _main_aside.scss
+  color: #3f3b30;
+
+  & > *:not(.article__text) {
+    font: 700 em(12px) "Arial";
+    color: inherit;
+  }
+  //& > *
+
+  &__text {
+    width: 200px;
+    height: 60px;
+    padding: {
+      top: em(4px, 12px);
+    };
+    font: 400 em(12px) "Arial";
+    line-height: 17px;
+    color: inherit;
+  }
+  //&__text
+}
+//.article
+article.article:last-of-type {
+  margin: {
+    bottom: em(31px);
+  };
+}
+//article.article:last-of-type жаль что :has пока не поддерживается....
