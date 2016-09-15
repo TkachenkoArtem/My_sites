@@ -22,6 +22,13 @@
     };
     background: inline('logo.png') no-repeat;
     background-position: center left;
+    @include respond(320, 768) {
+      float: none;
+      width: 100%;
+      padding: {
+        top: em(30px);
+      };
+    }
 
     &__motto {
       padding: {
@@ -44,6 +51,10 @@
     float: right;
     width: 31%;
     text-align: right;
+    @include respond(320, 768) {
+      float: none;
+      width: 100%;
+    }
 
     & > span {
       font: 400 em(12px) "Myriad Pro";
@@ -116,11 +127,22 @@
 
   li {
     @extend %inline_block;
+    @include respond-to(480) {
+      margin: {
+        bottom: 0.500em;
+        left: 1.000em;
+      };
+    }
 
     &:not(:last-of-type) {
       padding: {
         right: em(50px);
       };
+      @include respond(320, 768) {
+        padding: {
+          right: 1.000em;
+        };
+      }
     }
     //&:not(:last-of-type)
   }
@@ -131,6 +153,9 @@
     text-shadow: 0 -2px 0 rgba(#005c13, 0.63);
     letter-spacing: -1.3px;
     color: #ffffff;
+    @include respond-to(480) {
+      letter-spacing: normal;
+    }
   }
   //&__link
 }

@@ -8,6 +8,13 @@
     right: em(20px);
     left: em(16px);
   };
+  @include respond(320, 768) {
+    float: none;
+    width: 100%;
+  }
+  @include respond(1200, 1400) {
+    width: 79%;
+  }
 }
 //.main_container
 
@@ -28,7 +35,10 @@
     };
     background-color: rgba(#251d14, 0.9);
     height: 100%;
-    border-radius: 0 8px 8px 0;
+    // border-radius: 0 8px 8px 0; //уголки мигают
+    @include respond(320, 768) {
+      display: none;
+    }
 
     &__header {
       font: em(22px) "ZurichBT Roman";
@@ -68,9 +78,15 @@
 .slick {
   height: 267px;
   overflow: hidden;
-  border-radius: 8px;
+  @include respond(320, 768) {
+    height: auto;
+  }
 }
 //.slick
+
+// .slick-slide {
+//   border-radius: 8px;
+// } //.slick-slide !!! выключено т.к. при прокрутке слайдера мигают уголки
 
 .paginator {
   counter-reset: list;
@@ -83,43 +99,43 @@
 
   // & > ul {
 
-    & > li {
-      @extend %inline_block;
-      width: 21px;
-      height: 21px;
-      background-color: #6b685e;
-      box-shadow: inset 0.6px -0.8px 0 rgba(#c1bba7, 0.75);
-      border-radius: 10.5px;
-      text-align: center;
-      font: 700 em(12px) "Arial";
-      line-height: 21px;
-      color: #cbcbcb;
+  & > li {
+    @extend %inline_block;
+    width: 21px;
+    height: 21px;
+    background-color: #6b685e;
+    box-shadow: inset 0.6px -0.8px 0 rgba(#c1bba7, 0.75);
+    border-radius: 10.5px;
+    text-align: center;
+    font: 700 em(12px) "Arial";
+    line-height: 21px;
+    color: #cbcbcb;
 
-      &:after {
-        counter-increment: list;
-        content: counter(list);
-      }
-      //&:after
-      &:not(:last-of-type) {
-        margin: {
-          right: em(12px, 12px);
-        };
-      }
-      //&:not(:last-of-type)
-      &:hover {
-        width: 26px;
-        height: 26px;
-        line-height: 26px;
-        margin: {
-          right: em(7px, 12px);
-        };
-        background-color: #43ac2d;
-        background-image: linear-gradient(to top, rgba(#000000, 0.41) 0%, rgba(#ffffff, 0.41) 100%);
-        border-radius: 13px;
-        color: #ffffff;
-      }
+    &:after {
+      counter-increment: list;
+      content: counter(list);
     }
-    //& > li
+    //&:after
+    &:not(:last-of-type) {
+      margin: {
+        right: em(12px, 12px);
+      };
+    }
+    //&:not(:last-of-type)
+    &:hover {
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      margin: {
+        right: em(7px, 12px);
+      };
+      background-color: #43ac2d;
+      background-image: linear-gradient(to top, rgba(#000000, 0.41) 0%, rgba(#ffffff, 0.41) 100%);
+      border-radius: 13px;
+      color: #ffffff;
+    }
+  }
+  //& > li
   // }
   //& > ul
 }
@@ -127,6 +143,10 @@
 
 .information {
   width: 65%;
+  @include respond(320, 768) {
+    width: 55%;
+
+  }
 
   &__header {
     font: em(26px) "ZurichBT Roman";
@@ -140,8 +160,11 @@
       top: em(8px, 12px);
     };
     font: em(12px) "Arial";
-    line-height: 18px;
+    line-height: em(18px);
     color: #595447;
+    // @include respond-to(320) {
+    //   line-height: normal;
+    // }
   }
 
   &__link {
@@ -158,4 +181,9 @@
   height: 132px;
   top: -37px;
   right: 46px;
+  @include respond(320, 768) {
+    height: 160px;
+    top: -55px;
+    right: 0;
+  }
 }

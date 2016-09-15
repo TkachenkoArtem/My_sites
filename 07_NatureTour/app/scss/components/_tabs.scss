@@ -96,18 +96,20 @@
     border: 3px solid #e0dacd;
     border-radius: 5px;
     box-shadow: inset 0 0 0 2px #ffffff;
-
-    & > img {
-      border-radius: 5px;
+    text-align: center;
+    @include respond-to(320) {
+      height: 49px;
     }
-    //& > img
+    @include respond-to(480) {
+      height: 70px;
+    }
   }
   //&__image_container
 
   &__text {
     font: 400 em(12px) "Arial";
     color: #393630;
-    line-height: 19px;
+    line-height: em(19px);
     margin: {
       top: em(8px);
     };

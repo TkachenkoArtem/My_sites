@@ -9,8 +9,15 @@
   };
   background-color: #f4f1eb;
   border: 1px solid #e0dacd;
+  @include respond(320, 768) {
+    display: none;
+  }
+  @include respond(1200, 1400) {
+    width: 21%;
+  }
 
   form {
+    @extend %position_relative;
     padding-left: $sidebarPaddingLeft;
   }
   //form !!! это тут потому что перед Quick Search нет полосы
@@ -38,6 +45,10 @@ input[type="text"] {
     right: 13px;
   };
   text-indent: 6px;
+  @include respond(768, 1400) {
+    width: 160px;
+    margin-bottom: 0.750em;
+  }
 }
 //input[type="search, text, email"]
 
@@ -68,6 +79,9 @@ input[type="email"] {
     top: em(18px, 11px);
     bottom: em(12px, 11px);
   };
+  @include respond(768, 1400) {
+    width: 160px;
+  }
 }
 //input[type="email"]
 
@@ -85,6 +99,9 @@ input[type="submit"] {
     shadow: 0 -2px 0 rgba(#005c13, 0.63);
   };
   color: #ffffff;
+  @include respond(768, 1400) {
+    width: 160px;
+  }
 
   &:hover {
     background-image: linear-gradient(to top, #66c13e 0%, #0f941a 100%);
@@ -110,6 +127,9 @@ input[type="submit"] {
     margin: {
       bottom: em(20px, 15px);
     };
+    @include respond(768, 1400) {
+      width: 160px;
+    }
   }
   //.button_submit !!! Данный класс должен быть именно здесь т.к. его вес меньше веса перекрываемого
 
@@ -139,6 +159,10 @@ input[type="submit"] {
     font: 400 em(12px) "Arial";
     line-height: 17px;
     color: inherit;
+    @include respond(768, 1400) {
+      width: 160px;
+      height: 50px;
+    }
   }
   //&__text
 }

@@ -85,6 +85,7 @@
               -# с нижним бордером и стороной равной гипотенузе (2 катета известны)
               -# но тогда не будет закругления острия разве что как-то куда-то
               -# эллипсы подсунуть..... ))))
+            .icon-sprite_arrow
             %input.button_submit{type:"submit", value:"SEARCH HOLIDAYS", onclick:"event.preventDefault()"}
 
           %form(novalidate=true)
@@ -131,6 +132,9 @@
           %figure.slider_container
             .slick
               %img{src:"img/slider_img01.png", alt:"img1"}
+              %img{src:"img/slider_img01.png", alt:"img2"}
+              %img{src:"img/slider_img01.png", alt:"img3"}
+              %img{src:"img/slider_img01.png", alt:"img4"}
 
             %figcaption.slider_caption
               %h2.slider_caption__header Our
@@ -216,42 +220,50 @@
         %p.footer_caption Naturetour has 25 years experience in operating wildlife holidays.  Contact Us for friendly traval advice
         .footer_container
           .follow_us_on
-            %h6 Follow us on twitter
-            %p
-              %span * 4 days ago
+            %h6.icon-sprite_bird Follow us on twitter
+            %p.follow_us_on__text
+              %span * 4 days ago &#160; &#160;
               The new website is now live. We hope you enjoy it and any feedback is welcome.
-            %button{type:"button"}
-              %span join us on facebook
+                -# взять у дизайнера картинку для кнопки ибо в PSD она монолитная
+                -# если нет - подбирать
+            %button.follow_us_on__button{type:"button"} join us on facebook
           .quick_links
             %h6 Quick Links
-              %ul
-                %li Holidays by destination
-                %li Holidays by species
-                %li Holidays by tour type
-                %li Late availability
-                %li Tour leaders
-                %li How to book
-                %li FAQs
-                %li Visit Us
-                %li Terms & conditions
-                %li Privacy Policy
-                %li Latest news
-                %li Request a brochure
-                %li Subscribe to newsletter
-                %li Contact Us
+            %ul
+              %li %a{href:"#"} Holidays by destination
+              %li %a{href:"#"} Holidays by species
+              %li %a{href:"#"} Holidays by tour type
+              %li %a{href:"#"} Late availability
+              %li %a{href:"#"} Tour leaders
+            %ul
+              %li %a{href:"#"} How to book
+              %li %a{href:"#"} FAQs
+              %li %a{href:"#"} Visit Us
+              %li %a{href:"#"} Terms & conditions
+              %li %a{href:"#"} Privacy Policy
+            %ul
+              %li %a{href:"#"} Latest news
+              %li %a{href:"#"} Request a brochure
+              %li %a{href:"#"} Subscribe to newsletter
+              %li %a{href:"#"} Contact Us
           .contact_us
             %h6 Contact US
-            %p Tel: 12345 67890
-            %p Email: info@naturetour.com
-            .row
+            %p
+              %b Tel: &#160;
+              12345 67890
+            %p
+              %b Email: &#160;
+              info@naturetour.com
+            .row--contact_us
             %p Naturetour, Your City,
             %p Your state, 123 456 789
 
-      %p © Naturetour 2010.
-      %p No portion of this website may be reproduced without the prior written consent of Naturetour. All rights reserve
+      -# при включении раскомментировать 7 строку _footer.scss (margin-bottom)
+      -# %p.bottom.bottom--bold &#169; Naturetour 2010.
+      -# %p.bottom No portion of this website may be reproduced without the prior written consent of Naturetour. All rights reserve
 
           -# FOOTER end
 
-    %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
-    %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"}
+    %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+    %script{src:"https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"}
     %script{src:"scripts/script.min.js"}

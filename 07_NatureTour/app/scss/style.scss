@@ -19,6 +19,10 @@ main {
   border: 1px solid #e0dacd;
   border-radius: 5px;
   box-shadow: inset 0 0 0 2px #ffffff;
+  margin-bottom: 206px + 19px;
+  @include respond(320, 768) {
+    margin-bottom: 0;
+  }
 
   &:after {
     @extend %clearfix;
@@ -45,9 +49,11 @@ h3 {
     letter-spacing: -0.9px;
     color: inherit;
   }
+
   &.pl {
     padding-left: em(20px, 14px);
-  } //пояснение на 17 строке _main_aside.scss
+  }
+  //пояснение на 17 строке _main_aside.scss
 }
 
 h4 {
@@ -56,10 +62,28 @@ h4 {
   color: #393630;
 }
 
+h6 {
+  flex-basis: 100%;
+  height: em(16px);
+  font: em(14px) "Klavika Medium";
+  text: {
+    transform: uppercase;
+    indent: 3px;
+  };
+  color: #64522a;
+}
+
 .wrapper {
-  width: 990px;
+  @extend %position_relative;
+  width: 62.5%;
   margin: 0 auto;
   font-size: inherit;
+  @include respond(320, 1200) {
+    width: 99%;
+  }
+  @include respond(1200, 1400) {
+    width: 80%;
+  }
 }
 
 .page {
@@ -73,13 +97,31 @@ h4 {
   color: #14961c;
 }
 
+.bottom {
+  font: em(11px) "Arial";
+  text-align: center;
+  color: #716c61;
+
+  &--bold {
+    margin-bottom: em(6px, 11px);
+    font-weight: bold;
+    color: #3a3731;
+  }
+}
+
 .row {
-  position: relative;
+  @extend %position_relative;
 
   &--under_slider {
     margin: {
       top: em(23px);
       bottom: em(18px);
+    };
+  }
+
+  &--contact_us {
+    margin: {
+      top: em(21px);
     };
   }
 }
@@ -121,6 +163,7 @@ h4 {
   position: absolute;
 }
 @import "header";
+@import "components/sprite";
 @import "main_container";
 @import "components/tabs";
 @import "main_aside";

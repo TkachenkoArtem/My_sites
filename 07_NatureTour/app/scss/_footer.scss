@@ -1,7 +1,206 @@
 //main: style.scss
 
-#footer {}
+#footer {
+  @extend .wrapper;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  margin: {
+    // bottom: em(17px); //включить для отображения p.bottom.
+  };
+  transform: translate(-50%, 0);
+  @include respond(320, 768) {
+    position: static;
+    transform: none;
+  }
+}
+//#footer
 
 .footer_ {
-  &__caption {}
+  &caption {
+    background: {
+      color: #878176;
+      image: linear-gradient(to top, rgba(#000000, 0.05) 0%, rgba(#ffffff, 0.05) 100%);
+    };
+    border: {
+      bottom: 2px solid #635543;
+      top-left-radius: 5px;
+      top-right-radius: 5px;
+    };
+    font: italic em(16px) "Arial";
+    text: {
+      shadow: 0.5px 0.9px 0 rgba(#000000, 0.75);
+      align: center;
+    };
+    line-height: em(40px);
+    color: #ffffff;
+  }
+  //  &__caption
+
+  &container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    padding: {
+      top: em(22px);
+      right: em(4px);
+      bottom: em(22px);
+      left: em(23px);
+    };
+    border: {
+      bottom-left-radius: 5px;
+      bottom-right-radius: 5px;
+    };
+    background-color: #f4f2ec;
+    @include respond(320, 768) {
+      padding: em(22px);
+      flex-direction: column;
+    }
+  }
+  //  &__container
+
 }
+//.footer_
+
+.follow_us_on {
+  @extend %position_relative;
+  flex-basis: 23.5%;
+  @include respond(320, 768) {
+    flex-basis: 100%;
+    padding-bottom: 1.000em;
+  }
+
+  &:after {
+    @include respond(768, 4801) {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 118px;
+      top: 0;
+      right: 0;
+      background-color: #cfcdc5;
+      box-shadow: 1px 0 0 rgba(#ffffff, 0.75);
+    }
+  }
+  //&:after
+  &__text {
+    padding: {
+      top: em(10px);
+      bottom: em(12px);
+    };
+    font: em(12px) "Arial";
+    line-height: 17px;
+    color: #757268;
+
+    & > span {
+      font-size: em(11px, 12px);
+    }
+  }
+  //  &__text
+
+  &__button {
+    width: 190px;
+    height: 33px;
+    background: {
+      color: #878176;
+      image: linear-gradient(to top, rgba(#000000, 0.05) 0%, rgba(#ffffff, 0.05) 100%);
+    };
+    border: 1px solid #cfcdc5;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px #e8e5de, inset 0 -2px 0 #878176;
+    font: em(15px) "Klavika Medium";
+    letter-spacing: -1px;
+    text: {
+      transform: uppercase;
+      align: left;
+      indent: 10px;
+    };
+    color: #ffffff;
+    @include respond(320, 768) {
+      width: 100%;
+    }
+    @include respond(768, 1200) {
+      width: 160px;
+    }
+
+    &:hover {
+      background: {
+        color: #878176;
+        image: linear-gradient(to top, rgba(#ffffff, 0.05) 0%, rgba(#000000, 0.05) 100%);
+      };
+    }
+    //&:hover
+    &:active {
+      box-shadow: none;
+    }
+    //&:focus
+  }
+  //&__button
+}
+//.follow_us_on
+
+.quick_links {
+  @extend %position_relative;
+  flex-basis: 52%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  align-items: space-between;
+  margin: {
+    left: em(27px);
+  };
+  @include respond(320, 768) {
+    flex-basis: 100%;
+    padding-bottom: 1.000em;
+    margin: {
+      left: 0;
+    };
+  }
+
+  &:after {
+    @extend .follow_us_on:after;
+    right: 12px;
+  }
+
+  & > ul {
+    @extend %reset_list_style;
+    flex-basis: calc(100% / 3);
+    margin: {
+      top: em(11px);
+    }
+  }
+  //& > ul
+
+  & li {
+    font: 400 em(12px) "Arial";
+    line-height: 19px;
+    color: #757268;
+  }
+  //& li
+}
+//.quick_links
+
+.contact_us {
+  flex-basis: 17%;
+  margin: {
+    left: em(15px);
+  };
+  @include respond(320, 768) {
+    flex-basis: 100%;
+    margin: {
+      left: 0;
+    };
+  }
+
+  & > p {
+    font: 400 em(12px) "Arial";
+    line-height: 19px;
+    color: #757268;
+  }
+  //& > p
+  & > p:first-of-type {
+    margin-top: em(10px, 12px);
+  }
+  //& > p:first-of-type
+}
+//.contact_us

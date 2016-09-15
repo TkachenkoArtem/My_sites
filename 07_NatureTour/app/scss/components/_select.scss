@@ -17,6 +17,9 @@
   vertical-align: middle;
   color: #231f20;
   cursor: pointer;
+  @include respond(768, 1200) {
+    width: 160px;
+  }
 
   &__hidden {
     display: none;
