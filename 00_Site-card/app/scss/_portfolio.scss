@@ -45,9 +45,6 @@ section[name="section__portfolio"] {
     background: #FFB300;
     text-align: center;
     border: none;
-    @include respond(320, 768) {
-      height: 11.000em;
-    }
     @include respond(768, 4801) {
       height: 8.000em;
       margin-top: 0.500em;
@@ -57,7 +54,7 @@ section[name="section__portfolio"] {
     }
   }
 }
-@each $image in Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat {
+@each $image in Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat, NatureTour {
   img[data-cite="#{$image}"] {
     background: url("../img/cite-#{$image}.png") center/cover no-repeat;
   }
@@ -87,5 +84,46 @@ section[name="section__portfolio"] {
   &__example {
     float: right;
     width: 75%;
+  }
+}
+
+.tabs {
+  margin: 1.000em 0;
+  padding: 0;
+  list-style: none;
+
+  & > li {
+    display: inline-block;
+    width: 50%;
+    background: #FFB300;
+    text-align: center;
+    font-weight: bold;
+    border-top: 2px solid red;
+    vertical-align: top;
+    @include respond(320, 768) {
+      height: 40px;
+    }
+
+    & > a {
+      width: 100%;
+      @include respond(320, 768) {
+        font-size: 1.000em;
+      }
+    }
+  }
+
+  &__active {
+    @extend %position_relative;
+    border-top: 2px solid green !important;
+
+    &:before {
+      @extend %contentAbsolute;
+      @include triangle(30px, #FFB300, down);
+      bottom: -12px;
+      left: calc(50% - 15px);
+      @include respond(320, 768) {
+        bottom: -10px;
+      }
+    }
   }
 }

@@ -35,6 +35,36 @@ $(document).ready(function() {
   });
 });
 
+/*TABS*/
+function tabs() {
+  var tabItem = $('.tabs a');
+  var tabContent = $('.tabs__content');
+  var defaultActiveTab = $('ul.tabs > li.tabs__active > a');
+  var defaultActiveContent = $(defaultActiveTab.attr('href'));
+
+  if (!defaultActiveTab || !defaultActiveTab.length) {
+    defaultActiveTab = $('ul.tabs > li:first-child > a');
+    defaultActiveTab.parent().addClass('tabs__active');
+    defaultActiveContent = $(defaultActiveTab.attr('href'));
+  }
+
+  tabContent.hide();
+  defaultActiveContent.show();
+
+  tabItem.click(function() {
+    tabItem.parent().removeClass('tabs__active');
+    $(this).parent().addClass('tabs__active');
+
+    var activeTab = $(this).attr('href');
+    tabContent.hide();
+    $(activeTab).show();
+    return false;
+  });
+
+}
+
+tabs();
+
 /*CODEPEN*/
 document.getElementsByClassName || (document.getElementsByClassName = function(e) {
     var n, t, r, a = document,

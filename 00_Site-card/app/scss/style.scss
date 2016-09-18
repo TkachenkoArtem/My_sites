@@ -1,5 +1,6 @@
 //out: ../css/style.css
 @import "mixins/media";
+@import "mixins/triangle";
 
 $bg_home: #64B5F6;
 $bg_skills: #81C784;
@@ -55,10 +56,10 @@ section {
   width: 100%;
   margin: 0;
   padding: {
-    top:  1.000em;
-    bottom:  4.000em;
-    left:  2.000em;
-    right:  5.000em;
+    top: 1.000em;
+    bottom: 4.000em;
+    left: 2.000em;
+    right: 2.000em;
   };
   @include respond(768, 4801) {
     min-height: calc(100vh + 30px);
@@ -116,6 +117,11 @@ section {
 
 %position_relative {
   position: relative;
+}
+
+%contentAbsolute {
+  content: '';
+  position: absolute;
 }
 @import "general";
 @import "components/tooltip";

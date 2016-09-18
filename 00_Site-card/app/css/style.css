@@ -44,7 +44,7 @@ section {
   padding-top: 1.000em;
   padding-bottom: 4.000em;
   padding-left: 2.000em;
-  padding-right: 5.000em; }
+  padding-right: 2.000em; }
   @media only screen and (min-width: 768px) and (max-width: 4800px) {
     section {
       min-height: calc(100vh + 30px); } }
@@ -87,8 +87,12 @@ section {
 #back-to-top:hover, .home__avatar:hover, a[data-img]:hover, .portfolio:hover {
   transform: scale(1.2); }
 
-.home__avatar, .home__avatar > figcaption {
+.home__avatar, .home__avatar > figcaption, .tabs__active {
   position: relative; }
+
+.tabs__active:before {
+  content: '';
+  position: absolute; }
 
 .wrapper {
   width: 100%;
@@ -117,7 +121,7 @@ section {
         font-size: 9.000em; } }
   .main_style--h2 {
     margin: 0;
-    padding: 0.500em 0 0;
+    padding: 0;
     font-size: 2.500em; }
   .main_style--contacts {
     display: block; }
@@ -129,6 +133,9 @@ section {
   bottom: 0;
   left: 50%;
   transform: translate(50% 50%); }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .next_page {
+      display: none; } }
   .next_page__link {
     position: relative;
     transform: rotate(90deg);
@@ -162,8 +169,6 @@ section {
       background: #FFD54F; }
     .navigation li:nth-child(3):hover {
       background: #9575CD; }
-    .navigation li:hover {
-      border-radius: 12px; }
     .navigation li > a {
       color: white; }
       @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -586,9 +591,6 @@ section[name="section__portfolio"] {
     background: #FFB300;
     text-align: center;
     border: none; }
-    @media only screen and (min-width: 320px) and (max-width: 767px) {
-      .portfolio__caption {
-        height: 11.000em; } }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
       .portfolio__caption {
         height: 8.000em;
@@ -618,6 +620,9 @@ img[data-cite="MediaGrup"] {
 img[data-cite="Flat"] {
   background: url("../img/cite-Flat.png") center/cover no-repeat; }
 
+img[data-cite="NatureTour"] {
+  background: url("../img/cite-NatureTour.png") center/cover no-repeat; }
+
 .codepen_container {
   padding: 1.000em; }
   @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -633,6 +638,40 @@ img[data-cite="Flat"] {
   .codepen_container__example {
     float: right;
     width: 75%; }
+
+.tabs {
+  margin: 1.000em 0;
+  padding: 0;
+  list-style: none; }
+  .tabs > li {
+    display: inline-block;
+    width: 50%;
+    background: #FFB300;
+    text-align: center;
+    font-weight: bold;
+    border-top: 2px solid red;
+    vertical-align: top; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .tabs > li {
+        height: 40px; } }
+    .tabs > li > a {
+      width: 100%; }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+        .tabs > li > a {
+          font-size: 1.000em; } }
+  .tabs__active {
+    border-top: 2px solid green !important; }
+    .tabs__active:before {
+      height: 0;
+      width: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid #FFB300;
+      bottom: -12px;
+      left: calc(50% - 15px); }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+        .tabs__active:before {
+          bottom: -10px; } }
 
 section[name="section__contacts"] {
   background: #9575CD;

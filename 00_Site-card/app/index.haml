@@ -189,10 +189,17 @@
 
             %h2.main_style.main_style--h2 Portfolio
 
-            .cite_container
-                %h3.main_style My sites:
+
+            %ul.tabs
+              %li.tabs__active
+                  %a.main_style{href:"#tab1"} My sites
+              %li
+                  %a.main_style{href:"#tab2"} My works on Codepen
+
+            #tab1.tabs__content
+
                 %figure.portfolio
-                    %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
+                    %a{href:"http://tkachenko.ho.ua/01_Gastronymous/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
                     %figcaption.portfolio__caption
                         %h3 Gastronymous
                         %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp. PerfectPixel.
@@ -203,7 +210,7 @@
                         </a>
 
                 %figure.portfolio
-                    %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
+                    %a{href:"http://tkachenko.ho.ua/02_LusidTheme/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
                     %figcaption.portfolio__caption
                         %h3 Lusid Theme
                         %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
@@ -212,8 +219,9 @@
                             %span.icon_container
                                 %i.icon_download
                         </a>
+
                 %figure.portfolio
-                    %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
+                    %a{href:"http://tkachenko.ho.ua/03_LaCasa/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
                     %figcaption.portfolio__caption
                         %h3 La Casa
                         %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
@@ -223,32 +231,18 @@
                                 %i.icon_download
                         </a>
 
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/06_Ikaros/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Ikaros"}
+                %figure.portfolio
+                    %a{href:"http://tkachenko.ho.ua/07_NatureTour/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"NatureTour"}
                     %figcaption.portfolio__caption
-                        %h3 Ikaros
-                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                        %h3 NatureTour
+                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalise.css and jQeury. PerfectPixel.
+                    .btn_download
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/07_NatureTour.png" download> Download PNG
+                            %span.icon_container
+                                %i.icon_download
+                        </a>
 
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/04_Magazine_Blog/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MagBlog"}
-                    %figcaption.portfolio__caption
-                        %h3 Magazine Blog
-                        %p em + media-queries. Source code: HAML + Sass. Performed using Flexbox. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
-
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/07_MediaGrupPortfolio/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MediaGrup"}
-                    %figcaption.portfolio__caption
-                        %h3 MediaGrup Portfolio
-                        %p Bootstrap. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
-
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/05_FlatStyleWebsite/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Flat"}
-                    %figcaption.portfolio__caption
-                        %h3 FlatStyleWebsite
-                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Webpack.
-
-            .codepen_container
-                %h3.main_style My works on Codepen:
+            #tab2.tabs__content
 
               .codepen_container
                 .codepen_container__annotation
