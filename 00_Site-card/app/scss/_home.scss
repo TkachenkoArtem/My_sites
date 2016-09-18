@@ -1,7 +1,6 @@
 //main: style.scss
 
 section[name="section__home"] {
-  padding: 2.000em;
   background: $bg_home;
   box-shadow: -2px -2px 15px 7px rgba(#1E88E5,0.82) inset;
 }
@@ -9,13 +8,17 @@ section[name="section__home"] {
 .home {
   &__avatar {
     @extend %position_relative;
+    width: 3.000em;
+    height: 3.000em;
+    top: -20px;
+    left: 0;
+    background: inline('img01.png') center/contain no-repeat;
+    border-radius: 3.000em;
     @include respond(768, 4801) {
       width: 6.000em;
       height: 6.000em;
       top: -10px;
       left: 10px;
-      border-radius: 3.000em;
-      background: inline('img01.png') center/contain no-repeat;
     }
 
     &:hover {
@@ -28,8 +31,8 @@ section[name="section__home"] {
       letter-spacing: 0.15em;
       text-align: center;
       color: #1976D2;
-        @include respond(320, 481) {
-        bottom: 0;
+      @include respond(320, 481) {
+        bottom: -3.000em;
       }
     }
   }

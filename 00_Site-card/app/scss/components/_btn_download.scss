@@ -13,6 +13,7 @@ $btnW: 15rem;
 // Base Button Styles
 
 .btn_download {
+  vertical-align: middle;
   text-align: center;
   border: 1px solid #a37406;
 
@@ -22,9 +23,18 @@ $btnW: 15rem;
     width: $btnW;
     height: $btnH;
     background: $primary;
-    padding: 0 2rem;
+    padding: {
+      left: 3px;
+      right: 55px;
+    };
     line-height: $btnH;
     color: $gray;
+    @include respond(320, 341) {
+      line-height: $btnH / 2;
+    }
+    @include respond(768, 4801) {
+      padding: 0 2rem;
+    }
 
     &:hover {
       background: lighten($primary, 20%);

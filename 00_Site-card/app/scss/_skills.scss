@@ -55,12 +55,13 @@ th {
 
 .section__image_skills {
   display: none;
-  @include respond(768, 4801) {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
+  // @include respond(768, 4801) {
+  //   display: block;
+  //   width: 80%;
+  //   margin: 0 auto;
+  //   margin-bottom: 30px;
+  //   text-align: center;
+  // }
 }
 
 a[data-img] {

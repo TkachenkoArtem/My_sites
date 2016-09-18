@@ -20,9 +20,10 @@
 
         %section{name:"section__home"}
 
-            -# .home_container_avatar_and_nav
+            .next_page
+                %a.next_page__link{href:"#skills"} &raquo;
+
             %figure.home__avatar
-                -# %div
                 %figcaption %p Artem Tkachenko
 
             %ul.navigation
@@ -36,11 +37,15 @@
             %h1.main_style.main_style--h1 Junior
             %h1.main_style.main_style--h1 Front-end
             %h1.main_style.main_style--h1 developer
-
               -#  _____SKILLS_____
 
         %section{name:"section__skills"}
             %a{name:"skills"}
+
+            .next_page
+                %a.next_page__link{href:"#portfolio"} &raquo;
+
+
             %h2.main_style.main_style--h2 Skills
 
             .legend
@@ -64,7 +69,7 @@
                 %tr.practical_knowledge
                   %td CSS3
                   %td.theoretical_knowledge Pug.js (jade)
-                  %td.theoretical_knowledge Sublime
+                  %td Visual Studio 2015
                   %td Linux
                 %tr.practical_knowledge
                   %td JavaScript
@@ -79,7 +84,7 @@
                 %tr.theoretical_knowledge
                   %td XML
                   %td Less
-                  %td Grunt
+                  %td Sublime
                   %td
 
             %table
@@ -178,6 +183,10 @@
 
         %section{name:"section__portfolio"}
             %a{name:"portfolio"}
+
+            .next_page
+                %a.next_page__link{href:"#contacts"} &raquo;
+
             %h2.main_style.main_style--h2 Portfolio
 
             .cite_container
@@ -251,14 +260,14 @@
               .codepen_container
                 .codepen_container__annotation
                     %h4 2. E-mail
-                    %p This project is implemented imposition e-mail using the preprocessor HAML.
+                    %p This project shows the markup of the e-mail using the HAML preprocessor.
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="kXQqyX" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/kXQqyX/">HAML-email</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
                     %h4 3. JavaScript. Events
-                    %p This project shows how to work out the events by clicking on event.target.
+                    %p This project shows events actions when you click on event.target.
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="JKVpQq" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/JKVpQq/">JS-events</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
@@ -272,7 +281,7 @@
               .codepen_container
                 .codepen_container__annotation
                     %h4 5. Phonebook
-                    %p In this project, it implements a simple phone book to save the contact in localStorage. Functionality: checking the validity of input data, sorting and deleting.
+                    %p This project implements a simple phone book for saving contacts in localStorage. Functionality: checking the validity of the input data, data sorting and deletion.
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="LkvdYP" data-default-tab="js,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/LkvdYP/">JS-phonebook</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
@@ -296,11 +305,11 @@
                   %span.contacts__link.main_style a.tkachenko177
               %p.main_style Viber:
                   %span.contacts__link.main_style +380688891260
-              %a.main_style.main_style--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in Codepen!"} Codepen:
+              %a.main_style.main_style--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my profile in Codepen!"} Codepen:
                   %span.contacts__link.main_style http://codepen.io/Tkachenko/
-              %a.main_style.main_style--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in GitHub!"} Github:
+              %a.main_style.main_style--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my profile in GitHub!"} Github:
                   %span.contacts__link.main_style https://github.com/TkachenkoArtem/
-              %a.main_style.main_style--contacts{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in LinkedIn!"} Linkedin:
+              %a.main_style.main_style--contacts{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my profile in LinkedIn!"} Linkedin:
                   %span.contacts__link.main_style https://www.linkedin.com/in/artem-tkachenko
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}

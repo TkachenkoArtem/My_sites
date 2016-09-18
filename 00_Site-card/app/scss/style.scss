@@ -51,11 +51,17 @@ a {
 }
 
 section {
+  position: relative;
   width: 100%;
   margin: 0;
-  padding: 0 1.000em 1.000em;
+  padding: {
+    top:  1.000em;
+    bottom:  4.000em;
+    left:  2.000em;
+    right:  5.000em;
+  };
   @include respond(768, 4801) {
-    min-height: calc(100vh + 20px);
+    min-height: calc(100vh + 30px);
   }
 }
 
@@ -112,8 +118,8 @@ section {
   position: relative;
 }
 @import "general";
-@import "tooltip";
-@import "btn_download";
+@import "components/tooltip";
+@import "components/btn_download";
 @import "home";
 @import "skills";
 @import "portfolio";

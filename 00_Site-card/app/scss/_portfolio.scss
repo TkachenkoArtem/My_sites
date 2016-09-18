@@ -45,7 +45,7 @@ section[name="section__portfolio"] {
     background: #FFB300;
     text-align: center;
     border: none;
-    @include respond-to(480) {
+    @include respond(320, 768) {
       height: 11.000em;
     }
     @include respond(768, 4801) {
