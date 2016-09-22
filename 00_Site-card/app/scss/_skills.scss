@@ -1,6 +1,6 @@
 //main: style.scss
 
-section[name="section__skills"] {
+.skills {
   background: $bg_skills;
   box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
 }
@@ -53,7 +53,7 @@ th {
   color: #3E2723;
 }
 
-.section__image_skills {
+.skills__logos {
   display: none;
   // @include respond(768, 4801) {
   //   display: block;

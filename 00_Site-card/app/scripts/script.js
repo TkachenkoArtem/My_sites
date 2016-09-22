@@ -1,31 +1,15 @@
 /*jshint esversion: 6 */
 
-/*BACK-TO-TOP*/
-
-(function() {
-  if ($('#back-to-top').length) {
-    var scrollTrigger = 100, // px
-      backToTop = function() {
-        var scrollTop = $(window).scrollTop();
-        if (scrollTop > scrollTrigger) {
-          $('#back-to-top').addClass('show');
-        } else {
-          $('#back-to-top').removeClass('show');
+/*GO TO*/
+$(document).ready(function(){
+    $('.jsGoTo').click( function(){ // ловим клик по ссылке с классом jsGoTo
+	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length !== 0) { // проверим существование элемента чтобы избежать ошибки
+	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скроолинг к элементу scroll_el
         }
-      };
-
-    backToTop();
-    $(window).on('scroll', function() {
-      backToTop();
+	    return false; // выключаем стандартное действие
     });
-    $('#back-to-top').on('click', function(e) {
-      e.preventDefault();
-      $('html,body').animate({
-        scrollTop: 0
-      }, 700);
-    });
-  }
-})();
+});
 
 /*TOOLTIP*/
 $(document).ready(function() {

@@ -1,11 +1,11 @@
 //main: style.scss
 
-section[name="section__portfolio"] {
+.portfolio {
   background: $bg_portfolio;
   box-shadow: -2px -2px 15px 7px rgba(#FFB300,0.82) inset;
 }
 
-.portfolio {
+.my_markup {
   display: inline-block;
   width: calc(50% - 0.750em*2);
   margin: 0.750em;
@@ -50,7 +50,7 @@ section[name="section__portfolio"] {
       margin-top: 0.500em;
     }
     @include respond(992, 4801) {
-      height: 7.500em;
+      height: 8.500em;
     }
   }
 }

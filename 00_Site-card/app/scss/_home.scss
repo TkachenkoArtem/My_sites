@@ -1,11 +1,10 @@
 //main: style.scss
 
-section[name="section__home"] {
+.home {
   background: $bg_home;
   box-shadow: -2px -2px 15px 7px rgba(#1E88E5,0.82) inset;
-}
+  z-index: 5;
 
-.home {
   &__avatar {
     @extend %position_relative;
     width: 3.000em;

@@ -14,37 +14,39 @@
 
     .wrapper
 
-        %a#back-to-top{href:"#", title:"Back to top"} %p &#9650;
+        %ul.right_bar
+            %li
+              %a.jsGoTo{href:".home",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Home"} &#8962;
+            %li
+              %a.jsGoTo{href:".skills",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Skills"} &#9000;
+            %li
+              %a.jsGoTo{href:".portfolio",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Portfolio"} &#9999;
+            %li
+              %a.jsGoTo{href:".section__contacts",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Contacts"} &#9993;
+
 
               -#  _____HOME_____
 
-        %section{name:"section__home"}
-
-            .next_page
-                %a.next_page__link{href:"#skills"} &raquo;
+        %section.home
 
             %figure.home__avatar
                 %figcaption %p Artem Tkachenko
 
             %ul.navigation
                 %li
-                  %a.main_style{href:"#skills"} Skills
+                  %a.main_style.jsGoTo{href:".skills"} &#9000;&nbsp;Skills
                 %li
-                  %a.main_style{href:"#portfolio"} Portfolio
+                  %a.main_style.jsGoTo{href:".portfolio"} &#9999;&nbsp;Portfolio
                 %li
-                  %a.main_style{href:"#contacts"} Contacts
+                  %a.main_style.jsGoTo{href:".section__contacts"} &#9993;&nbsp;Contacts
 
             %h1.main_style.main_style--h1 Junior
             %h1.main_style.main_style--h1 Front-end
             %h1.main_style.main_style--h1 developer
+
               -#  _____SKILLS_____
 
-        %section{name:"section__skills"}
-            %a{name:"skills"}
-
-            .next_page
-                %a.next_page__link{href:"#portfolio"} &raquo;
-
+        %section.skills
 
             %h2.main_style.main_style--h2 Skills
 
@@ -114,7 +116,7 @@
                   %td Autocad
                   %td Wordpress
                 %tr.practical_knowledge
-                  %td.theoretical_knowledge jQweryUI
+                  %td.theoretical_knowledge jQueryUI
                   %td.theoretical_knowledge Underscore.js
                   %td Lightroom
                   %td Codepen
@@ -140,7 +142,7 @@
                   %td
 
 
-            .section__image_skills
+            .skills__logos
                 %a{href:"https://atom.io/", target:"_blank", data-img:"atom"}
                 %a{href:"http://webpack.github.io/", target:"_blank", data-img:"webpack"}
                 %a{href:"https://www.sourcetreeapp.com/", target:"_blank", data-img:"SourceTree"}
@@ -181,11 +183,7 @@
 
               -#  _____PORTFOLIO_____
 
-        %section{name:"section__portfolio"}
-            %a{name:"portfolio"}
-
-            .next_page
-                %a.next_page__link{href:"#contacts"} &raquo;
+        %section.portfolio
 
             %h2.main_style.main_style--h2 Portfolio
 
@@ -198,44 +196,44 @@
 
             #tab1.tabs__content
 
-                %figure.portfolio
+                %figure.my_markup
                     %a{href:"http://tkachenko.ho.ua/01_Gastronymous/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
-                    %figcaption.portfolio__caption
+                    %figcaption.my_markup__caption
                         %h3 Gastronymous
-                        %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp. PerfectPixel.
+                        %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp.  Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
                         <a class="btn_download__link" href="http://tkachenko.ho.ua/download/01_Gastronymous.png" download> Download PNG
                             %span.icon_container
                                 %i.icon_download
                         </a>
 
-                %figure.portfolio
+                %figure.my_markup
                     %a{href:"http://tkachenko.ho.ua/02_LusidTheme/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
-                    %figcaption.portfolio__caption
+                    %figcaption.my_markup__caption
                         %h3 Lusid Theme
-                        %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                        %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.  Libraries: Normalize.css. PerfectPixel.
                     .btn_download
                         <a class="btn_download__link" href="http://tkachenko.ho.ua/download/02_LusidTheme.png" download> Download PNG
                             %span.icon_container
                                 %i.icon_download
                         </a>
 
-                %figure.portfolio
+                %figure.my_markup
                     %a{href:"http://tkachenko.ho.ua/03_LaCasa/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
-                    %figcaption.portfolio__caption
+                    %figcaption.my_markup__caption
                         %h3 La Casa
-                        %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                        %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
                         <a class="btn_download__link" href="http://tkachenko.ho.ua/download/03_LaCasa.png" download> Download PNG
                             %span.icon_container
                                 %i.icon_download
                         </a>
 
-                %figure.portfolio
-                    %a{href:"http://tkachenko.ho.ua/07_NatureTour/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"NatureTour"}
-                    %figcaption.portfolio__caption
+                %figure.my_markup
+                    %a{href:"http://tkachenko.ho.ua/07_NatureTour/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"NatureTour"}
+                    %figcaption.my_markup__caption
                         %h3 NatureTour
-                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalise.css and jQeury. PerfectPixel.
+                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
                         <a class="btn_download__link" href="http://tkachenko.ho.ua/download/07_NatureTour.png" download> Download PNG
                             %span.icon_container
@@ -288,22 +286,22 @@
 
               -#  _____CONTACTS_____
 
-        %section{name:"section__contacts"}
-            %a{name:"contacts"}
+        %section.section__contacts
+
             %h2.main_style.main_style--h2 Contacts
 
           .contacts.center
-              %p.main_style E-mail:
+              %address.main_style E-mail:
                   %a.contacts__link.main_style{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
               %p.main_style Skype:
                   %span.contacts__link.main_style a.tkachenko177
               %p.main_style Viber:
                   %span.contacts__link.main_style +380688891260
-              %a.main_style.main_style--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my profile in Codepen!"} Codepen:
+              %a.main_style.main_style--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my Codepen profile!"} Codepen:
                   %span.contacts__link.main_style http://codepen.io/Tkachenko/
-              %a.main_style.main_style--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my profile in GitHub!"} Github:
+              %a.main_style.main_style--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my GitHub profile!"} Github:
                   %span.contacts__link.main_style https://github.com/TkachenkoArtem/
-              %a.main_style.main_style--contacts{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my profile in LinkedIn!"} Linkedin:
+              %a.main_style.main_style--contacts{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my LinkedIn profile!"} Linkedin:
                   %span.contacts__link.main_style https://www.linkedin.com/in/artem-tkachenko
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
