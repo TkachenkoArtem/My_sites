@@ -5,88 +5,6 @@
   box-shadow: -2px -2px 15px 7px rgba(#FFB300,0.82) inset;
 }
 
-.my_markup {
-  display: inline-block;
-  width: calc(50% - 0.750em*2);
-  margin: 0.750em;
-  vertical-align: middle;
-  border: none;
-  @include respond-to(768) {
-    width: calc(50% - 2.000em*2);
-    margin: 2.700em 2.000em;
-  }
-  @include respond(992, 4801) {
-    width: calc(50% - 4.000em*2);
-    margin: 2.700em 4.000em;
-  }
-
-  &:hover {
-    @extend %trans_scale;
-  }
-
-  a,
-  img {
-    width: 100%;
-  }
-
-  img {
-    display: none;
-    @include respond(768, 4801) {
-      display: block;
-      height: 400px;
-      border: none;
-    }
-  }
-
-  &__caption {
-    height: 18em;
-    margin: auto;
-    padding: 1.000em;
-    background: #FFB300;
-    text-align: center;
-    border: none;
-    @include respond(768, 4801) {
-      height: 8.000em;
-      margin-top: 0.500em;
-    }
-    @include respond(992, 4801) {
-      height: 8.500em;
-    }
-  }
-}
-@each $image in Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat, NatureTour {
-  img[data-cite="#{$image}"] {
-    background: url("../img/cite-#{$image}.png") center/cover no-repeat;
-  }
-}
-
-.codepen_container {
-  padding: 1.000em;
-  @include respond(320, 481) {
-    display: none;
-  }
-
-  &::after {
-    @extend %clearfix;
-  }
-
-  &__annotation {
-    float: left;
-    width: 25%;
-    padding: 1.000em;
-
-    p {
-      font-size: 1.500em;
-      text-align: justify;
-    }
-  }
-
-  &__example {
-    float: right;
-    width: 75%;
-  }
-}
-
 .tabs {
   margin: 1.000em 0;
   padding: 0;
@@ -112,6 +30,14 @@
     }
   }
 
+  &__content {
+    &--markup {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  }
+
   &__active {
     @extend %position_relative;
     border-top: 2px solid green !important;
@@ -124,6 +50,71 @@
       @include respond(320, 768) {
         bottom: -10px;
       }
+    }
+  }
+}
+
+.my_markup {
+  width: 49%;
+  margin: {
+    bottom: 0.750em;
+  };
+  border: none;
+
+  a,
+  img {
+    width: 100%;
+  }
+
+  img {
+    display: none;
+    @include respond(768, 4801) {
+      display: block;
+      height: 400px;
+      border: none;
+    }
+  }
+
+  &__caption {
+    height: 18em;
+    margin: auto;
+    padding: 1.000em;
+    background: #FFB300;
+    text-align: center;
+    border: none;
+    @include respond-to(480) {
+      height: 12.000em;
+    }
+    @include respond(768, 4801) {
+      height: 7.000em;
+    }
+  }
+}
+@each $image in Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat, NatureTour {
+  img[data-cite="#{$image}"] {
+    background: url("../img/cite-#{$image}.png") center/cover no-repeat;
+  }
+}
+
+.codepen_container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &__annotation {
+    width: 25.5%;
+    padding: 1.000em;
+    font-size: 1.500em;
+    text-align: justify;
+    @include respond(320, 768) {
+      display: none;
+    }
+  }
+
+  &__example {
+    width: 73.5%;
+    @include respond(320, 768) {
+      width: 100%;
     }
   }
 }

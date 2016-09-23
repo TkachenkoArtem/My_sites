@@ -28,8 +28,7 @@ h4 {
 
 h4 {
   margin-bottom: 0.750em;
-  text-align: center;
-  font-size: 1.500em; }
+  text-align: center; }
 
 a {
   display: inline-block;
@@ -44,9 +43,9 @@ section {
   position: relative;
   width: 100%;
   margin: 0;
-  padding-top: 1.000em;
-  padding-bottom: 1.000em;
-  padding-left: 1.000em;
+  padding-top: 2.000em;
+  padding-bottom: 2.000em;
+  padding-left: 2.000em;
   padding-right: 5.000em; }
   @media only screen and (min-width: 768px) and (max-width: 4800px) {
     section {
@@ -55,12 +54,7 @@ section {
 #ho_adv {
   display: none !important; }
 
-.codepen_container::after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.right_bar > li:hover, .home__avatar:hover, a[data-img]:hover, .my_markup:hover {
+.right_bar > li:hover, .home__avatar:hover, a[data-img]:hover {
   transform: scale(1.2); }
 
 .home__avatar, .home__avatar > figcaption, .tabs__active {
@@ -100,8 +94,6 @@ section {
     margin: 0;
     padding: 0;
     font-size: 2.500em; }
-  .main_style--contacts {
-    display: block; }
 
 .navigation {
   position: absolute;
@@ -390,7 +382,8 @@ section {
       padding-right: 0.500em; }
 
 table {
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
   margin-bottom: 2.000em;
   border: 1px solid #43A047;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
@@ -416,6 +409,13 @@ th {
 
 .skills__logos {
   display: none; }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    .skills__logos {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      text-align: center; } }
 
 a[data-img] {
   display: inline-block;
@@ -542,20 +542,48 @@ a[data-img="webpack"] {
   background: #FFD54F;
   box-shadow: -2px -2px 15px 7px rgba(255, 179, 0, 0.82) inset; }
 
+.tabs {
+  margin: 1.000em 0;
+  padding: 0;
+  list-style: none; }
+  .tabs > li {
+    display: inline-block;
+    width: 50%;
+    background: #FFB300;
+    text-align: center;
+    font-weight: bold;
+    border-top: 2px solid red;
+    vertical-align: top; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .tabs > li {
+        height: 40px; } }
+    .tabs > li > a {
+      width: 100%; }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+        .tabs > li > a {
+          font-size: 1.000em; } }
+  .tabs__content--markup {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+  .tabs__active {
+    border-top: 2px solid green !important; }
+    .tabs__active:before {
+      height: 0;
+      width: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid #FFB300;
+      bottom: -12px;
+      left: calc(50% - 15px); }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+        .tabs__active:before {
+          bottom: -10px; } }
+
 .my_markup {
-  display: inline-block;
-  width: calc(50% - 0.750em*2);
-  margin: 0.750em;
-  vertical-align: middle;
+  width: 49%;
+  margin-bottom: 0.750em;
   border: none; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .my_markup {
-      width: calc(50% - 2.000em*2);
-      margin: 2.700em 2.000em; } }
-  @media only screen and (min-width: 992px) and (max-width: 4800px) {
-    .my_markup {
-      width: calc(50% - 4.000em*2);
-      margin: 2.700em 4.000em; } }
   .my_markup a,
   .my_markup img {
     width: 100%; }
@@ -573,13 +601,12 @@ a[data-img="webpack"] {
     background: #FFB300;
     text-align: center;
     border: none; }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      .my_markup__caption {
+        height: 12.000em; } }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
       .my_markup__caption {
-        height: 8.000em;
-        margin-top: 0.500em; } }
-    @media only screen and (min-width: 992px) and (max-width: 4800px) {
-      .my_markup__caption {
-        height: 8.500em; } }
+        height: 7.000em; } }
 
 img[data-cite="Gastronymous"] {
   background: url("../img/cite-Gastronymous.png") center/cover no-repeat; }
@@ -606,68 +633,39 @@ img[data-cite="NatureTour"] {
   background: url("../img/cite-NatureTour.png") center/cover no-repeat; }
 
 .codepen_container {
-  padding: 1.000em; }
-  @media only screen and (min-width: 320px) and (max-width: 480px) {
-    .codepen_container {
-      display: none; } }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
   .codepen_container__annotation {
-    float: left;
-    width: 25%;
-    padding: 1.000em; }
-    .codepen_container__annotation p {
-      font-size: 1.500em;
-      text-align: justify; }
-  .codepen_container__example {
-    float: right;
-    width: 75%; }
-
-.tabs {
-  margin: 1.000em 0;
-  padding: 0;
-  list-style: none; }
-  .tabs > li {
-    display: inline-block;
-    width: 50%;
-    background: #FFB300;
-    text-align: center;
-    font-weight: bold;
-    border-top: 2px solid red;
-    vertical-align: top; }
+    width: 25.5%;
+    padding: 1.000em;
+    font-size: 1.500em;
+    text-align: justify; }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-      .tabs > li {
-        height: 40px; } }
-    .tabs > li > a {
-      width: 100%; }
-      @media only screen and (min-width: 320px) and (max-width: 767px) {
-        .tabs > li > a {
-          font-size: 1.000em; } }
-  .tabs__active {
-    border-top: 2px solid green !important; }
-    .tabs__active:before {
-      height: 0;
-      width: 0;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-top: 15px solid #FFB300;
-      bottom: -12px;
-      left: calc(50% - 15px); }
-      @media only screen and (min-width: 320px) and (max-width: 767px) {
-        .tabs__active:before {
-          bottom: -10px; } }
+      .codepen_container__annotation {
+        display: none; } }
+  .codepen_container__example {
+    width: 73.5%; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .codepen_container__example {
+        width: 100%; } }
 
-.section__contacts {
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
   background: #9575CD;
   box-shadow: -2px -2px 15px 7px rgba(94, 53, 177, 0.82) inset; }
 
-.contacts__link {
-  font-size: 0.750em;
+address {
+  font-size: 2.500em;
   font-weight: bold;
-  text-transform: lowercase;
-  color: #311B92; }
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
-    .contacts__link {
-      display: block; } }
-
-@media only screen and (min-width: 768px) and (max-width: 4800px) {
-  .contacts {
-    font-size: 1.700em; } }
+  text-align: center;
+  text-transform: capitalize; }
+  address > a,
+  address span {
+    padding-left: 20px;
+    text-transform: lowercase;
+    color: #311B92; }

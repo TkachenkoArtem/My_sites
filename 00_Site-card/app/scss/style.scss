@@ -41,7 +41,6 @@ h4 {
 h4 {
   margin-bottom: 0.750em;
   text-align: center;
-  font-size: 1.500em;
 }
 
 a {
@@ -60,9 +59,9 @@ section {
   width: 100%;
   margin: 0;
   padding: {
-    top: 1.000em;
-    bottom: 1.000em;
-    left: 1.000em;
+    top: 2.000em;
+    bottom: 2.000em;
+    left: 2.000em;
     right: 5.000em;
   };
   @include respond(768, 4801) {

@@ -22,7 +22,7 @@
             %li
               %a.jsGoTo{href:".portfolio",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Portfolio"} &#9999;
             %li
-              %a.jsGoTo{href:".section__contacts",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Contacts"} &#9993;
+              %a.jsGoTo{href:".contacts",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Contacts"} &#9993;
 
 
               -#  _____HOME_____
@@ -38,7 +38,7 @@
                 %li
                   %a.main_style.jsGoTo{href:".portfolio"} &#9999;&nbsp;Portfolio
                 %li
-                  %a.main_style.jsGoTo{href:".section__contacts"} &#9993;&nbsp;Contacts
+                  %a.main_style.jsGoTo{href:".contacts"} &#9993;&nbsp;Contacts
 
             %h1.main_style.main_style--h1 Junior
             %h1.main_style.main_style--h1 Front-end
@@ -50,13 +50,12 @@
 
             %h2.main_style.main_style--h2 Skills
 
-            .legend
-                %ul
-                  %li.practical_knowledge have practical skills
-                  %li.theoretical_knowledge have theoretical skills
-                  %li.no_knowledge learn now
-
             %table
+                %caption.legend
+                    %ul
+                      %li.practical_knowledge have practical skills
+                      %li.theoretical_knowledge have theoretical skills
+                      %li.no_knowledge learn now
                 %thead
                   %tr
                     %th Languages
@@ -194,7 +193,7 @@
               %li
                   %a.main_style{href:"#tab2"} My works on Codepen
 
-            #tab1.tabs__content
+            #tab1.tabs__content.tabs__content--markup
 
                 %figure.my_markup
                     %a{href:"http://tkachenko.ho.ua/01_Gastronymous/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
@@ -286,23 +285,22 @@
 
               -#  _____CONTACTS_____
 
-        %section.section__contacts
+        %section.contacts
 
             %h2.main_style.main_style--h2 Contacts
 
-          .contacts.center
-              %address.main_style E-mail:
-                  %a.contacts__link.main_style{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
-              %p.main_style Skype:
-                  %span.contacts__link.main_style a.tkachenko177
-              %p.main_style Viber:
-                  %span.contacts__link.main_style +380688891260
-              %a.main_style.main_style--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my Codepen profile!"} Codepen:
-                  %span.contacts__link.main_style http://codepen.io/Tkachenko/
-              %a.main_style.main_style--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my GitHub profile!"} Github:
-                  %span.contacts__link.main_style https://github.com/TkachenkoArtem/
-              %a.main_style.main_style--contacts{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my LinkedIn profile!"} Linkedin:
-                  %span.contacts__link.main_style https://www.linkedin.com/in/artem-tkachenko
+            %address E-mail:
+                %a{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
+            %address Skype:
+                %span a.tkachenko177
+            %address Viber/Phone:
+                %span +380688891260
+            %address Codepen:
+                %a{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my Codepen profile!"} http://codepen.io/Tkachenko/
+            %address Github:
+                %a{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my GitHub profile!"} https://github.com/TkachenkoArtem/
+            %address Linkedin:
+                %a{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my LinkedIn profile!"} https://www.linkedin.com/in/artem-tkachenko
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity:"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin:"anonymous"}
