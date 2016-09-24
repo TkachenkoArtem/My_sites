@@ -7,8 +7,9 @@
   align-items: center;
   align-content: flex-start;
   background: $bg_contacts;
-  box-shadow: -2px -2px 15px 7px rgba(#5E35B1,0.82) inset;
-
+  background-image: url("../img/bg-contacts-top.png"), url("../img/bg-contacts-bottom.png");
+  background-position: top left, bottom left;
+  background-repeat: repeat-x, repeat-x;
 }
 
 address {
@@ -24,6 +25,7 @@ address {
   & > a,
   span {
     padding-left: 20px;
+    font-weight: normal;
     text-transform: lowercase;
     color: #311B92;
   }

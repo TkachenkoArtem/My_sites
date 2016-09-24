@@ -1,0 +1,47 @@
+//main: style.scss
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
+  @include respond-to(320) {
+    font-size: 12px;
+  }
+  @include respond-to(480) {
+    font-size: 13px;
+  }
+  @include respond-to(768) {
+    font-size: 14px;
+  }
+  @include respond-to(992) {
+    font-size: 15px;
+  }
+  @include respond(2560, 4801) {
+    font-size: 20px;
+  }
+}
+
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}

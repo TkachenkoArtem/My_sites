@@ -32,23 +32,24 @@
             %figure.home__avatar
                 %figcaption %p Artem Tkachenko
 
-            %ul.navigation
+            %ul.home__navigation
                 %li
-                  %a.main_style.jsGoTo{href:".skills"} &#9000;&nbsp;Skills
+                  %a.jsGoTo{href:".skills"} &#9000;&nbsp;Skills
                 %li
-                  %a.main_style.jsGoTo{href:".portfolio"} &#9999;&nbsp;Portfolio
+                  %a.jsGoTo{href:".portfolio"} &#9999;&nbsp;Portfolio
                 %li
-                  %a.main_style.jsGoTo{href:".contacts"} &#9993;&nbsp;Contacts
+                  %a.jsGoTo{href:".contacts"} &#9993;&nbsp;Contacts
 
-            %h1.main_style.main_style--h1 Junior
-            %h1.main_style.main_style--h1 Front-end
-            %h1.main_style.main_style--h1 developer
+            %h1
+                %span Junior
+                %span Front-end
+                %span developer
 
               -#  _____SKILLS_____
 
         %section.skills
 
-            %h2.main_style.main_style--h2 Skills
+            %h2 Skills
 
             %table
                 %caption.legend
@@ -184,57 +185,69 @@
 
         %section.portfolio
 
-            %h2.main_style.main_style--h2 Portfolio
-
+            %h2 Portfolio
 
             %ul.tabs
               %li.tabs__active
-                  %a.main_style{href:"#tab1"} My sites
+                  %a{href:"#tab1"} My sites
               %li
-                  %a.main_style{href:"#tab2"} My works on Codepen
+                  %a{href:"#tab2"} My works on Codepen
 
             #tab1.tabs__content.tabs__content--markup
 
                 %figure.my_markup
-                    %a{href:"http://tkachenko.ho.ua/01_Gastronymous/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
+                    %a.git{href:"https://github.com/TkachenkoArtem/TkachenkoArtem.github.io", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect on GitHub!"}
+                    %a.jsGoTo{href:".home", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"You are already on this site!"} %img{data-cite:"SiteCard"}
+                    %figcaption.my_markup__caption
+                        %h3 My Site-card
+                        %p em + media-queries. Source code: HAML + Sass. Packet managers: npm. Build system automating tasks: Gulp.  Libraries: Normalize.css and jQuery. Framework: Bootstrap 3 (only used tooltip). PerfectPixel.
+                    .btn_download
+                        %span.btn_download__link No additional materials
+
+                %figure.my_markup
+                    %a.git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/01_Gastronymous", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect on GitHub!"}
+                    %a{href:"http://tkachenko.ho.ua/01_Gastronymous/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect on hosting!"} %img{data-cite:"Gastronymous"}
                     %figcaption.my_markup__caption
                         %h3 Gastronymous
                         %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp.  Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
-                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/01_Gastronymous.png" download> Download PNG
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/01_Gastronymous.png" download> Download additional materials
                             %span.icon_container
                                 %i.icon_download
                         </a>
 
                 %figure.my_markup
-                    %a{href:"http://tkachenko.ho.ua/02_LusidTheme/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
+                    %a.git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/02_LusidTheme", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect on GitHub!"}
+                    %a{href:"http://tkachenko.ho.ua/02_LusidTheme/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect on hosting!"} %img{data-cite:"LusidTheme"}
                     %figcaption.my_markup__caption
                         %h3 Lusid Theme
                         %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.  Libraries: Normalize.css. PerfectPixel.
                     .btn_download
-                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/02_LusidTheme.png" download> Download PNG
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/02_LusidTheme.png" download> Download additional materials
                             %span.icon_container
                                 %i.icon_download
                         </a>
 
                 %figure.my_markup
-                    %a{href:"http://tkachenko.ho.ua/03_LaCasa/", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
+                    %a.git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/03_LaCasa", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect on GitHub!"}
+                    %a{href:"http://tkachenko.ho.ua/03_LaCasa/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect on hosting!"} %img{data-cite:"LaCasa"}
                     %figcaption.my_markup__caption
                         %h3 La Casa
                         %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
-                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/03_LaCasa.png" download> Download PNG
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/03_LaCasa.png" download> Download additional materials
                             %span.icon_container
                                 %i.icon_download
                         </a>
 
                 %figure.my_markup
-                    %a{href:"http://tkachenko.ho.ua/07_NatureTour/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"NatureTour"}
+                    %a.git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/07_NatureTour", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect on GitHub!"}
+                    %a{href:"http://tkachenko.ho.ua/07_NatureTour/", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect on hosting!"} %img{data-cite:"NatureTour"}
                     %figcaption.my_markup__caption
                         %h3 NatureTour
                         %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
-                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/07_NatureTour.png" download> Download PNG
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/07_NatureTour.png" download> Download additional materials
                             %span.icon_container
                                 %i.icon_download
                         </a>
@@ -287,18 +300,18 @@
 
         %section.contacts
 
-            %h2.main_style.main_style--h2 Contacts
+            %h2 Contacts
 
-            %address E-mail:
-                %a{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
             %address Skype:
                 %span a.tkachenko177
+            %address E-mail:
+                %a{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
             %address Viber/Phone:
                 %span +380688891260
             %address Codepen:
-                %a{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my Codepen profile!"} http://codepen.io/Tkachenko/
+                %a{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my Codepen profile!"} http://codepen.io/Tkachenko
             %address Github:
-                %a{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my GitHub profile!"} https://github.com/TkachenkoArtem/
+                %a{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my GitHub profile!"} https://github.com/TkachenkoArtem
             %address Linkedin:
                 %a{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my LinkedIn profile!"} https://www.linkedin.com/in/artem-tkachenko
 

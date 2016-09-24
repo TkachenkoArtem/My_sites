@@ -2,7 +2,9 @@
 
 .skills {
   background: $bg_skills;
-  box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
+  background-image: url("../img/bg-skills-top.png"), url("../img/bg-skills-bottom.png");
+  background-position: top left, bottom left;
+  background-repeat: repeat-x, repeat-x;
 }
 
 .legend {

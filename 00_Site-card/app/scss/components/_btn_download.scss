@@ -17,6 +17,11 @@ $btnW: 15rem;
   text-align: center;
   border: 1px solid #a37406;
 
+  & > span {
+    display: block;
+    width: 100%;
+  }
+
   &__link {
     display: inline-block;
     position: relative;
@@ -36,7 +41,7 @@ $btnW: 15rem;
       padding: 0 2rem;
     }
 
-    &:hover {
+    &:hover:not(span) {
       background: lighten($primary, 20%);
     }
   }

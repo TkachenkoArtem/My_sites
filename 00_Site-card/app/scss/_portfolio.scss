@@ -2,7 +2,9 @@
 
 .portfolio {
   background: $bg_portfolio;
-  box-shadow: -2px -2px 15px 7px rgba(#FFB300,0.82) inset;
+  background-image: url("../img/bg-portfolio-top.png"), url("../img/bg-portfolio-bottom.png");
+  background-position: top left, bottom left;
+  background-repeat: repeat-x, repeat-x;
 }
 
 .tabs {
@@ -24,6 +26,7 @@
 
     & > a {
       width: 100%;
+      @extend %main_style;
       @include respond(320, 768) {
         font-size: 1.000em;
       }
@@ -55,11 +58,27 @@
 }
 
 .my_markup {
+  position: relative;
   width: 49%;
   margin: {
     bottom: 0.750em;
   };
   border: none;
+
+  .git {
+    display: none;
+    @extend %contentAbsolute;
+    @include respond(768, 4801) {
+      display: block;
+      width: 50px;
+      height: 40px;
+      top: 5px;
+      left: 5px;
+      background-image: url("../img/Octocat.png");
+      background-repeat: no-repeat;
+      background-size: cover;;
+    }
+  }
 
   a,
   img {
@@ -90,7 +109,7 @@
     }
   }
 }
-@each $image in Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat, NatureTour {
+@each $image in SiteCard, Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat, NatureTour {
   img[data-cite="#{$image}"] {
     background: url("../img/cite-#{$image}.png") center/cover no-repeat;
   }
