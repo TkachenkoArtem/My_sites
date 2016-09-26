@@ -111,10 +111,10 @@ section {
 .right_bar > li:hover, .home__avatar:hover, a[data-img]:hover {
   transform: scale(1.2); }
 
-.home__avatar, .home__avatar > figcaption, .tabs__active {
+.tabs__active {
   position: relative; }
 
-.tabs__active:before, .my_markup .git {
+.tabs__active:before, .markup__git {
   content: '';
   position: absolute; }
 
@@ -245,13 +245,10 @@ h2, .home__navigation li > a, .tabs > li > a {
   vertical-align: middle;
   text-align: center;
   border: 1px solid #a37406; }
-  .btn_download > span {
-    display: block;
-    width: 100%; }
   .btn_download__link {
     display: inline-block;
     position: relative;
-    width: 15rem;
+    width: 100%;
     height: 4rem;
     background: #FFB300;
     padding-left: 3px;
@@ -322,32 +319,28 @@ h2, .home__navigation li > a, .tabs > li > a {
   background-position: top left, bottom left;
   background-repeat: repeat-x, repeat-x;
   z-index: 5; }
+  .home__about_me {
+    width: 40%;
+    display: inline-block;
+    margin-top: 1.000em;
+    margin-bottom: 1.000em;
+    text-align: center; }
+    .home__about_me > figcaption {
+      display: inherit;
+      width: 84%;
+      font-size: 1.300em;
+      color: white; }
   .home__avatar {
-    width: 3.000em;
-    height: 3.000em;
-    top: -20px;
-    left: 0;
+    display: inherit;
+    width: 16%;
+    height: 6.000em;
     background: inline("img01.png") center/contain no-repeat;
     border-radius: 3.000em; }
-    @media only screen and (min-width: 768px) and (max-width: 4800px) {
-      .home__avatar {
-        width: 6.000em;
-        height: 6.000em;
-        top: -10px;
-        left: 10px; } }
-    .home__avatar > figcaption {
-      bottom: -6.000em;
-      letter-spacing: 0.15em;
-      text-align: center;
-      color: #1976D2; }
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
-        .home__avatar > figcaption {
-          bottom: -3.000em; } }
   .home__navigation {
-    position: absolute;
-    top: 50px;
-    right: 10px;
+    display: inline-block;
+    width: 59%;
     padding: 0;
+    vertical-align: top;
     list-style: none;
     text-align: right; }
     .home__navigation li {
@@ -378,7 +371,8 @@ h2, .home__navigation li > a, .tabs > li > a {
   background-repeat: repeat-x, repeat-x; }
 
 .legend {
-  text-align: right; }
+  text-align: right;
+  height: 60px; }
   .legend li {
     list-style-type: none; }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
@@ -590,15 +584,15 @@ a[data-img="webpack"] {
         .tabs__active:before {
           bottom: -10px; } }
 
-.my_markup {
+.markup {
   position: relative;
   width: 49%;
   margin-bottom: 0.750em;
   border: none; }
-  .my_markup .git {
+  .markup__git {
     display: none; }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
-      .my_markup .git {
+      .markup__git {
         display: block;
         width: 50px;
         height: 40px;
@@ -607,17 +601,15 @@ a[data-img="webpack"] {
         background-image: url("../img/Octocat.png");
         background-repeat: no-repeat;
         background-size: cover; } }
-  .my_markup a,
-  .my_markup img {
-    width: 100%; }
-  .my_markup img {
+  .markup__link_to_cite {
     display: none; }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
-      .my_markup img {
+      .markup__link_to_cite {
         display: block;
+        width: 100%;
         height: 400px;
         border: none; } }
-  .my_markup__caption {
+  .markup__caption {
     height: 18em;
     margin: auto;
     padding: 1.000em;
@@ -625,37 +617,37 @@ a[data-img="webpack"] {
     text-align: center;
     border: none; }
     @media only screen and (min-width: 480px) and (max-width: 767px) {
-      .my_markup__caption {
+      .markup__caption {
         height: 12.000em; } }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
-      .my_markup__caption {
+      .markup__caption {
         height: 7.000em; } }
 
-img[data-cite="SiteCard"] {
+a[data-cite="SiteCard"] {
   background: url("../img/cite-SiteCard.png") center/cover no-repeat; }
 
-img[data-cite="Gastronymous"] {
+a[data-cite="Gastronymous"] {
   background: url("../img/cite-Gastronymous.png") center/cover no-repeat; }
 
-img[data-cite="LusidTheme"] {
+a[data-cite="LusidTheme"] {
   background: url("../img/cite-LusidTheme.png") center/cover no-repeat; }
 
-img[data-cite="LaCasa"] {
+a[data-cite="LaCasa"] {
   background: url("../img/cite-LaCasa.png") center/cover no-repeat; }
 
-img[data-cite="Ikaros"] {
+a[data-cite="Ikaros"] {
   background: url("../img/cite-Ikaros.png") center/cover no-repeat; }
 
-img[data-cite="MagBlog"] {
+a[data-cite="MagBlog"] {
   background: url("../img/cite-MagBlog.png") center/cover no-repeat; }
 
-img[data-cite="MediaGrup"] {
+a[data-cite="MediaGrup"] {
   background: url("../img/cite-MediaGrup.png") center/cover no-repeat; }
 
-img[data-cite="Flat"] {
+a[data-cite="Flat"] {
   background: url("../img/cite-Flat.png") center/cover no-repeat; }
 
-img[data-cite="NatureTour"] {
+a[data-cite="NatureTour"] {
   background: url("../img/cite-NatureTour.png") center/cover no-repeat; }
 
 .codepen_container {

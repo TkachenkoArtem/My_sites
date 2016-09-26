@@ -2,47 +2,47 @@
 
 .home {
   background: $bg_home;
-  background-image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
-  background-position: top left, bottom left;
-  background-repeat: repeat-x, repeat-x;
+  background: {
+    image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
+    position: top left, bottom left;
+    repeat: repeat-x, repeat-x;
+  };
   z-index: 5;
 
+  &__about_me {
+    width: 40%;
+    display: inline-block;
+    margin: {
+      top: 1.000em;
+      bottom: 1.000em;
+    };
+    text-align: center;
+
+    & > figcaption {
+      display: inherit;
+      width: 84%;
+      font-size: 1.300em;
+      color: white;
+    }
+  }
+
   &__avatar {
-    @extend %position_relative;
-    width: 3.000em;
-    height: 3.000em;
-    top: -20px;
-    left: 0;
+    display: inherit;
+    width: 16%;
+    height: 6.000em;
     background: inline('img01.png') center/contain no-repeat;
     border-radius: 3.000em;
-    @include respond(768, 4801) {
-      width: 6.000em;
-      height: 6.000em;
-      top: -10px;
-      left: 10px;
-    }
 
     &:hover {
       @extend %trans_scale;
     }
-
-    & > figcaption {
-      @extend %position_relative;
-      bottom: -6.000em;
-      letter-spacing: 0.15em;
-      text-align: center;
-      color: #1976D2;
-      @include respond(320, 481) {
-        bottom: -3.000em;
-      }
-    }
   }
 
   &__navigation {
-    position: absolute;
-    top: 50px;
-    right: 10px;
+    display: inline-block;
+    width: 59%;
     padding: 0;
+    vertical-align: top;
     list-style: none;
     text-align: right;
 

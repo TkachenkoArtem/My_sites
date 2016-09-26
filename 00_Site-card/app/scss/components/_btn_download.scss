@@ -8,7 +8,7 @@ $primary: #FFB300;
 
 $btnH: 4rem;
 $btnD: 4rem;
-$btnW: 15rem;
+$btnW: 100%;
 
 // Base Button Styles
 
@@ -17,10 +17,10 @@ $btnW: 15rem;
   text-align: center;
   border: 1px solid #a37406;
 
-  & > span {
-    display: block;
-    width: 100%;
-  }
+  // & > span {
+  //   display: block;
+  //   width: 100%;
+  // }
 
   &__link {
     display: inline-block;
