@@ -119,36 +119,6 @@ img {
   content: "\f0c9";
 }
 
-.github {
-  position: absolute;
-  top: 0.65em;
-  left: 4.500em;
-  z-index: 9999;
-  color: white;
-
-  @include respond-to(480) {
-    top: 0.450em;
-  }
-
-  @include respond-to(768) {
-    top: 0.400em;
-  }
-
-  @include respond(992, 4801) {
-    top: 3.100em;
-    left: 0.500em;
-  }
-
-  &__link {
-    font: 0.500em "Bitter";
-  }
-}
-
-.fa-github:before {
-  font-size: 0.750em;
-  color: white;
-}
-
 #ho_adv {
   display: none !important;
 }
