@@ -2,9 +2,15 @@
 
 .portfolio {
   background: $bg_portfolio;
-  background-image: url("../img/bg-portfolio-top.png"), url("../img/bg-portfolio-bottom.png");
-  background-position: top left, bottom left;
-  background-repeat: repeat-x, repeat-x;
+  box-shadow: -2px -2px 15px 7px rgba(#FFB300,0.82) inset;
+  @include respond(768, 4801) {
+    background: {
+      image: url("../img/bg-portfolio-top.png"), url("../img/bg-portfolio-bottom.png");
+      position: top left, bottom left;
+      repeat: repeat-x, repeat-x;
+    };
+    box-shadow: none;
+  }
 }
 
 .tabs {
@@ -91,12 +97,13 @@
   }
 
   &__caption {
-    height: 18em;
+    height: 14em;
     margin: auto;
     padding: 1.000em;
     background: #FFB300;
     text-align: center;
     border: none;
+    font-size: 0.750em;
     @include respond-to(480) {
       height: 12.000em;
     }

@@ -48,13 +48,16 @@ h1 > span {
   color: #1976D2; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     h1 > span {
-      font-size: 4.000em; } }
+      font-size: 3.000em; } }
   @media only screen and (min-width: 992px) and (max-width: 4800px) {
     h1 > span {
-      font-size: 5.000em; } }
+      font-size: 4.000em; } }
 
 h2 {
-  font-size: 2.500em !important; }
+  font-size: 1.500em !important; }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    h2 {
+      font-size: 2.500em !important; } }
 
 h4 {
   margin-bottom: 0.750em;
@@ -63,13 +66,17 @@ h4 {
 section {
   position: relative;
   width: 100%;
-  padding-top: 3.000em;
-  padding-bottom: 5.000em;
-  padding-left: 2.000em;
+  padding-top: 0.500em;
+  padding-bottom: 0.500em;
+  padding-left: 0.500em;
   padding-right: 5.000em; }
   @media only screen and (min-width: 768px) and (max-width: 4800px) {
     section {
-      min-height: 100vh; } }
+      min-height: 100vh;
+      padding-top: 3.000em;
+      padding-bottom: 5.000em;
+      padding-left: 2.000em;
+      padding-right: 5.000em; } }
 
 .wrapper {
   position: relative;
@@ -242,9 +249,12 @@ h2, .home__navigation li > a, .tabs > li > a {
   border-bottom-color: #000; }
 
 .btn_download {
-  vertical-align: middle;
-  text-align: center;
-  border: 1px solid #a37406; }
+  display: none; }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    .btn_download {
+      vertical-align: middle;
+      text-align: center;
+      border: 1px solid #a37406; } }
   .btn_download__link {
     display: inline-block;
     position: relative;
@@ -315,16 +325,26 @@ h2, .home__navigation li > a, .tabs > li > a {
 
 .home {
   background: #64B5F6;
-  background-image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
-  background-position: top left, bottom left;
-  background-repeat: repeat-x, repeat-x;
+  box-shadow: -2px -2px 15px 7px rgba(30, 136, 229, 0.82) inset;
   z-index: 5; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .home {
+      padding-bottom: 1.000em; } }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    .home {
+      background-image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
+      background-position: top left, bottom left;
+      background-repeat: repeat-x, repeat-x;
+      box-shadow: none; } }
   .home__about_me {
-    width: 40%;
-    display: inline-block;
-    margin-top: 1.000em;
-    margin-bottom: 1.000em;
-    text-align: center; }
+    display: none; }
+    @media only screen and (min-width: 768px) and (max-width: 4800px) {
+      .home__about_me {
+        width: 40%;
+        display: inline-block;
+        margin-top: 1.000em;
+        margin-bottom: 1.000em;
+        text-align: center; } }
     .home__about_me > figcaption {
       display: inherit;
       width: 84%;
@@ -337,12 +357,14 @@ h2, .home__navigation li > a, .tabs > li > a {
     background: inline("img01.png") center/contain no-repeat;
     border-radius: 3.000em; }
   .home__navigation {
-    display: inline-block;
-    width: 59%;
     padding: 0;
     vertical-align: top;
     list-style: none;
     text-align: right; }
+    @media only screen and (min-width: 768px) and (max-width: 4800px) {
+      .home__navigation {
+        display: inline-block;
+        width: 59%; } }
     .home__navigation li {
       display: inline-block; }
       @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -366,13 +388,24 @@ h2, .home__navigation li > a, .tabs > li > a {
 
 .skills {
   background: #81C784;
-  background-image: url("../img/bg-skills-top.png"), url("../img/bg-skills-bottom.png");
-  background-position: top left, bottom left;
-  background-repeat: repeat-x, repeat-x; }
+  box-shadow: -2px -2px 15px 7px rgba(67, 160, 71, 0.82) inset; }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    .skills {
+      background-image: url("../img/bg-skills-top.png"), url("../img/bg-skills-bottom.png");
+      background-position: top left, bottom left;
+      background-repeat: repeat-x, repeat-x;
+      box-shadow: none; } }
+  .skills__logos {
+    display: none; }
+    @media only screen and (min-width: 768px) and (max-width: 4800px) {
+      .skills__logos {
+        display: block;
+        text-align: center; } }
 
 .legend {
-  text-align: right;
-  height: 60px; }
+  text-align: right; }
+  .legend ul {
+    margin: 0; }
   .legend li {
     list-style-type: none; }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
@@ -384,12 +417,16 @@ h2, .home__navigation li > a, .tabs > li > a {
       padding-right: 0.500em; }
 
 table {
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 2.000em;
+  margin: 0 auto 2.000em;
   border: 1px solid #43A047;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
   border-collapse: collapse; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    table {
+      font-size: 0.750em; } }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    table {
+      width: 70%; } }
 
 td,
 th {
@@ -408,16 +445,6 @@ th {
 
 .no_knowledge {
   color: #3E2723; }
-
-.skills__logos {
-  display: none; }
-  @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    .skills__logos {
-      display: block;
-      width: 80%;
-      margin: 0 auto;
-      margin-bottom: 30px;
-      text-align: center; } }
 
 a[data-img] {
   display: inline-block;
@@ -542,9 +569,13 @@ a[data-img="webpack"] {
 
 .portfolio {
   background: #FFD54F;
-  background-image: url("../img/bg-portfolio-top.png"), url("../img/bg-portfolio-bottom.png");
-  background-position: top left, bottom left;
-  background-repeat: repeat-x, repeat-x; }
+  box-shadow: -2px -2px 15px 7px rgba(255, 179, 0, 0.82) inset; }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    .portfolio {
+      background-image: url("../img/bg-portfolio-top.png"), url("../img/bg-portfolio-bottom.png");
+      background-position: top left, bottom left;
+      background-repeat: repeat-x, repeat-x;
+      box-shadow: none; } }
 
 .tabs {
   margin: 1.000em 0;
@@ -610,12 +641,13 @@ a[data-img="webpack"] {
         height: 400px;
         border: none; } }
   .markup__caption {
-    height: 18em;
+    height: 14em;
     margin: auto;
     padding: 1.000em;
     background: #FFB300;
     text-align: center;
-    border: none; }
+    border: none;
+    font-size: 0.750em; }
     @media only screen and (min-width: 480px) and (max-width: 767px) {
       .markup__caption {
         height: 12.000em; } }
@@ -675,15 +707,23 @@ a[data-cite="NatureTour"] {
   align-items: center;
   align-content: flex-start;
   background: #9575CD;
-  background-image: url("../img/bg-contacts-top.png"), url("../img/bg-contacts-bottom.png");
-  background-position: top left, bottom left;
-  background-repeat: repeat-x, repeat-x; }
+  box-shadow: -2px -2px 15px 7px rgba(94, 53, 177, 0.82) inset; }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    .contacts {
+      background-image: url("../img/bg-contacts-top.png"), url("../img/bg-contacts-bottom.png");
+      background-position: top left, bottom left;
+      background-repeat: repeat-x, repeat-x;
+      box-shadow: none; } }
 
 address {
-  font-size: 2.500em;
+  font-size: 2.300em;
   font-weight: bold;
   text-align: center;
   text-transform: capitalize; }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    address {
+      font-size: 0.750em;
+      text-align: left; } }
   address > a,
   address span {
     padding-left: 20px;

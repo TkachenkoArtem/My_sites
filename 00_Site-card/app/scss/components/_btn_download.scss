@@ -13,14 +13,12 @@ $btnW: 100%;
 // Base Button Styles
 
 .btn_download {
-  vertical-align: middle;
-  text-align: center;
-  border: 1px solid #a37406;
-
-  // & > span {
-  //   display: block;
-  //   width: 100%;
-  // }
+  display: none;
+  @include respond(768, 4801) {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #a37406;
+  }
 
   &__link {
     display: inline-block;

@@ -2,21 +2,31 @@
 
 .home {
   background: $bg_home;
-  background: {
-    image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
-    position: top left, bottom left;
-    repeat: repeat-x, repeat-x;
-  };
+  box-shadow: -2px -2px 15px 7px rgba(#1E88E5,0.82) inset;
   z-index: 5;
+  @include respond(320, 768) {
+    padding-bottom: 1.000em;
+  }
+  @include respond(768, 4801) {
+    background: {
+      image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
+      position: top left, bottom left;
+      repeat: repeat-x, repeat-x;
+    };
+    box-shadow: none;
+  }
 
   &__about_me {
-    width: 40%;
-    display: inline-block;
-    margin: {
-      top: 1.000em;
-      bottom: 1.000em;
-    };
-    text-align: center;
+    display: none;
+    @include respond(768, 4801) {
+      width: 40%;
+      display: inline-block;
+      margin: {
+        top: 1.000em;
+        bottom: 1.000em;
+      };
+      text-align: center;
+    }
 
     & > figcaption {
       display: inherit;
@@ -39,12 +49,14 @@
   }
 
   &__navigation {
-    display: inline-block;
-    width: 59%;
     padding: 0;
     vertical-align: top;
     list-style: none;
     text-align: right;
+    @include respond(768, 4801) {
+      display: inline-block;
+      width: 59%;
+    }
 
     li {
       display: inline-block;
