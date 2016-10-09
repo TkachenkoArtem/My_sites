@@ -1,0 +1,52 @@
+//out: ../css/style.css
+$brand_color: #269993;
+$brand_color_accent: #E67A2E;
+$bg_color: #FFFFE0;
+@import "mixins/media";
+@import "reset";
+
+@function em($pxval, $base: 16px) {
+     @return ($pxval / $base) * 1em;
+}
+
+body {
+  min-width: 320px;
+  background-color: $bg_color;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  background-color: $brand_color;
+  opacity: 0.65;
+  z-index: 1000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 2000px;
+}
+
+%clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+%contentAbsolute {
+    content: '';
+    position: absolute;
+}
+
+
+@import "components/_back_to_top";
+@import "top";
+@import "components/_log_in";
+@import "middle";
+@import "bottom";
