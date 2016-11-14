@@ -144,22 +144,6 @@ a[href] {
   opacity: 1;
 }
 
-.github {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 9999;
-  color: $darkGreen;
-
-  &__link {
-    font: 0.813em "Lady Copra";
-  }
-}
-
-.fa-github:before {
-  color: $darkGreen;
-}
-
 .wrapper {
   width: 98%;
   @include respond-to(992) {
