@@ -1,20 +1,5 @@
 //main: style.scss
 
-.github {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  z-index: 9999;
-  color: white;
-  @include respond-to(320) {
-    display: none;
-  }
-
-  &__link {
-    font: 0.813em "AmericanTypewriter";
-  }
-}
-
 .header {
   &__nav {
     position: relative;

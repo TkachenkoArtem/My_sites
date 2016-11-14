@@ -129,18 +129,6 @@ p {
 #back-to-top.show {
   opacity: 1; }
 
-.github {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  z-index: 9999;
-  color: white; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    .github {
-      display: none; } }
-  .github__link {
-    font: 0.813em "AmericanTypewriter"; }
-
 .header__nav {
   position: relative;
   padding: 0.150em 0;
