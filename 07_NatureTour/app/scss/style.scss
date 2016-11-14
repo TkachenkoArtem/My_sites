@@ -1,37 +1,138 @@
 //out: ../css/style.css
 @import "mixins/media";
-
-* {
-  box-sizing: border-box;
+@import "mixins/triangle";
+@import "fonts";
+@import "reboot";
+@function em($pxval, $base: 16px) {
+   @return ($pxval / $base) * 1em;
 }
 
-html {
-  font-size: 16px;
-  @include respond-to(320) {
-    font-size: 12px;
+$brandcolor: #28b028;
+$sidebarPaddingLeft: em(20px);
+
+body {
+  background: inline('bgi.png') repeat fixed;
+}
+
+main {
+  background-color: #ffffff;
+  border: 1px solid #e0dacd;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  margin-bottom: 206px + 19px;
+  @include respond(320, 768) {
+    margin-bottom: 0;
   }
-  @include respond-to(480) {
-    font-size: 13px;
-  }
-  @include respond-to(768) {
-    font-size: 14px;
-  }
-  @include respond-to(992) {
-    font-size: 15px;
-  }
-  @include respond(2560, 4801) {
-    font-size: 20px;
+
+  &:after {
+    @extend %clearfix;
   }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
+h1 {
+  font: em(34px) "Klavika Medium";
+  text-transform: uppercase;
+  color: #221e1f;
 }
 
-#ho_adv { //It`s for hosting
+h3 {
+  font: 400 em(14px) "Myriad Pro";
+  text-transform: uppercase;
+  color: #3e3a2f;
+
+  & + p {
+    margin: {
+      top: em(5px, 12px);
+      bottom: em(11px, 12px);
+    };
+    font: 400 em(12px, 14px) "Arial";
+    letter-spacing: -0.9px;
+    color: inherit;
+  }
+
+  &.pl {
+    padding-left: em(20px, 14px);
+  }
+  //пояснение на 17 строке _main_aside.scss
+}
+
+h4 {
+  font: bold em(14px) "Arial";
+  text-transform: capitalize;
+  color: #393630;
+}
+
+h6 {
+  flex-basis: 100%;
+  height: em(16px);
+  font: em(14px) "Klavika Medium";
+  text: {
+    transform: uppercase;
+    indent: 3px;
+  };
+  color: #64522a;
+}
+
+.wrapper {
+  @extend %position_relative;
+  width: 62.5%;
+  margin: 0 auto;
+  font-size: inherit;
+  @include respond(320, 1200) {
+    width: 99%;
+  }
+  @include respond(1200, 1400) {
+    width: 80%;
+  }
+}
+
+.page {
+  margin: {
+    top: em(11px, 12px);
+    left: em(22px, 12px);
+    bottom: em(8px, 12px);
+  };
+  font: 400 em(12px) "Arial";
+  text-shadow: 0.5px 0.9px 0 #ffffff;
+  color: #14961c;
+}
+
+.bottom {
+  font: em(11px) "Arial";
+  text-align: center;
+  color: #716c61;
+
+  &--bold {
+    margin-bottom: em(6px, 11px);
+    font-weight: bold;
+    color: #3a3731;
+  }
+}
+
+.row {
+  @extend %position_relative;
+
+  &--under_slider {
+    margin: {
+      top: em(23px);
+      bottom: em(18px);
+    };
+  }
+
+  &--contact_us {
+    margin: {
+      top: em(21px);
+    };
+  }
+}
+
+#ho_adv {
+  //It`s for hosting
   display: none !important;
+}
+
+%tmp {
+  border: 1px solid gray;
 }
 
 %clearfix {
@@ -44,6 +145,27 @@ a {
   position: relative;
 }
 
+%reset_list_style {
+  list-style: none;
+}
+
+%inline_block {
+  display: inline-block;
+}
+
+%notBorderNotOutline {
+  outline: none;
+  border: none;
+}
+
+%contentAbsolute {
+  content: '';
+  position: absolute;
+}
 @import "header";
-@import "main";
+@import "components/sprite";
+@import "main_container";
+@import "components/tabs";
+@import "main_aside";
+@import "components/select";
 @import "footer";
