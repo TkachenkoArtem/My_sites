@@ -1,35 +1,93 @@
 //main: style.scss
 
-section[name="section__home"] {
-  padding: 2.000em;
+.home {
   background: $bg_home;
   box-shadow: -2px -2px 15px 7px rgba(#1E88E5,0.82) inset;
-}
+  z-index: 5;
+  @include respond(320, 768) {
+    padding-bottom: 1.000em;
+  }
+  @include respond(768, 4801) {
+    background: {
+      image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
+      position: top left, bottom left;
+      repeat: repeat-x, repeat-x;
+    };
+    box-shadow: none;
+  }
 
-.home {
-  &__avatar {
-    @extend %position_relative;
+  &__about_me {
+    display: none;
     @include respond(768, 4801) {
-      width: 6.000em;
-      height: 6.000em;
-      top: -10px;
-      left: 10px;
-      border-radius: 3.000em;
-      background: inline('img01.png') center/contain no-repeat;
+      width: 40%;
+      display: inline-block;
+      margin: {
+        top: 1.000em;
+        bottom: 1.000em;
+      };
+      text-align: center;
     }
+
+    & > figcaption {
+      display: inherit;
+      width: 84%;
+      font-size: 1.300em;
+      color: white;
+    }
+  }
+
+  &__avatar {
+    display: inherit;
+    width: 16%;
+    height: 6.000em;
+    background: inline('img01.png') center/contain no-repeat;
+    border-radius: 3.000em;
 
     &:hover {
       @extend %trans_scale;
     }
+  }
 
-    & > figcaption {
-      @extend %position_relative;
-      bottom: -6.000em;
-      letter-spacing: 0.15em;
-      text-align: center;
-      color: #1976D2;
+  &__navigation {
+    padding: 0;
+    vertical-align: top;
+    list-style: none;
+    text-align: right;
+    @include respond(768, 4801) {
+      display: inline-block;
+      width: 59%;
+    }
+
+    li {
+      display: inline-block;
+      @include respond(320, 481) {
+        display: block;
+      }
+
+      &:nth-child(1):hover {
+        background: $bg_skills;
+      }
+
+      &:nth-child(2):hover {
+        background: $bg_portfolio;
+      }
+
+      &:nth-child(3):hover {
+        background: $bg_contacts;
+      }
+
+      & > a {
+        @extend %main_style;
+        color: white;
         @include respond(320, 481) {
-        bottom: 0;
+          padding: 0;
+          font-size: 1.000em;
+        }
+
+        &:hover {
+          border-right: 6px;
+          color: #131313;
+        }
       }
     }
   }

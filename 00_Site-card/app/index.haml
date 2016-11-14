@@ -14,42 +14,52 @@
 
     .wrapper
 
-        %a#back-to-top{href:"#", title:"Back to top"} %p &#9650;
+        %ul.right_bar
+            %li
+              %a.jsGoTo{href:".home",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Home"} &#8962;
+            %li
+              %a.jsGoTo{href:".skills",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Skills"} &#9000;
+            %li
+              %a.jsGoTo{href:".portfolio",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Portfolio"} &#9999;
+            %li
+              %a.jsGoTo{href:".contacts",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Contacts"} &#9993;
+
 
               -#  _____HOME_____
 
-        %section{name:"section__home"}
+        %section.home
 
-            -# .home_container_avatar_and_nav
-            %figure.home__avatar
-                -# %div
-                %figcaption %p Artem Tkachenko
+            %figure.home__about_me
+                .home__avatar
+                %figcaption
+                    %b Hello!
+                    I'm Artem Tkachenko. I like to code on JavaScript cause JS is versatile, flexible and effective language used in various spheres of activity. I'm intended to learn Dart and become JavaScript Full Stack Developer (React + Node.js)
 
-            %ul.navigation
+            %ul.home__navigation
                 %li
-                  %a.main_style{href:"#skills"} Skills
+                  %a.jsGoTo{href:".skills"} &#9000;&nbsp;Skills
                 %li
-                  %a.main_style{href:"#portfolio"} Portfolio
+                  %a.jsGoTo{href:".portfolio"} &#9999;&nbsp;Portfolio
                 %li
-                  %a.main_style{href:"#contacts"} Contacts
+                  %a.jsGoTo{href:".contacts"} &#9993;&nbsp;Contacts
 
-            %h1.main_style.main_style--h1 Junior
-            %h1.main_style.main_style--h1 Front-end
-            %h1.main_style.main_style--h1 developer
+            %h1
+                %span Junior
+                %span Front-end
+                %span developer
 
               -#  _____SKILLS_____
 
-        %section{name:"section__skills"}
-            %a{name:"skills"}
-            %h2.main_style.main_style--h2 Skills
+        %section.skills
 
-            .legend
-                %ul
-                  %li.practical_knowledge have practical skills
-                  %li.theoretical_knowledge have theoretical skills
-                  %li.no_knowledge learning now
+            %h2 Skills
 
             %table
+                %caption.legend
+                    %ul
+                      %li.practical_knowledge have practical skills
+                      %li.theoretical_knowledge have theoretical skills
+                      %li.no_knowledge learn now
                 %thead
                   %tr
                     %th Languages
@@ -64,7 +74,7 @@
                 %tr.practical_knowledge
                   %td CSS3
                   %td.theoretical_knowledge Pug.js (jade)
-                  %td.theoretical_knowledge Sublime
+                  %td Visual Studio 2015
                   %td Linux
                 %tr.practical_knowledge
                   %td JavaScript
@@ -79,7 +89,7 @@
                 %tr.theoretical_knowledge
                   %td XML
                   %td Less
-                  %td Grunt
+                  %td Sublime
                   %td
 
             %table
@@ -109,7 +119,7 @@
                   %td Autocad
                   %td Wordpress
                 %tr.practical_knowledge
-                  %td.theoretical_knowledge jQweryUI
+                  %td.theoretical_knowledge jQueryUI
                   %td.theoretical_knowledge Underscore.js
                   %td Lightroom
                   %td Codepen
@@ -135,7 +145,7 @@
                   %td
 
 
-            .section__image_skills
+            .skills__logos
                 %a{href:"https://atom.io/", target:"_blank", data-img:"atom"}
                 %a{href:"http://webpack.github.io/", target:"_blank", data-img:"webpack"}
                 %a{href:"https://www.sourcetreeapp.com/", target:"_blank", data-img:"SourceTree"}
@@ -176,89 +186,95 @@
 
               -#  _____PORTFOLIO_____
 
-        %section{name:"section__portfolio"}
-            %a{name:"portfolio"}
-            %h2.main_style.main_style--h2 Portfolio
+        %section.portfolio
 
-            .cite_container
-                %h3.main_style My sites:
-                %figure.portfolio
-                    %a{href:"http://tkachenko.ho.ua/01_Gastronymous/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Gastronymous"}
-                    %figcaption.portfolio__caption
+            %h2 Portfolio
+
+            %ul.tabs
+              %li.tabs__active
+                  %a{href:"#tab1"} My sites
+              %li
+                  %a{href:"#tab2"} My works on Codepen
+
+            #tab1.tabs__content.tabs__content--markup
+
+                %figure.markup
+                    %a.markup__git{href:"https://github.com/TkachenkoArtem/TkachenkoArtem.github.io", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this project on GitHub!"}
+                    %a.markup__link_to_cite.jsGoTo{href:".home", target:"_blank", data-cite:"SiteCard",  data-toggle:"tooltip", data-placement:"right", data-original-title:"You are on this site now 😀"}
+                    %figcaption.markup__caption
+                        %h3 My Site-card
+                        %p em + media-queries. Source code: HAML + Sass. Packet managers: npm. Build system automating tasks: Gulp.  Libraries: Normalize.css and jQuery. Framework: Bootstrap 3 (only used tooltip). PerfectPixel.
+                    .btn_download
+                        %span.btn_download__link No additional materials
+
+                %figure.markup
+                    %a.markup__git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/01_Gastronymous", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this project on GitHub!"}
+                    %a.markup__link_to_cite{href:"http://tkachenko.ho.ua/01_Gastronymous/", target:"_blank", data-cite:"Gastronymous",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this project on hosting!"}
+                    %figcaption.markup__caption
                         %h3 Gastronymous
-                        %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp. PerfectPixel.
+                        %p em + media-queries. Source code: HTML + Sass. Packet managers: npm и bower. Build system automating tasks: Gulp.  Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
-                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/01_Gastronymous.png" download> Download PNG
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/01_Gastronymous.png" download> Download supplemental materials
                             %span.icon_container
-                                %i.icon_download
+                                %span.icon_download
                         </a>
 
-                %figure.portfolio
-                    %a{href:"http://tkachenko.ho.ua/02_LusidTheme/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this progect!"} %img{data-cite:"LusidTheme"}
-                    %figcaption.portfolio__caption
+                %figure.markup
+                    %a.markup__git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/02_LusidTheme", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this project on GitHub!"}
+                    %a.markup__link_to_cite{href:"http://tkachenko.ho.ua/02_LusidTheme/", target:"_blank", data-cite:"LusidTheme", data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this project on hosting!"}
+                    %figcaption.markup__caption
                         %h3 Lusid Theme
-                        %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                        %p % + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp.  Libraries: Normalize.css. PerfectPixel.
                     .btn_download
-                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/02_LusidTheme.png" download> Download PNG
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/02_LusidTheme.png" download> Download supplemental materials
                             %span.icon_container
-                                %i.icon_download
+                                %span.icon_download
                         </a>
-                %figure.portfolio
-                    %a{href:"http://tkachenko.ho.ua/03_LaCasa/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"LaCasa"}
-                    %figcaption.portfolio__caption
+
+                %figure.markup
+                    %a.markup__git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/03_LaCasa", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this project on GitHub!"}
+                    %a.markup__link_to_cite{href:"http://tkachenko.ho.ua/03_LaCasa/", target:"_blank",  data-cite:"LaCasa", data-toggle:"tooltip", data-placement:"left", data-original-title:"Click and go to this project on hosting!"}
+                    %figcaption.markup__caption
                         %h3 La Casa
-                        %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                        %p em + media-queries. Source code: HTML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalize.css and jQuery. PerfectPixel.
                     .btn_download
-                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/03_LaCasa.png" download> Download PNG
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/03_LaCasa.png" download> Download supplemental materials
                             %span.icon_container
-                                %i.icon_download
+                                %span.icon_download
                         </a>
 
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/06_Ikaros/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Ikaros"}
-                    %figcaption.portfolio__caption
-                        %h3 Ikaros
-                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
+                %figure.markup
+                    %a.markup__git{href:"https://github.com/TkachenkoArtem/My_sites/tree/master/07_NatureTour", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this project on GitHub!"}
+                    %a.markup__link_to_cite{href:"http://tkachenko.ho.ua/07_NatureTour/", target:"_blank", data-cite:"NatureTour",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this project on hosting!"}
+                    %figcaption.markup__caption
+                        %h3 NatureTour
+                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. Libraries: Normalize.css and jQuery. PerfectPixel.
+                    .btn_download
+                        <a class="btn_download__link" href="http://tkachenko.ho.ua/download/07_NatureTour.png" download> Download supplemental materials
+                            %span.icon_container
+                                %span.icon_download
+                        </a>
 
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/04_Magazine_Blog/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MagBlog"}
-                    %figcaption.portfolio__caption
-                        %h3 Magazine Blog
-                        %p em + media-queries. Source code: HAML + Sass. Performed using Flexbox. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
-
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/07_MediaGrupPortfolio/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"MediaGrup"}
-                    %figcaption.portfolio__caption
-                        %h3 MediaGrup Portfolio
-                        %p Bootstrap. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Gulp. PerfectPixel.
-
-                %figure.portfolio{style:"display:none"}
-                    %a{href:"http://tkachenko.ho.ua/05_FlatStyleWebsite/index.min.html", target:"_blank",  data-toggle:"tooltip", data-placement:"right", data-original-title:"Click and go to this progect!"} %img{data-cite:"Flat"}
-                    %figcaption.portfolio__caption
-                        %h3 FlatStyleWebsite
-                        %p em + media-queries. Source code: HAML + Sass. Packet manager: npm. Build system automating tasks: Webpack.
-
-            .codepen_container
-                %h3.main_style My works in Codepen:
+            #tab2.tabs__content
 
               .codepen_container
                 .codepen_container__annotation
                     %h4 1. React
-                    %p I learning it now!
+                    %p I learn it now!
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="YGXjLZ" data-default-tab="result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/YGXjLZ/">React</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
                     %h4 2. E-mail
-                    %p This project is implemented imposition e-mail using the preprocessor HAML.
+                    %p This project shows the markup of the e-mail using the HAML preprocessor.
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="kXQqyX" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/kXQqyX/">HAML-email</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
                     %h4 3. JavaScript. Events
-                    %p This project shows how to work out the events by clicking on event.target.
+                    %p This project shows events actions when you click on event.target.
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="JKVpQq" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/JKVpQq/">JS-events</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
@@ -272,36 +288,35 @@
               .codepen_container
                 .codepen_container__annotation
                     %h4 5. Phonebook
-                    %p In this project, it implements a simple phone book to save the contact in localStorage. Functionality: checking the validity of input data, sorting and deleting.
+                    %p This project implements a simple phone book for saving contacts in localStorage. Functionality: checking the validity of the input data, data sorting and deletion.
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="LkvdYP" data-default-tab="js,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/LkvdYP/">JS-phonebook</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
                     %h4 6. OrnaJS
-                    %p I learning it now!
+                    %p I learn it now!
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="vXOVpG" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/vXOVpG/">OrnaJS</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               -#  _____CONTACTS_____
 
-        %section{name:"section__contacts"}
-            %a{name:"contacts"}
-            %h2.main_style.main_style--h2 Contacts
+        %section.contacts
 
-          .contacts.center
-              %p.main_style E-mail:
-                  %a.contacts__link.main_style{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
-              %p.main_style Skype:
-                  %span.contacts__link.main_style a.tkachenko177
-              %p.main_style Viber:
-                  %span.contacts__link.main_style +380688891260
-              %a.main_style.main_style--contacts{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in Codepen!"} Codepen:
-                  %span.contacts__link.main_style http://codepen.io/Tkachenko/
-              %a.main_style.main_style--contacts{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in GitHub!"} Github:
-                  %span.contacts__link.main_style https://github.com/TkachenkoArtem/
-              %a.main_style.main_style--contacts{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my profile in LinkedIn!"} Linkedin:
-                  %span.contacts__link.main_style https://www.linkedin.com/in/artem-tkachenko
+            %h2 Contacts
+
+            %address Skype:
+                %span a.tkachenko177
+            %address E-mail:
+                %a{href:"mailto:igrfy87@gmail.com"} igrfy87@gmail.com
+            %address Viber/Phone:
+                %span +380688891260
+            %address Codepen:
+                %a{href:"http://codepen.io/Tkachenko/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my Codepen profile!"} http://codepen.io/Tkachenko
+            %address Github:
+                %a{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my GitHub profile!"} https://github.com/TkachenkoArtem
+            %address Linkedin:
+                %a{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my LinkedIn profile!"} https://www.linkedin.com/in/artem-tkachenko
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity:"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin:"anonymous"}

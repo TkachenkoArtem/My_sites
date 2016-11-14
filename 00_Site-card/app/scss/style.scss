@@ -1,101 +1,120 @@
 //out: ../css/style.css
 @import "mixins/media";
+@import "mixins/triangle";
+@import "reset";
 
 $bg_home: #64B5F6;
 $bg_skills: #81C784;
 $bg_portfolio: #FFD54F;
 $bg_contacts: #9575CD;
+$main_color: #131313;
 
-* {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-html {
-  font-size: 16px;
-  @include respond-to(320) {
-    font-size: 12px;
-  }
-  @include respond-to(480) {
-    font-size: 13px;
-  }
-  @include respond-to(768) {
-    font-size: 14px;
-  }
-  @include respond-to(992) {
-    font-size: 15px;
-  }
-  @include respond(2560, 4801) {
-    font-size: 20px;
+h1 {
+  & > span {
+    display: block;
+    letter-spacing: 0.15em;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    font-size: 1.000em;
+    color: #1976D2;
+    @include respond-to(768) {
+      font-size: 3.000em;
+    }
+    @include respond(992, 4801) {
+      font-size: 4.000em;
+    }
   }
 }
 
-body,
-figure,
-h3,
-h4 {
-  margin: 0;
+h2 {
+  @extend %main_style;
+  font-size: 1.500em !important;
+  @include respond(768, 4801) {
+    font-size: 2.500em !important;
+  }
 }
 
 h4 {
   margin-bottom: 0.750em;
   text-align: center;
-  font-size: 1.500em;
-}
-
-a {
-  display: inline-block;
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 section {
+  position: relative;
   width: 100%;
-  margin: 0;
-  padding: 0 1.000em 1.000em;
+  padding: {
+    top: 0.500em;
+    bottom: 0.500em;
+    left: 0.500em;
+    right: 5.000em;
+  };
   @include respond(768, 4801) {
-    min-height: calc(100vh + 20px);
+    min-height: 100vh;
+    padding: {
+      top: 3.000em;
+      bottom: 5.000em;
+      left: 2.000em;
+      right: 5.000em;
+    };
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.right_bar {
+  position: fixed;
+  top: 50vh;
+  right: 10px;
+  padding: 0;
+  transform: translateY(-50%);
+  list-style: none;
+  z-index: 4;
+
+  & > li {
+    display: block;
+    width: 3.000em;
+    height: 3.000em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    &:nth-of-type(1) {
+      background: #1E88E5;
+    }
+
+    &:nth-of-type(2) {
+      background: #43A047;
+    }
+
+    &:nth-of-type(3) {
+      background: #FFB300;
+    }
+
+    &:nth-of-type(4) {
+      background: #5E35B1;
+    }
+
+    &:hover {
+      @extend %trans_scale;
+    }
+
+    & > a {
+      padding: 2px;
+      font-size: 2.000em;
+      line-height: 1.500em;
+      color: white;
+    }
   }
 }
 
 #ho_adv {
   display: none !important;
-}
-
-#back-to-top {
-  position: fixed;
-  bottom: 0.500em;
-  right: 1.000em;
-  width: 1.500em;
-  height: 1.500em;
-  z-index: 9999;
-  padding-top: 0.150em;
-  border-radius: 0.750em;
-  transition: opacity 0.2s ease-out;
-  font-size: 2.000em;
-  text-align: center;
-  opacity: 0;
-
-  p {
-    margin: 0;
-    color: #90A4AE;
-
-    &:hover {
-      color: #263238;
-    }
-  }
-}
-
-#back-to-top:hover {
-  background: #546E7A;
-  box-shadow: 4px 3px 11px 5px rgba(#BDBDBD,0.82);
-  @extend %trans_scale;
-}
-
-#back-to-top.show {
-  background: #CFD8DC;
-  opacity: 0.85;
 }
 
 %clearfix {
@@ -111,9 +130,25 @@ section {
 %position_relative {
   position: relative;
 }
-@import "general";
-@import "tooltip";
-@import "btn_download";
+
+%contentAbsolute {
+  content: '';
+  position: absolute;
+}
+
+%main_style {
+  margin: 0;
+  padding: 0.500em;
+  font-size: 1.500em;
+  letter-spacing: 0.15em;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  color: $main_color;
+}
+@import "components/tooltip";
+@import "components/btn_download";
 @import "home";
 @import "skills";
 @import "portfolio";

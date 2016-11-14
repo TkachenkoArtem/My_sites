@@ -1,12 +1,32 @@
 //main: style.scss
 
-section[name="section__skills"] {
+.skills {
   background: $bg_skills;
   box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
+  @include respond(768, 4801) {
+    background: {
+      image: url("../img/bg-skills-top.png"), url("../img/bg-skills-bottom.png");
+      position: top left, bottom left;
+      repeat: repeat-x, repeat-x;
+    };
+    box-shadow: none;
+  }
+
+  &__logos {
+    display: none;
+    @include respond(768, 4801) {
+      display: block;
+      text-align: center;
+    }
+  }
 }
 
 .legend {
   text-align: right;
+
+  ul {
+    margin: 0;
+  }
 
   li {
     list-style-type: none;
@@ -23,11 +43,16 @@ section[name="section__skills"] {
 }
 
 table {
-  width: 100%;
-  margin-bottom: 2.000em;
+  margin: 0 auto 2.000em;
   border: 1px solid #43A047;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.12), 0 1px 2px 0 rgba(0,0,0,.24);
   border-collapse: collapse;
+  @include respond(320, 768) {
+    font-size: 0.750em;
+  }
+  @include respond(768, 4801) {
+    width: 70%;
+  }
 }
 
 td,
@@ -51,16 +76,6 @@ th {
 
 .no_knowledge {
   color: #3E2723;
-}
-
-.section__image_skills {
-  display: none;
-  @include respond(768, 4801) {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
 }
 
 a[data-img] {
