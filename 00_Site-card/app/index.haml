@@ -29,24 +29,32 @@
 
         %section.home
 
-            %figure.home__about_me
-                .home__avatar
-                %figcaption
-                    %b Hello!
-                    I'm Artem Tkachenko. I like to code on JavaScript cause JS is versatile, flexible and effective language used in various spheres of activity. I'm intended to learn Dart and become JavaScript Full Stack Developer (React + Node.js)
+            %nav
+              .home__avatar
+              %p.home__about_me
+                  %b Hello!
+                  I'm Artem Tkachenko. Now I am a Junior Front-end developer. I like to code on JavaScript cause it is versatile, flexible and effective language used in various spheres of activity. I'm intended to learn Dart and become JavaScript Full Stack Developer (React + Node.js)
 
-            %ul.home__navigation
-                %li
-                  %a.jsGoTo{href:".skills"} &#9000;&nbsp;Skills
-                %li
-                  %a.jsGoTo{href:".portfolio"} &#9999;&nbsp;Portfolio
-                %li
-                  %a.jsGoTo{href:".contacts"} &#9993;&nbsp;Contacts
+            .home__navigation
+                %a.jsGoTo{href:".skills"}
+                    %p
+                        %span &#9000;
+                        %strong &nbsp;Skills
+                    %br
+                    %p my technology
+                %a.jsGoTo{href:".portfolio"}
+                    %p
+                        %span &#9999;
+                        %strong &nbsp;Portfolio
+                    %br
+                    %p my works
+                %a.jsGoTo{href:".contacts"}
+                    %p
+                        %span &#9993;
+                        %strong &nbsp;Contacts
+                    %br
+                    %p contact with me
 
-            %h1
-                %span Junior
-                %span Front-end
-                %span developer
 
               -#  _____SKILLS_____
 
@@ -259,45 +267,32 @@
 
               .codepen_container
                 .codepen_container__annotation
-                    %h4 1. React
+                    %h4 1. ReactJS
                     %p I learn it now!
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="YGXjLZ" data-default-tab="result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/YGXjLZ/">React</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
-                    %h4 2. E-mail
+                    %h4 2. OrnaJS
+                    %p I learn it now!
+                .codepen_container__example
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="vXOVpG" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/vXOVpG/">OrnaJS</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+              .codepen_container
+                .codepen_container__annotation
+                    %h4 3. E-mail
                     %p This project shows the markup of the e-mail using the HAML preprocessor.
                 .codepen_container__example
-                    <p data-height="300" data-theme-id="25315" data-slug-hash="kXQqyX" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/kXQqyX/">HAML-email</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                    <p data-height="300" data-theme-id="25315" data-slug-hash="QKVqZQ" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" data-pen-title="BigLetter" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/QKVqZQ/">BigLetter</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               .codepen_container
                 .codepen_container__annotation
-                    %h4 3. JavaScript. Events
-                    %p This project shows events actions when you click on event.target.
-                .codepen_container__example
-                    <p data-height="300" data-theme-id="25315" data-slug-hash="JKVpQq" data-default-tab="html,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/JKVpQq/">JS-events</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-
-              .codepen_container
-                .codepen_container__annotation
-                    %h4 4. CSS. display: grid
-                    %p The experimental technology not included in the official specification.
-                .codepen_container__example
-                    <p data-height="300" data-theme-id="25315" data-slug-hash="OXqxxb" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/OXqxxb/">CSS -gridLayout</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-
-              .codepen_container
-                .codepen_container__annotation
-                    %h4 5. Phonebook
+                    %h4 4. Phonebook
                     %p This project implements a simple phone book for saving contacts in localStorage. Functionality: checking the validity of the input data, data sorting and deletion.
                 .codepen_container__example
                     <p data-height="300" data-theme-id="25315" data-slug-hash="LkvdYP" data-default-tab="js,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/LkvdYP/">JS-phonebook</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
-              .codepen_container
-                .codepen_container__annotation
-                    %h4 6. OrnaJS
-                    %p I learn it now!
-                .codepen_container__example
-                    <p data-height="300" data-theme-id="25315" data-slug-hash="vXOVpG" data-default-tab="css,result" data-user="Tkachenko" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Tkachenko/pen/vXOVpG/">OrnaJS</a> by Artem (<a href="http://codepen.io/Tkachenko">@Tkachenko</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
               -#  _____CONTACTS_____
 
@@ -317,6 +312,8 @@
                 %a{href:"https://github.com/TkachenkoArtem/", target:"_blank",  data-toggle:"tooltip", data-placement:"bottom", data-original-title:"Click and go to my GitHub profile!"} https://github.com/TkachenkoArtem
             %address Linkedin:
                 %a{href:"https://www.linkedin.com/in/artem-tkachenko-17b547128?trk=hp-identity-name", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my LinkedIn profile!"} https://www.linkedin.com/in/artem-tkachenko
+            %address Stackoverflow:
+                %a{href:"http://ru.stackoverflow.com/users/229296/artem-tkachenko", target:"_blank",  data-toggle:"tooltip", data-placement:"top", data-original-title:"Click and go to my Stackoverflow profile!"} http://ru.stackoverflow.com/users/229296/artem-tkachenko
 
     %script{src:"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity:"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin:"anonymous"}

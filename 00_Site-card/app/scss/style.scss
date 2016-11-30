@@ -44,20 +44,26 @@ h4 {
 section {
   position: relative;
   width: 100%;
-  padding: {
-    top: 0.500em;
-    bottom: 0.500em;
-    left: 0.500em;
-    right: 5.000em;
-  };
   @include respond(768, 4801) {
     min-height: 100vh;
+
+  }
+
+  &:not(.home) {
     padding: {
-      top: 3.000em;
-      bottom: 5.000em;
-      left: 2.000em;
+      top: 0.500em;
+      bottom: 0.500em;
+      left: 0.500em;
       right: 5.000em;
     };
+    @include respond(768, 4801) {
+      padding: {
+        top: 3.000em;
+        bottom: 5.000em;
+        left: 2.000em;
+        right: 5.000em;
+      };
+    }
   }
 }
 

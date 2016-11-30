@@ -3,14 +3,6 @@
 .skills {
   background: $bg_skills;
   box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
-  @include respond(768, 4801) {
-    background: {
-      image: url("../img/bg-skills-top.png"), url("../img/bg-skills-bottom.png");
-      position: top left, bottom left;
-      repeat: repeat-x, repeat-x;
-    };
-    box-shadow: none;
-  }
 
   &__logos {
     display: none;

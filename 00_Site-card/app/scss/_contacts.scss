@@ -8,35 +8,27 @@
   align-content: flex-start;
   background: $bg_contacts;
   box-shadow: -2px -2px 15px 7px rgba(#5E35B1,0.82) inset;
-  @include respond(768, 4801) {
-    background: {
-      image: url("../img/bg-contacts-top.png"), url("../img/bg-contacts-bottom.png");
-      position: top left, bottom left;
-      repeat: repeat-x, repeat-x;
+
+  address {
+    font: {
+      size: 2.300em;
+      weight: bold;
     };
-    box-shadow: none;
-  }
-}
+    text: {
+      align: center;
+      transform: capitalize;
+    };
+    @include respond(320, 768) {
+      font-size: 0.750em;
+      text-align: left;
+    }
 
-address {
-  font: {
-    size: 2.300em;
-    weight: bold;
-  };
-  text: {
-    align: center;
-    transform: capitalize;
-  };
-  @include respond(320, 768) {
-    font-size: 0.750em;
-    text-align: left;
-  }
-
-  & > a,
-  span {
-    padding-left: 20px;
-    font-weight: normal;
-    text-transform: lowercase;
-    color: #311B92;
+    & > a,
+    span {
+      padding-left: 20px;
+      font-weight: normal;
+      text-transform: lowercase;
+      color: #311B92;
+    }
   }
 }

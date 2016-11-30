@@ -7,88 +7,105 @@
   @include respond(320, 768) {
     padding-bottom: 1.000em;
   }
-  @include respond(768, 4801) {
-    background: {
-      image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
-      position: top left, bottom left;
-      repeat: repeat-x, repeat-x;
-    };
-    box-shadow: none;
+
+  nav {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(#fff, 0.25);
+    @include respond(320, 769) {
+      padding: 5px;
+    }
   }
 
   &__about_me {
-    display: none;
-    @include respond(768, 4801) {
-      width: 40%;
-      display: inline-block;
-      margin: {
-        top: 1.000em;
-        bottom: 1.000em;
-      };
-      text-align: center;
-    }
-
-    & > figcaption {
-      display: inherit;
-      width: 84%;
-      font-size: 1.300em;
-      color: white;
+    width: 90%;
+    text-align: center;
+    font-size: 1.300em;
+    color: white;
+    @include respond(320, 769) {
+      font-size: 1.000em;
     }
   }
 
   &__avatar {
-    display: inherit;
-    width: 16%;
-    height: 6.000em;
+    width: 10%;
+    height: 75px;
+    padding-right: 5px;
     background: inline('img01.png') center/contain no-repeat;
-    border-radius: 3.000em;
-
-    &:hover {
-      @extend %trans_scale;
+    @include respond(320, 769) {
+      height: 50px;
     }
   }
 
   &__navigation {
-    padding: 0;
-    vertical-align: top;
-    list-style: none;
-    text-align: right;
-    @include respond(768, 4801) {
-      display: inline-block;
-      width: 59%;
-    }
+    display: flex;
+    padding: 1.500em;
+    justify-content: space-around;
 
-    li {
-      display: inline-block;
-      @include respond(320, 481) {
-        display: block;
-      }
+    a {
+      display: flex;
+      position: relative;
+      width: 30%;
+      height: 75vh;
+      padding-bottom: 15vh;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      @extend %main_style;
+      color: white;
 
-      &:nth-child(1):hover {
+      &:nth-child(1) {
         background: $bg_skills;
+        box-shadow: -2px -2px 15px 7px rgba(#43A047,0.82) inset;
+        color: darken(#43A047, 10%);
       }
 
-      &:nth-child(2):hover {
+      &:nth-child(2) {
         background: $bg_portfolio;
+        box-shadow: -2px -2px 15px 7px rgba(#FFB300,0.82) inset;
+        color: darken(#FFB300, 10%);
       }
 
-      &:nth-child(3):hover {
+      &:nth-child(3) {
         background: $bg_contacts;
+        box-shadow: -2px -2px 15px 7px rgba(#5E35B1,0.82) inset;
+        color: darken(#5E35B1, 10%);
       }
 
-      & > a {
-        @extend %main_style;
-        color: white;
-        @include respond(320, 481) {
-          padding: 0;
-          font-size: 1.000em;
-        }
+      &:hover {
+        color: #131313;
+      }
 
-        &:hover {
-          border-right: 6px;
-          color: #131313;
+      & > p {
+        width: 100%;
+
+        &:nth-of-type(2) {
+          text-transform: lowercase;
+        }
+        span {
+          @include respond(769, 4801) {
+            display: block;
+            position: absolute;
+            font-size: 5.000em;
+            bottom: 35%;
+            left: 50%;
+            transform: translate(-50%);
+          }
         }
       }
+      @include respond(320, 769) {
+        width: 100%;
+        height: 13vh;
+        padding: 5px;
+        align-content: center;
+      }
+    }
+    @include respond(320, 769) {
+      flex-direction: column;
+      height: 50vh;
+      padding: 0.500em;
     }
   }
 }

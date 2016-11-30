@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif; }
+  @media only screen and (min-width: 0px) and (max-width: 319px) {
+    * {
+      display: none; } }
 
 html {
   font-size: 16px; }
@@ -26,7 +29,9 @@ h1,
 h2,
 h3,
 h4,
-section {
+p,
+section,
+ul {
   margin: 0;
   padding: 0; }
 
@@ -65,18 +70,21 @@ h4 {
 
 section {
   position: relative;
-  width: 100%;
-  padding-top: 0.500em;
-  padding-bottom: 0.500em;
-  padding-left: 0.500em;
-  padding-right: 5.000em; }
+  width: 100%; }
   @media only screen and (min-width: 768px) and (max-width: 4800px) {
     section {
-      min-height: 100vh;
-      padding-top: 3.000em;
-      padding-bottom: 5.000em;
-      padding-left: 2.000em;
-      padding-right: 5.000em; } }
+      min-height: 100vh; } }
+  section:not(.home) {
+    padding-top: 0.500em;
+    padding-bottom: 0.500em;
+    padding-left: 0.500em;
+    padding-right: 5.000em; }
+    @media only screen and (min-width: 768px) and (max-width: 4800px) {
+      section:not(.home) {
+        padding-top: 3.000em;
+        padding-bottom: 5.000em;
+        padding-left: 2.000em;
+        padding-right: 5.000em; } }
 
 .wrapper {
   position: relative;
@@ -115,7 +123,7 @@ section {
 #ho_adv {
   display: none !important; }
 
-.right_bar > li:hover, .home__avatar:hover, a[data-img]:hover {
+.right_bar > li:hover, a[data-img]:hover {
   transform: scale(1.2); }
 
 .tabs__active {
@@ -125,7 +133,7 @@ section {
   content: '';
   position: absolute; }
 
-h2, .home__navigation li > a, .tabs > li > a {
+h2, .home__navigation a, .tabs > li > a {
   margin: 0;
   padding: 0.500em;
   font-size: 1.500em;
@@ -330,71 +338,86 @@ h2, .home__navigation li > a, .tabs > li > a {
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .home {
       padding-bottom: 1.000em; } }
-  @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    .home {
-      background-image: url("../img/bg-home-top.png"), url("../img/bg-home-bottom.png");
-      background-position: top left, bottom left;
-      background-repeat: repeat-x, repeat-x;
-      box-shadow: none; } }
+  .home nav {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.25); }
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+      .home nav {
+        padding: 5px; } }
   .home__about_me {
-    display: none; }
-    @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    width: 90%;
+    text-align: center;
+    font-size: 1.300em;
+    color: white; }
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
       .home__about_me {
-        width: 40%;
-        display: inline-block;
-        margin-top: 1.000em;
-        margin-bottom: 1.000em;
-        text-align: center; } }
-    .home__about_me > figcaption {
-      display: inherit;
-      width: 84%;
-      font-size: 1.300em;
-      color: white; }
+        font-size: 1.000em; } }
   .home__avatar {
-    display: inherit;
-    width: 16%;
-    height: 6.000em;
-    background: inline("img01.png") center/contain no-repeat;
-    border-radius: 3.000em; }
+    width: 10%;
+    height: 75px;
+    padding-right: 5px;
+    background: inline("img01.png") center/contain no-repeat; }
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+      .home__avatar {
+        height: 50px; } }
   .home__navigation {
-    padding: 0;
-    vertical-align: top;
-    list-style: none;
-    text-align: right; }
-    @media only screen and (min-width: 768px) and (max-width: 4800px) {
+    display: flex;
+    padding: 1.500em;
+    justify-content: space-around; }
+    .home__navigation a {
+      display: flex;
+      position: relative;
+      width: 30%;
+      height: 75vh;
+      padding-bottom: 15vh;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      color: white; }
+      .home__navigation a:nth-child(1) {
+        background: #81C784;
+        box-shadow: -2px -2px 15px 7px rgba(67, 160, 71, 0.82) inset;
+        color: #347c37; }
+      .home__navigation a:nth-child(2) {
+        background: #FFD54F;
+        box-shadow: -2px -2px 15px 7px rgba(255, 179, 0, 0.82) inset;
+        color: #cc8f00; }
+      .home__navigation a:nth-child(3) {
+        background: #9575CD;
+        box-shadow: -2px -2px 15px 7px rgba(94, 53, 177, 0.82) inset;
+        color: #49298a; }
+      .home__navigation a:hover {
+        color: #131313; }
+      .home__navigation a > p {
+        width: 100%; }
+        .home__navigation a > p:nth-of-type(2) {
+          text-transform: lowercase; }
+        @media only screen and (min-width: 769px) and (max-width: 4800px) {
+          .home__navigation a > p span {
+            display: block;
+            position: absolute;
+            font-size: 5.000em;
+            bottom: 35%;
+            left: 50%;
+            transform: translate(-50%); } }
+      @media only screen and (min-width: 320px) and (max-width: 768px) {
+        .home__navigation a {
+          width: 100%;
+          height: 13vh;
+          padding: 5px;
+          align-content: center; } }
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
       .home__navigation {
-        display: inline-block;
-        width: 59%; } }
-    .home__navigation li {
-      display: inline-block; }
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
-        .home__navigation li {
-          display: block; } }
-      .home__navigation li:nth-child(1):hover {
-        background: #81C784; }
-      .home__navigation li:nth-child(2):hover {
-        background: #FFD54F; }
-      .home__navigation li:nth-child(3):hover {
-        background: #9575CD; }
-      .home__navigation li > a {
-        color: white; }
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
-          .home__navigation li > a {
-            padding: 0;
-            font-size: 1.000em; } }
-        .home__navigation li > a:hover {
-          border-right: 6px;
-          color: #131313; }
+        flex-direction: column;
+        height: 50vh;
+        padding: 0.500em; } }
 
 .skills {
   background: #81C784;
   box-shadow: -2px -2px 15px 7px rgba(67, 160, 71, 0.82) inset; }
-  @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    .skills {
-      background-image: url("../img/bg-skills-top.png"), url("../img/bg-skills-bottom.png");
-      background-position: top left, bottom left;
-      background-repeat: repeat-x, repeat-x;
-      box-shadow: none; } }
   .skills__logos {
     display: none; }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
@@ -570,12 +593,6 @@ a[data-img="webpack"] {
 .portfolio {
   background: #FFD54F;
   box-shadow: -2px -2px 15px 7px rgba(255, 179, 0, 0.82) inset; }
-  @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    .portfolio {
-      background-image: url("../img/bg-portfolio-top.png"), url("../img/bg-portfolio-bottom.png");
-      background-position: top left, bottom left;
-      background-repeat: repeat-x, repeat-x;
-      box-shadow: none; } }
 
 .tabs {
   margin: 1.000em 0;
@@ -708,25 +725,18 @@ a[data-cite="NatureTour"] {
   align-content: flex-start;
   background: #9575CD;
   box-shadow: -2px -2px 15px 7px rgba(94, 53, 177, 0.82) inset; }
-  @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    .contacts {
-      background-image: url("../img/bg-contacts-top.png"), url("../img/bg-contacts-bottom.png");
-      background-position: top left, bottom left;
-      background-repeat: repeat-x, repeat-x;
-      box-shadow: none; } }
-
-address {
-  font-size: 2.300em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize; }
-  @media only screen and (min-width: 320px) and (max-width: 767px) {
-    address {
-      font-size: 0.750em;
-      text-align: left; } }
-  address > a,
-  address span {
-    padding-left: 20px;
-    font-weight: normal;
-    text-transform: lowercase;
-    color: #311B92; }
+  .contacts address {
+    font-size: 2.300em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize; }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      .contacts address {
+        font-size: 0.750em;
+        text-align: left; } }
+    .contacts address > a,
+    .contacts address span {
+      padding-left: 20px;
+      font-weight: normal;
+      text-transform: lowercase;
+      color: #311B92; }

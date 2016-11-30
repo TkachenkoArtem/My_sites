@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  @include respond(0, 320) {
+      display: none;
+  }
 }
 
 html {
@@ -30,7 +33,9 @@ h1,
 h2,
 h3,
 h4,
-section {
+p,
+section,
+ul {
   margin: 0;
   padding: 0;
 }
