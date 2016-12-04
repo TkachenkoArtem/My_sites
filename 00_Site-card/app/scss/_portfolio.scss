@@ -89,19 +89,15 @@
   }
 
   &__caption {
-    // height: 14em;
     margin: auto;
     padding: 1.000em;
     background: #FFB300;
     text-align: center;
     border: none;
+    font-size: 1.250em;
+  }
+  @include respond(320, 769) {
     font-size: 0.750em;
-    // @include respond-to(480) {
-    //   height: 12.000em;
-    // }
-    // @include respond(768, 4801) {
-    //   height: 7.000em;
-    // }
   }
 }
 @each $image in SiteCard, Gastronymous, LusidTheme, LaCasa, Ikaros, MagBlog, MediaGrup, Flat, NatureTour {

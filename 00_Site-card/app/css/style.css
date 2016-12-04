@@ -79,12 +79,18 @@ section {
     padding-bottom: 0.500em;
     padding-left: 0.500em;
     padding-right: 5.000em; }
+    @media (pointer: coarse) {
+      section:not(.home) {
+        padding-right: 0.500em; } }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
       section:not(.home) {
-        padding-top: 3.000em;
-        padding-bottom: 5.000em;
+        padding-top: 2.000em;
+        padding-bottom: 2.000em;
         padding-left: 2.000em;
         padding-right: 5.000em; } }
+  @media only screen and (min-width: 768px) and (max-width: 4800px) and (pointer: coarse) {
+    section:not(.home) {
+      padding-right: 2.000em; } }
 
 .wrapper {
   position: relative;
@@ -99,6 +105,9 @@ section {
   transform: translateY(-50%);
   list-style: none;
   z-index: 4; }
+  @media (pointer: coarse) {
+    .right_bar {
+      display: none; } }
   .right_bar > li {
     display: block;
     width: 3.000em;
@@ -419,11 +428,9 @@ h2, .home__navigation a, .tabs > li > a {
   background: #81C784;
   box-shadow: -2px -2px 15px 7px rgba(67, 160, 71, 0.82) inset; }
   .skills__logos {
-    display: none; }
-    @media only screen and (min-width: 768px) and (max-width: 4800px) {
-      .skills__logos {
-        display: block;
-        text-align: center; } }
+    display: none;
+    display: block;
+    text-align: center; }
 
 .legend {
   text-align: right; }
@@ -435,160 +442,202 @@ h2, .home__navigation a, .tabs > li > a {
       .legend li {
         display: inline-block;
         padding: 1.000em; } }
+    .legend li.c_e {
+      color: #49a54e; }
+    .legend li.p_k {
+      color: #01579B; }
+    .legend li.t_k {
+      color: #E65100; }
     .legend li:before {
       content: "\274d ";
       padding-right: 0.500em; }
 
-table {
-  margin: 0 auto 2.000em;
-  border: 1px solid #43A047;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-  border-collapse: collapse; }
-  @media only screen and (min-width: 320px) and (max-width: 767px) {
-    table {
-      font-size: 0.750em; } }
-  @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    table {
-      width: 70%; } }
-
-td,
-th {
-  width: 25%;
-  padding-left: 2%;
-  border: 1px solid #43A047; }
-
-th {
-  background: #66BB6A; }
-
-.practical_knowledge {
-  color: #01579B; }
-
-.theoretical_knowledge {
-  color: #E65100; }
-
-.no_knowledge {
-  color: #3E2723; }
-
 a[data-img] {
   display: inline-block;
-  width: 2.000em;
-  height: 3.000em;
-  margin: 0.500em;
-  vertical-align: middle; }
+  width: 12.000em;
+  height: 12.000em;
+  margin: 1.000em;
+  padding: 1.000em;
+  vertical-align: middle;
+  border-radius: 6.000em; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img] {
+      width: 6.000em;
+      height: 6.000em;
+      border-radius: 3.000em;
+      margin: 0.5000em;
+      padding: 0.5000em; } }
 
-a[data-img].wide {
-  width: 6.000em; }
-
-a[data-img="atom"] {
-  background: inline("atom-logo.png") center/contain no-repeat; }
-
-a[data-img="SourceTree"] {
-  background: inline("SourceTree-logo.png") center/contain no-repeat; }
+a[data-img="c"] {
+  background: inline("c-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="c"] {
+      background: inline("c-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="gulp"] {
-  background: inline("gulp-logo.png") center/contain no-repeat; }
-
-a[data-img="codepen"] {
-  background: inline("codepen-logo.png") center/contain no-repeat; }
+  background: inline("gulp-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="gulp"] {
+      background: inline("gulp-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="git"] {
-  background: inline("git-logo.png") center/contain no-repeat; }
+  background: inline("git-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="git"] {
+      background: inline("git-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="npm"] {
-  background: inline("npm-logo.png") center/contain no-repeat; }
+  background: inline("npm-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="npm"] {
+      background: inline("npm-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="sass"] {
-  background: inline("sass-logo.png") center/contain no-repeat; }
+  background: inline("sass-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="sass"] {
+      background: inline("sass-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="github"] {
-  background: inline("github-logo.png") center/contain no-repeat; }
+  background: inline("github-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="github"] {
+      background: inline("github-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="css3"] {
-  background: inline("css3-logo.png") center/contain no-repeat; }
+  background: inline("css3-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="css3"] {
+      background: inline("css3-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="html5"] {
-  background: inline("html5-logo.png") center/contain no-repeat; }
+  background: inline("html5-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="html5"] {
+      background: inline("html5-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="javascript"] {
-  background: inline("javascript-logo.png") center/contain no-repeat; }
+  background: inline("javascript-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="javascript"] {
+      background: inline("javascript-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="bootstrap"] {
-  background: inline("bootstrap-logo.png") center/contain no-repeat; }
-
-a[data-img="bower"] {
-  background: inline("bower-logo.png") center/contain no-repeat; }
+  background: inline("bootstrap-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="bootstrap"] {
+      background: inline("bootstrap-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="fontawesome"] {
-  background: inline("fontawesome-logo.png") center/contain no-repeat; }
-
-a[data-img="slick"] {
-  background: inline("slick-logo.png") center/contain no-repeat; }
+  background: inline("fontawesome-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="fontawesome"] {
+      background: inline("fontawesome-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="normalizecss"] {
-  background: inline("normalizecss-logo.png") center/contain no-repeat; }
+  background: inline("normalizecss-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="normalizecss"] {
+      background: inline("normalizecss-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="bourbon"] {
-  background: inline("bourbon-logo.png") center/contain no-repeat; }
+  background: inline("bourbon-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="bourbon"] {
+      background: inline("bourbon-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="haml"] {
-  background: inline("haml-logo.png") center/contain no-repeat; }
+  background: inline("haml-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="haml"] {
+      background: inline("haml-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="JSON"] {
-  background: inline("JSON-logo.png") center/contain no-repeat; }
+  background: inline("JSON-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="JSON"] {
+      background: inline("JSON-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="AJAX"] {
-  background: inline("AJAX-logo.png") center/contain no-repeat; }
+  background: inline("AJAX-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="AJAX"] {
+      background: inline("AJAX-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="underscore"] {
-  background: inline("underscore-logo.png") center/contain no-repeat; }
+  background: inline("underscore-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="underscore"] {
+      background: inline("underscore-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="XML"] {
-  background: inline("XML-logo.png") center/contain no-repeat; }
+  background: inline("XML-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="XML"] {
+      background: inline("XML-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="MongoDB"] {
-  background: inline("MongoDB-logo.png") center/contain no-repeat; }
-
-a[data-img="Lightroom"] {
-  background: inline("Lightroom-logo.png") center/contain no-repeat; }
+  background: inline("MongoDB-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="MongoDB"] {
+      background: inline("MongoDB-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="AdobePhotoshop"] {
-  background: inline("AdobePhotoshop-logo.png") center/contain no-repeat; }
+  background: inline("AdobePhotoshop-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="AdobePhotoshop"] {
+      background: inline("AdobePhotoshop-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="wordpress"] {
-  background: inline("wordpress-logo.png") center/contain no-repeat; }
-
-a[data-img="autocad"] {
-  background: inline("autocad-logo.png") center/contain no-repeat; }
+  background: inline("wordpress-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="wordpress"] {
+      background: inline("wordpress-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="babel"] {
-  background: inline("babel-logo.png") center/contain no-repeat; }
+  background: inline("babel-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="babel"] {
+      background: inline("babel-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="jquery"] {
-  background: inline("jquery-logo.png") center/contain no-repeat; }
+  background: inline("jquery-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="jquery"] {
+      background: inline("jquery-logo.png") center/auto 3em no-repeat; } }
 
-a[data-img="fontello"] {
-  background: inline("fontello-logo.png") center/contain no-repeat; }
-
-a[data-img="FlipClock"] {
-  background: inline("FlipClock-logo.png") center/contain no-repeat; }
-
-a[data-img="remodal"] {
-  background: inline("remodal-logo.png") center/contain no-repeat; }
-
-a[data-img="rx"] {
-  background: inline("rx-logo.png") center/contain no-repeat; }
-
-a[data-img="riot"] {
-  background: inline("riot-logo.png") center/contain no-repeat; }
+a[data-img="php"] {
+  background: inline("php-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="php"] {
+      background: inline("php-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="cs"] {
-  background: inline("cs-logo.png") center/contain no-repeat; }
-
-a[data-img="ornanajs"] {
-  background: inline("ornanajs-logo.png") center/contain no-repeat; }
+  background: inline("cs-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="cs"] {
+      background: inline("cs-logo.png") center/auto 3em no-repeat; } }
 
 a[data-img="webpack"] {
-  background: inline("webpack-logo.png") center/contain no-repeat; }
+  background: inline("webpack-logo.png") center/auto 5.5em no-repeat; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    a[data-img="webpack"] {
+      background: inline("webpack-logo.png") center/auto 3em no-repeat; } }
+
+.wide {
+  background-size: 7.500em auto !important; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .wide {
+      background-size: 3.500em auto !important; } }
+
+.commercial_experience {
+  border: 7px solid #49a54e; }
+
+.practical_knowledge {
+  border: 7px solid #01579B; }
+
+.theoretical_knowledge {
+  border: 7px solid #E65100; }
 
 .portfolio {
   background: #FFD54F;
@@ -663,7 +712,10 @@ a[data-img="webpack"] {
     background: #FFB300;
     text-align: center;
     border: none;
-    font-size: 0.750em; }
+    font-size: 1.250em; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .markup {
+      font-size: 0.750em; } }
 
 a[data-cite="SiteCard"] {
   background: url("../img/cite-SiteCard.png") center/cover no-repeat; }

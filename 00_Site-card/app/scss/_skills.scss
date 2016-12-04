@@ -6,10 +6,8 @@
 
   &__logos {
     display: none;
-    @include respond(768, 4801) {
-      display: block;
-      text-align: center;
-    }
+    display: block;
+    text-align: center;
   }
 }
 
@@ -27,6 +25,18 @@
       padding: 1.000em;
     }
 
+    &.c_e {
+      color: darken(#66BB6A, 10%);
+    }
+
+    &.p_k {
+      color: #01579B;
+    }
+
+    &.t_k {
+      color: #E65100;
+    }
+
     &:before {
       content: "\274d ";
       padding-right: 0.500em;
@@ -34,59 +44,52 @@
   }
 }
 
-table {
-  margin: 0 auto 2.000em;
-  border: 1px solid #43A047;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.12), 0 1px 2px 0 rgba(0,0,0,.24);
-  border-collapse: collapse;
-  @include respond(320, 768) {
-    font-size: 0.750em;
-  }
-  @include respond(768, 4801) {
-    width: 70%;
-  }
-}
-
-td,
-th {
-  width: 25%;
-  padding-left: 2%;
-  border: 1px solid #43A047;
-}
-
-th {
-  background: #66BB6A;
-}
-
-.practical_knowledge {
-  color: #01579B;
-}
-
-.theoretical_knowledge {
-  color: #E65100;
-}
-
-.no_knowledge {
-  color: #3E2723;
-}
-
 a[data-img] {
   display: inline-block;
-  width: 2.000em;
-  height: 3.000em;
-  margin: 0.500em;
+  width: 12.000em;
+  height: 12.000em;
+  margin: 1.000em;
+  padding: 1.000em;
   vertical-align: middle;
+  border-radius: 6.000em;
+  @include respond(320, 769) {
+    width: 6.000em;
+    height: 6.000em;
+    border-radius: 3.000em;
+    margin: 0.5000em;
+    padding: 0.5000em;
+
+  }
 
   &:hover {
     @extend %trans_scale;
   }
 }
-
-a[data-img].wide {
-  width: 6.000em;
-}
-@each $image in atom, SourceTree, gulp, codepen, git, npm, sass, github, css3, html5, javascript, bootstrap, bower, fontawesome, slick, normalizecss, bourbon, haml, JSON, AJAX, underscore, XML, MongoDB, Lightroom, AdobePhotoshop, wordpress, autocad, babel, jquery, fontello, FlipClock, remodal, rx, riot, cs, ornanajs, webpack {
+@each $image in c, gulp, git, npm, sass, github, css3, html5, javascript, bootstrap, fontawesome, normalizecss, bourbon, haml, JSON, AJAX, underscore, XML, MongoDB, AdobePhotoshop, wordpress, babel, jquery, php, cs, webpack {
   a[data-img="#{$image}"] {
-    background: inline('#{$image}-logo.png') center/contain no-repeat;
+    background: inline('#{$image}-logo.png') center/auto 5.500em no-repeat;
+    @include respond(320, 769) {
+      background: inline('#{$image}-logo.png') center/auto 3.000em no-repeat;
+    }
   }
+}
+
+.wide {
+  background-size: 7.500em auto !important;
+  @include respond(320, 769) {
+    background-size: 3.500em auto !important;
+
+  }
+}
+
+.commercial_experience {
+  border: 7px solid darken(#66BB6A, 10%);
+}
+
+.practical_knowledge {
+  border: 7px solid #01579B;
+}
+
+.theoretical_knowledge {
+  border: 7px solid #E65100;
 }

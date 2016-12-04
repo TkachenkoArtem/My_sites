@@ -56,13 +56,23 @@ section {
       left: 0.500em;
       right: 5.000em;
     };
+    @media( pointer: coarse) {
+      padding: {
+        right: 0.500em;
+      };
+    }
     @include respond(768, 4801) {
       padding: {
-        top: 3.000em;
-        bottom: 5.000em;
+        top: 2.000em;
+        bottom: 2.000em;
         left: 2.000em;
         right: 5.000em;
       };
+      @media( pointer: coarse) {
+        padding: {
+          right: 2.000em;
+        };
+      }
     }
   }
 }
@@ -81,6 +91,9 @@ section {
   transform: translateY(-50%);
   list-style: none;
   z-index: 4;
+  @media( pointer: coarse) {
+    display: none;
+  }
 
   & > li {
     display: block;

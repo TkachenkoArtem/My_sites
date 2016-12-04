@@ -62,135 +62,39 @@
 
             %h2 Skills
 
-            %table
-                %caption.legend
-                    %ul
-                      %li.practical_knowledge have practical skills
-                      %li.theoretical_knowledge have theoretical skills
-                      %li.no_knowledge learn now
-                %thead
-                  %tr
-                    %th Languages
-                    %th Preprocessors
-                    %th IDE
-                    %th OS
-                %tr.practical_knowledge
-                  %td HTML5
-                  %td HAML
-                  %td Atom
-                  %td Windows 7, 10
-                %tr.practical_knowledge
-                  %td CSS3
-                  %td.theoretical_knowledge Pug.js (jade)
-                  %td Visual Studio 2015
-                  %td Linux
-                %tr.practical_knowledge
-                  %td JavaScript
-                  %td SASS
-                  %td Gulp
-                  %td
-                %tr
-                  %td.theoretical_knowledge C/C++
-                  %td.no_knowledge CoffeeScript
-                  %td.practical_knowledge Webpack
-                  %td
-                %tr.theoretical_knowledge
-                  %td XML
-                  %td Less
-                  %td Sublime
-                  %td
-
-            %table
-                %thead
-                  %tr
-                    %th{colspan:"2"} Libraries and frameworks
-                    %th Programs
-                    %th Package managers, CMS, other
-                %tr.practical_knowledge
-                  %td jQuery
-                  %td Bootstrap 3
-                  %td Adobe Photoshop
-                  %td npm
-                %tr.practical_knowledge
-                  %td Slick.js
-                  %td Normalize.css
-                  %td GitHub
-                  %td Bower
-                %tr.practical_knowledge
-                  %td Font Awesome
-                  %td Bourbon
-                  %td SourceTree
-                  %td Git
-                %tr.practical_knowledge
-                  %td Babel.js
-                  %td Fontello
-                  %td Autocad
-                  %td Wordpress
-                %tr.practical_knowledge
-                  %td.theoretical_knowledge jQueryUI
-                  %td.theoretical_knowledge Underscore.js
-                  %td Lightroom
-                  %td Codepen
-                %tr.theoretical_knowledge
-                  %td FlipClock.js
-                  %td Remodal.js
-                  %td
-                  %td MongoDB
-                %tr
-                  %td.no_knowledge Node.js
-                  %td.no_knowledge React
-                  %td
-                  %td.theoretical_knowledge JSON
-                %tr
-                  %td.no_knowledge Orna.js
-                  %td.no_knowledge ReactiveX
-                  %td
-                  %td.theoretical_knowledge AJAX
-                %tr
-                  %td.no_knowledge RIOT.js
-                  %td
-                  %td
-                  %td
-
+            %ul.legend
+                %li.c_e have commercial experience
+                %li.p_k have practical skills
+                %li.t_k have theoretical skills
 
             .skills__logos
-                %a{href:"https://atom.io/", target:"_blank", data-img:"atom"}
-                %a{href:"http://webpack.github.io/", target:"_blank", data-img:"webpack"}
-                %a{href:"https://www.sourcetreeapp.com/", target:"_blank", data-img:"SourceTree"}
-                %a{href:"http://gulpjs.com/", target:"_blank", data-img:"gulp"}
-                %a.wide{href:"http://codepen.io/", target:"_blank", data-img:"codepen"}
-                %a{href:"https://git-scm.com/", target:"_blank", data-img:"git"}
-                %a.wide{href:"https://www.npmjs.com/", target:"_blank", data-img:"npm"}
-                %a{href:"http://sass-lang.com/", target:"_blank", data-img:"sass"}
-                %a{href:"https://github.com/", target:"_blank", data-img:"github"}
-                %a{href:"http://www.w3schools.com/css/css3_intro.asp", target:"_blank", data-img:"css3"}
-                %a{href:"http://www.w3schools.com/html/default.asp", target:"_blank", data-img:"html5"}
-                %a{href:"http://www.w3schools.com/js/default.asp", target:"_blank", data-img:"javascript"}
-                %a{href:"http://getbootstrap.com/", target:"_blank", data-img:"bootstrap"}
-                %a{href:"https://bower.io/", target:"_blank", data-img:"bower"}
-                %a.wide{href:"http://fontawesome.io/", target:"_blank", data-img:"fontawesome"}
-                %a{href:"http://kenwheeler.github.io/slick/", target:"_blank", data-img:"slick"}
-                %a{href:"https://necolas.github.io/normalize.css/", target:"_blank", data-img:"normalizecss"}
-                %a.wide{href:"http://bourbon.io/docs/", target:"_blank", data-img:"bourbon"}
-                %a.wide{href:"http://haml.info/", target:"_blank", data-img:"haml"}
-                %a{href:"http://www.json.org/", target:"_blank", data-img:"JSON"}
-                %a.wide{href:"http://www.w3schools.com/ajax/", target:"_blank", data-img:"AJAX"}
-                %a.wide{href:"http://underscorejs.org/", target:"_blank", data-img:"underscore"}
-                %a{href:"http://www.w3schools.com/xml/", target:"_blank", data-img:"XML"}
-                %a.wide{href:"https://www.mongodb.com/", target:"_blank", data-img:"MongoDB"}
-                %a{href:"https://www.adobe.com/products/photoshop-lightroom.html?promoid=KLXLX", target:"_blank", data-img:"Lightroom"}
-                %a{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank", data-img:"AdobePhotoshop"}
-                %a{href:"https://wordpress.org/", target:"_blank", data-img:"wordpress"}
-                %a.wide{href:"http://www.autodesk.ru/products/autocad/overview", target:"_blank", data-img:"autocad"}
-                %a.wide{href:"https://babeljs.io/", target:"_blank", data-img:"babel"}
-                %a{href:"https://jquery.com/", target:"_blank", data-img:"jquery"}
-                %a.wide{href:"http://fontello.com/", target:"_blank", data-img:"fontello"}
-                %a.wide{href:"http://flipclockjs.com/", target:"_blank", data-img:"FlipClock"}
-                %a.wide{href:"http://vodkabears.github.io/remodal/", target:"_blank", data-img:"remodal"}
-                %a{href:"http://reactivex.io/", target:"_blank", data-img:"rx"}
-                %a.wide{href:"http://riotjs.com/", target:"_blank", data-img:"riot"}
-                %a.wide{href:"http://coffeescript.org/", target:"_blank", data-img:"cs"}
-                %a.wide{href:"https://ornaorg.github.io/", target:"_blank", data-img:"ornanajs"}
+                %a.commercial_experience{href:"http://www.w3schools.com/js/default.asp", target:"_blank", data-img:"javascript"}
+                %a.theoretical_knowledge{href:"https://www.php.net/", target:"_blank", data-img:"php"}
+                %a.wide.practical_knowledge{href:"https://isocpp.org/", target:"_blank", data-img:"c"}
+                %a.commercial_experience{href:"http://www.w3schools.com/html/default.asp", target:"_blank", data-img:"html5"}
+                %a.commercial_experience{href:"http://www.w3schools.com/css/css3_intro.asp", target:"_blank", data-img:"css3"}
+                %a.wide.commercial_experience{href:"http://haml.info/", target:"_blank", data-img:"haml"}
+                %a.commercial_experience{href:"http://sass-lang.com/", target:"_blank", data-img:"sass"}
+                %a.wide.theoretical_knowledge{href:"http://coffeescript.org/", target:"_blank", data-img:"cs"}
+                %a.wide.practical_knowledge{href:"http://bourbon.io/docs/", target:"_blank", data-img:"bourbon"}
+                %a.commercial_experience{href:"https://jquery.com/", target:"_blank", data-img:"jquery"}
+                %a.theoretical_knowledge{href:"http://getbootstrap.com/", target:"_blank", data-img:"bootstrap"}
+                %a.wide.theoretical_knowledge{href:"https://babeljs.io/", target:"_blank", data-img:"babel"}
+                %a.wide.theoretical_knowledge{href:"http://underscorejs.org/", target:"_blank", data-img:"underscore"}
+                %a.practical_knowledge{href:"https://necolas.github.io/normalize.css/", target:"_blank", data-img:"normalizecss"}
+                %a.theoretical_knowledge{href:"http://webpack.github.io/", target:"_blank", data-img:"webpack"}
+                %a.practical_knowledge{href:"http://gulpjs.com/", target:"_blank", data-img:"gulp"}
+                %a.practical_knowledge{href:"https://git-scm.com/", target:"_blank", data-img:"git"}
+                %a.wide.practical_knowledge{href:"https://www.npmjs.com/", target:"_blank", data-img:"npm"}
+                %a.practical_knowledge{href:"https://github.com/", target:"_blank", data-img:"github"}
+                %a.wide.practical_knowledge{href:"http://fontawesome.io/", target:"_blank", data-img:"fontawesome"}
+                %a.theoretical_knowledge{href:"http://www.w3schools.com/xml/", target:"_blank", data-img:"XML"}
+                %a.practical_knowledge{href:"http://www.json.org/", target:"_blank", data-img:"JSON"}
+                %a.wide.theoretical_knowledge{href:"http://www.w3schools.com/ajax/", target:"_blank", data-img:"AJAX"}
+                %a.wide.theoretical_knowledge{href:"https://www.mongodb.com/", target:"_blank", data-img:"MongoDB"}
+                %a.practical_knowledge{href:"https://www.adobe.com/products/photoshop.html?promoid=KLXLS", target:"_blank", data-img:"AdobePhotoshop"}
+                %a.practical_knowledge{href:"https://wordpress.org/", target:"_blank", data-img:"wordpress"}
+
 
               -#  _____PORTFOLIO_____
 
@@ -211,7 +115,7 @@
                     %a.markup__link_to_cite.jsGoTo{href:".home", target:"_blank", data-cite:"SiteCard",  data-toggle:"tooltip", data-placement:"right", data-original-title:"You are on this site now 😀"}
                     %figcaption.markup__caption
                         %h3 My Site-card
-                        %p em + media-queries. Source code: HAML + Sass. Packet managers: npm. Build system automating tasks: Gulp.  Libraries: Normalize.css and jQuery. Framework: Bootstrap 3 (only used tooltip). PerfectPixel.
+                        %p em + media-queries. Source code: HAML + Sass. Packet managers: npm. Build system automating tasks: Gulp.  Libraries: Normalize.css and jQuery. Framework: Bootstrap 3 (only used tooltip).
                     .btn_download
                         %span.btn_download__link No additional materials
 
