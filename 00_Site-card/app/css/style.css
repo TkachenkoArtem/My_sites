@@ -415,14 +415,15 @@ h2, .home__navigation a, .tabs > li > a {
       @media only screen and (min-width: 320px) and (max-width: 768px) {
         .home__navigation a {
           width: 100%;
-          height: 13vh;
+          height: 30%;
           padding: 5px;
           align-content: center; } }
     @media only screen and (min-width: 320px) and (max-width: 768px) {
       .home__navigation {
         flex-direction: column;
-        height: 50vh;
-        padding: 0.500em; } }
+        padding: 0.500em;
+        height: calc(100vh - 110px);
+        align-items: stretch; } }
 
 .skills {
   background: #81C784;
