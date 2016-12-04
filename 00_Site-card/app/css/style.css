@@ -658,19 +658,12 @@ a[data-img="webpack"] {
         height: 400px;
         border: none; } }
   .markup__caption {
-    height: 14em;
     margin: auto;
     padding: 1.000em;
     background: #FFB300;
     text-align: center;
     border: none;
     font-size: 0.750em; }
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-      .markup__caption {
-        height: 12.000em; } }
-    @media only screen and (min-width: 768px) and (max-width: 4800px) {
-      .markup__caption {
-        height: 7.000em; } }
 
 a[data-cite="SiteCard"] {
   background: url("../img/cite-SiteCard.png") center/cover no-repeat; }

@@ -1,14 +1,33 @@
 /*jshint esversion: 6 */
 
+function setEqualHeight(columns) {
+  var tallestcolumn = 0;
+  columns.each(
+    function() {
+      currentHeight = $(this).height();
+      if (currentHeight > tallestcolumn) {
+        tallestcolumn = currentHeight;
+      }
+    }
+  );
+  columns.height(tallestcolumn);
+}
+
+$(document).ready(function() {
+  setEqualHeight($(".markup > .markup__caption"));
+});
+
 /*GO TO*/
-$(document).ready(function(){
-    $('.jsGoTo').click( function(){ // ловим клик по ссылке с классом jsGoTo
-	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
-        if ($(scroll_el).length !== 0) { // проверим существование элемента чтобы избежать ошибки
-	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скролинг к элементу scroll_el
-        }
-	    return false; // выключаем стандартное действие
-    });
+$(document).ready(function() {
+  $('.jsGoTo').click(function() { // ловим клик по ссылке с классом jsGoTo
+    var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+    if ($(scroll_el).length !== 0) { // проверим существование элемента чтобы избежать ошибки
+      $('html, body').animate({
+        scrollTop: $(scroll_el).offset().top
+      }, 500); // анимируем скролинг к элементу scroll_el
+    }
+    return false; // выключаем стандартное действие
+  });
 });
 
 /*TOOLTIP*/
@@ -50,7 +69,7 @@ function tabs() {
 tabs();
 
 /*CODEPEN*/
-$( document ).ready(function() {
+$(document).ready(function() {
   document.getElementsByClassName || (document.getElementsByClassName = function(e) {
       var n, t, r, a = document,
         o = [];

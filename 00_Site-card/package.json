@@ -5,8 +5,10 @@
   "author": "Tkachenko Artem",
   "license": "free",
   "devDependencies": {
+    "babel-preset-latest": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-babel": "latest",
     "gulp-base64-inline": "latest",
     "gulp-clean-css": "latest",
     "gulp-concat-css": "latest",
@@ -21,7 +23,6 @@
   },
   "dependencies": {
     "install": "latest",
-    "normalize.css": "latest",
-    "npm": "latest"
+    "normalize.css": "latest"
   }
 }
