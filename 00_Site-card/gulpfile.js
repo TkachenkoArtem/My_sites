@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const concatCSS = require('gulp-concat-css');
 const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename");
-const pngmin = require('gulp-pngmin');
+const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 const base64 = require('gulp-base64-inline');
 const sass = require('gulp-sass');
@@ -70,22 +70,27 @@ gulp.task('css', () => {
     .pipe(livereload());
 });
 
+/*транспайлинг*/
+gulp.task('babel', () => {
+  return gulp.src('app/scripts/script.js')
+    .pipe(babel())
+    .pipe(rename('script_after_babel.js'))
+    .pipe(gulp.dest('app/scripts'));
+});
+
 /*операции с js*/
 gulp.task('compress', () => {
-  return gulp.src('app/scripts/script.js')
-    // .pipe(babel({
-    //   presets: ['es2015']
-    // }))
+  return gulp.src('app/scripts/script_after_babel.js')
     .pipe(uglify())
     .pipe(rename('script.min.js'))
     .pipe(gulp.dest('TkachenkoArtem.github.io/scripts/'))
     .pipe(livereload());
 });
 
-/*минимизация png*/
-gulp.task('png', () => {
-  return gulp.src('app/img/for_dist/*.png')
-    .pipe(pngmin())
+/*минимизация image*/
+gulp.task('imagemin', () => {
+  return gulp.src('app/img/for_dist/*')
+    .pipe(imagemin())
     .pipe(gulp.dest('TkachenkoArtem.github.io/img'));
 });
 
@@ -102,11 +107,12 @@ gulp.task('init', () => {
 gulp.task('watch', () => {
   livereload.listen();
   gulp.watch('app/*.haml', ['haml']); /*следить за haml, запускать haml*/
-  gulp.watch('app/img/for_dist/*.png', ['png']); /*следить за изображениями, запускать png*/
+  gulp.watch('app/img/for_dist/*', ['imagemin']); /*следить за изображениями, запускать imagemin*/
   gulp.watch('app/css/*.min.css', ['vendorCSS']); /*следить за сторонними css, запускать vendorCSS*/
   gulp.watch('app/scss/**/*.scss', ['sass']); /*следить за SASS, запускать sass*/
   gulp.watch('app/css/style.css', ['css']); /*следить за style.css, запускать css*/
-  gulp.watch('app/scripts/*.js', ['compress']); /*следить за js, запускать compress*/
+  gulp.watch('app/scripts/script.js', ['babel']); /*следить за js, запускать babel*/
+  gulp.watch('app/scripts/script_after_babel.js', ['compress']); /*следить за js, запускать compress*/
 });
 
 /*BUILD*/

@@ -13,7 +13,7 @@ function setEqualHeight(columns) {
   columns.height(tallestcolumn);
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
   setEqualHeight($(".markup > .markup__caption"));
 });
 
