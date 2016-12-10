@@ -1,21 +1,35 @@
+
 {
-  "name": "ikaros",
+  "name": "Icaros",
   "description": "",
   "version": "0.0.1",
   "author": "Tkachenko Artem",
   "license": "free",
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
   "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-babel": "^6.1.2",
     "gulp-base64-inline": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat-css": "latest",
     "gulp-haml": "latest",
     "gulp-htmlmin": "latest",
+    "gulp-imagemin": "latest",
     "gulp-livereload": "latest",
-    "gulp-pngmin": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "gulp-uncss": "latest",
     "gulp.spritesmith": "latest"
+  },
+  "dependencies": {
+    "install": "latest",
+    "normalize.css": "latest"
   }
 }
