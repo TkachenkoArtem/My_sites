@@ -13,13 +13,11 @@
 
 .legend {
   text-align: right;
-
-  ul {
-    margin: 0;
-  }
+  margin: 0;
+  list-style-type: none;
 
   li {
-    list-style-type: none;
+    font-size: 1.400em;
     @include respond(768, 4801) {
       display: inline-block;
       padding: 1.000em;
@@ -51,11 +49,11 @@ a[data-img] {
   margin: 1.000em;
   padding: 1.000em;
   vertical-align: middle;
-  border-radius: 6.000em;
+  // border-radius: 6.000em;
   @include respond(320, 769) {
     width: 6.000em;
     height: 6.000em;
-    border-radius: 3.000em;
+    // border-radius: 3.000em;
     margin: 0.5000em;
     padding: 0.5000em;
 
@@ -67,17 +65,17 @@ a[data-img] {
 }
 @each $image in c, gulp, git, npm, sass, github, css3, html5, javascript, bootstrap, fontawesome, normalizecss, bourbon, haml, JSON, AJAX, underscore, XML, MongoDB, AdobePhotoshop, wordpress, babel, jquery, php, cs, webpack {
   a[data-img="#{$image}"] {
-    background: inline('#{$image}-logo.png') center/auto 5.500em no-repeat;
+    background: inline('#{$image}-logo.png') center/auto 6.000em no-repeat;
     @include respond(320, 769) {
-      background: inline('#{$image}-logo.png') center/auto 3.000em no-repeat;
+      background: inline('#{$image}-logo.png') center/auto 3.300em no-repeat;
     }
   }
 }
 
 .wide {
-  background-size: 7.500em auto !important;
+  background-size: 8.000em auto !important;
   @include respond(320, 769) {
-    background-size: 3.500em auto !important;
+    background-size: 3.700em auto !important;
 
   }
 }

@@ -4,7 +4,7 @@ function setEqualHeight(columns) {
   var tallestcolumn = 0;
   columns.each(
     function() {
-      currentHeight = $(this).height();
+      var currentHeight = $(this).height();
       if (currentHeight > tallestcolumn) {
         tallestcolumn = currentHeight;
       }
@@ -13,7 +13,7 @@ function setEqualHeight(columns) {
   columns.height(tallestcolumn);
 }
 
-$(document).ready(() => {
+$(document).ready(function() {
   setEqualHeight($(".markup > .markup__caption"));
 });
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
 });
 
 /*TOOLTIP*/
-$(document).ready(function() {
+$(document).ready(() => {
   $("body").tooltip({
     selector: "[data-toggle='tooltip']",
     container: "body"

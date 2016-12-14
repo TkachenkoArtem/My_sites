@@ -434,11 +434,11 @@ h2, .home__navigation a, .tabs > li > a {
     text-align: center; }
 
 .legend {
-  text-align: right; }
-  .legend ul {
-    margin: 0; }
+  text-align: right;
+  margin: 0;
+  list-style-type: none; }
   .legend li {
-    list-style-type: none; }
+    font-size: 1.400em; }
     @media only screen and (min-width: 768px) and (max-width: 4800px) {
       .legend li {
         display: inline-block;
@@ -459,177 +459,175 @@ a[data-img] {
   height: 12.000em;
   margin: 1.000em;
   padding: 1.000em;
-  vertical-align: middle;
-  border-radius: 6.000em; }
+  vertical-align: middle; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img] {
       width: 6.000em;
       height: 6.000em;
-      border-radius: 3.000em;
       margin: 0.5000em;
       padding: 0.5000em; } }
 
 a[data-img="c"] {
-  background: inline("c-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("c-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="c"] {
-      background: inline("c-logo.png") center/auto 3em no-repeat; } }
+      background: inline("c-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="gulp"] {
-  background: inline("gulp-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("gulp-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="gulp"] {
-      background: inline("gulp-logo.png") center/auto 3em no-repeat; } }
+      background: inline("gulp-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="git"] {
-  background: inline("git-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("git-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="git"] {
-      background: inline("git-logo.png") center/auto 3em no-repeat; } }
+      background: inline("git-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="npm"] {
-  background: inline("npm-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("npm-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="npm"] {
-      background: inline("npm-logo.png") center/auto 3em no-repeat; } }
+      background: inline("npm-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="sass"] {
-  background: inline("sass-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("sass-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="sass"] {
-      background: inline("sass-logo.png") center/auto 3em no-repeat; } }
+      background: inline("sass-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="github"] {
-  background: inline("github-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("github-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="github"] {
-      background: inline("github-logo.png") center/auto 3em no-repeat; } }
+      background: inline("github-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="css3"] {
-  background: inline("css3-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("css3-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="css3"] {
-      background: inline("css3-logo.png") center/auto 3em no-repeat; } }
+      background: inline("css3-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="html5"] {
-  background: inline("html5-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("html5-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="html5"] {
-      background: inline("html5-logo.png") center/auto 3em no-repeat; } }
+      background: inline("html5-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="javascript"] {
-  background: inline("javascript-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("javascript-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="javascript"] {
-      background: inline("javascript-logo.png") center/auto 3em no-repeat; } }
+      background: inline("javascript-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="bootstrap"] {
-  background: inline("bootstrap-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("bootstrap-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="bootstrap"] {
-      background: inline("bootstrap-logo.png") center/auto 3em no-repeat; } }
+      background: inline("bootstrap-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="fontawesome"] {
-  background: inline("fontawesome-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("fontawesome-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="fontawesome"] {
-      background: inline("fontawesome-logo.png") center/auto 3em no-repeat; } }
+      background: inline("fontawesome-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="normalizecss"] {
-  background: inline("normalizecss-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("normalizecss-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="normalizecss"] {
-      background: inline("normalizecss-logo.png") center/auto 3em no-repeat; } }
+      background: inline("normalizecss-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="bourbon"] {
-  background: inline("bourbon-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("bourbon-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="bourbon"] {
-      background: inline("bourbon-logo.png") center/auto 3em no-repeat; } }
+      background: inline("bourbon-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="haml"] {
-  background: inline("haml-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("haml-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="haml"] {
-      background: inline("haml-logo.png") center/auto 3em no-repeat; } }
+      background: inline("haml-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="JSON"] {
-  background: inline("JSON-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("JSON-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="JSON"] {
-      background: inline("JSON-logo.png") center/auto 3em no-repeat; } }
+      background: inline("JSON-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="AJAX"] {
-  background: inline("AJAX-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("AJAX-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="AJAX"] {
-      background: inline("AJAX-logo.png") center/auto 3em no-repeat; } }
+      background: inline("AJAX-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="underscore"] {
-  background: inline("underscore-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("underscore-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="underscore"] {
-      background: inline("underscore-logo.png") center/auto 3em no-repeat; } }
+      background: inline("underscore-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="XML"] {
-  background: inline("XML-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("XML-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="XML"] {
-      background: inline("XML-logo.png") center/auto 3em no-repeat; } }
+      background: inline("XML-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="MongoDB"] {
-  background: inline("MongoDB-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("MongoDB-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="MongoDB"] {
-      background: inline("MongoDB-logo.png") center/auto 3em no-repeat; } }
+      background: inline("MongoDB-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="AdobePhotoshop"] {
-  background: inline("AdobePhotoshop-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("AdobePhotoshop-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="AdobePhotoshop"] {
-      background: inline("AdobePhotoshop-logo.png") center/auto 3em no-repeat; } }
+      background: inline("AdobePhotoshop-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="wordpress"] {
-  background: inline("wordpress-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("wordpress-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="wordpress"] {
-      background: inline("wordpress-logo.png") center/auto 3em no-repeat; } }
+      background: inline("wordpress-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="babel"] {
-  background: inline("babel-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("babel-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="babel"] {
-      background: inline("babel-logo.png") center/auto 3em no-repeat; } }
+      background: inline("babel-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="jquery"] {
-  background: inline("jquery-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("jquery-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="jquery"] {
-      background: inline("jquery-logo.png") center/auto 3em no-repeat; } }
+      background: inline("jquery-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="php"] {
-  background: inline("php-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("php-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="php"] {
-      background: inline("php-logo.png") center/auto 3em no-repeat; } }
+      background: inline("php-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="cs"] {
-  background: inline("cs-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("cs-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="cs"] {
-      background: inline("cs-logo.png") center/auto 3em no-repeat; } }
+      background: inline("cs-logo.png") center/auto 3.3em no-repeat; } }
 
 a[data-img="webpack"] {
-  background: inline("webpack-logo.png") center/auto 5.5em no-repeat; }
+  background: inline("webpack-logo.png") center/auto 6em no-repeat; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     a[data-img="webpack"] {
-      background: inline("webpack-logo.png") center/auto 3em no-repeat; } }
+      background: inline("webpack-logo.png") center/auto 3.3em no-repeat; } }
 
 .wide {
-  background-size: 7.500em auto !important; }
+  background-size: 8.000em auto !important; }
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     .wide {
-      background-size: 3.500em auto !important; } }
+      background-size: 3.700em auto !important; } }
 
 .commercial_experience {
   border: 7px solid #49a54e; }
