@@ -1,0 +1,25 @@
+{
+  "name": "phone_book_spa",
+  "version": "0.0.1",
+  "description": "spa",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TkachenkoArtem/My_sites/tree/08_Phone_book_SPA/08_Phone_book_SPA"
+  },
+  "keywords": [
+    "spa"
+  ],
+  "author": "Tkachenko Artem",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "mongoose": "latest"
+  },
+  "devDependencies": {
+    "babel": "latest",
+    "babel-loader": "latest"
+  }
+}
