@@ -112,7 +112,7 @@
   justify-content: space-between;
 
   &__annotation {
-    width: 25.5%;
+    flex-basis: 25.5%;
     padding: 1.000em;
     font-size: 1.500em;
     text-align: justify;
@@ -122,9 +122,9 @@
   }
 
   &__example {
-    width: 73.5%;
+    flex-basis: 73.5%;
     @include respond(320, 768) {
-      width: 100%;
+      flex-basis: 100%;
     }
   }
 }
