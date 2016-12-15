@@ -20,6 +20,14 @@
   },
   "devDependencies": {
     "babel": "latest",
-    "babel-loader": "latest"
+    "babel-loader": "latest",
+    "css-loader": "latest",
+    "file-loader": "latest",
+    "json-loader": "latest",
+    "react-hot-loader": "latest",
+    "style-loader": "latest",
+    "url-loader": "latest",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
   }
 }
